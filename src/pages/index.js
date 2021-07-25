@@ -1,15 +1,17 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-
-import './index.scss';
+import { graphql } from 'gatsby';
+import Layout from '../layouts/Layout/Layout';
+// import Hero from "../components/Hero"
+// import Services from "../components/Services"
+// import Jobs from "../components/Jobs"
+// import Projects from "../components/Projects"
+// import Blogs from "../components/Blogs"
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>Detalle</p>
-      <Button variant="primary">Primary</Button>
-    </div>
+    <Layout>
+      <h1>Home Page</h1>
+    </Layout>
   );
 };
 
