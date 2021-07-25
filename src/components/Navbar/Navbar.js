@@ -1,11 +1,24 @@
 import React from 'react';
 import logo from '../../images/logo.svg';
 import { FaAlignRight } from 'react-icons/fa';
-import PageLinks from '../../constants/links';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
 import './Navbar.scss';
 
+const query = graphql`
+  {
+    strapi {
+      navs(locale: "en") {
+        text
+        order
+        url
+      }
+    }
+  }
+`;
+
 const Navbar = () => {
+  const data = useStaticQuery(query);
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -15,7 +28,13 @@ const Navbar = () => {
             <FaAlignRight />
           </button>
         </div>
-        <PageLinks styleClass="nav-links"></PageLinks>
+        <ul className="page-links nav-links">
+          {data.strapi.navs.map(link => (
+            <li key={link.order}>
+              <Link to={link.url}>{link.text}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
