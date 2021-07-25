@@ -10,7 +10,7 @@ import Layout from '../layouts/Layout/Layout';
 const Home = () => {
   return (
     <Layout>
-      <h1>Home Page</h1>
+      <h3>Home</h3>
     </Layout>
   );
 };

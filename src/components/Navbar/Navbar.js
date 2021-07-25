@@ -1,9 +1,24 @@
 import React from 'react';
 import logo from '../../images/logo.svg';
 import { FaAlignRight } from 'react-icons/fa';
-// import PageLinks from '../constants/links';
+import PageLinks from '../../constants/links';
+
+import './Navbar.scss';
+
 const Navbar = () => {
-  return <h1>Navbar component</h1>;
+  return (
+    <nav className="navbar">
+      <div className="nav-center">
+        <div className="nav-header">
+          <img src={logo} alt="logo" />
+          <button type="button" className="toggle-btn">
+            <FaAlignRight />
+          </button>
+        </div>
+        <PageLinks styleClass="nav-links"></PageLinks>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
