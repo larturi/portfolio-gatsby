@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Portfolio Leandro Arturi`,
@@ -31,10 +35,18 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'STRAPI',
+        fieldName: 'strapi',
+        url: process.env.GATSBY_STRAPI_GRAPHQL_ENDPOINT + '/graphql',
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://apirest.com.ar:3100`,
-        queryLimit: 1000,
+        apiURL: process.env.GATSBY_STRAPI_GRAPHQL_ENDPOINT,
+        queryLimit: 10000,
         collectionTypes: [
           `cursos`,
           `docencias`,
@@ -45,6 +57,7 @@ module.exports = {
           `tecnologias`,
         ],
         singleTypes: [`about`, `home`],
+        availableLngs: ['es-AR', 'en'],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
