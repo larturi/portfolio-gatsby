@@ -1,4 +1,5 @@
 import '../sass/pages.scss';
+import './404.scss';
 
 import React from 'react';
 import { Link } from 'gatsby';

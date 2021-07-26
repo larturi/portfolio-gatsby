@@ -1,15 +1,15 @@
 import React from 'react';
 import Layout from '../layouts/Layout/Layout';
-
+import About from '../components/About';
 import Seo from '../components/Seo';
 
-const About = () => {
+const AboutPage = () => {
   return (
     <Layout>
       <Seo title="About" />
-      <h3>About</h3>
+      <About />
     </Layout>
   );
 };
 
-export default About;
+export default AboutPage;

@@ -1,0 +1,70 @@
+@import '../../sass/variables.scss';
+
+.about-page {
+    padding: 10rem 0;
+}
+
+.about-img {
+    margin-bottom: 2rem;
+    height: 25rem;
+}
+
+.about-img-svg {
+    margin-bottom: 2rem;
+    display: block;
+    border-radius: 100%;
+    max-width: 200px;
+    margin-left: 50px;
+}
+
+.about-text .section-title {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.about-text .underline {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.about-text p {
+    line-height: 2;
+}
+
+.stack-container {
+    width: 30rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0.5rem;
+}
+
+.stack-container span {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    color: $clr-grey-4;
+}
+
+.stack-icon {
+    color: $clr-primary-5;
+    margin-right: 0.25rem;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .about-center {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        column-gap: 4rem;
+    }
+    .about-img,
+    .about-img-svg {
+        grid-column: 1 / span 5;
+        margin-bottom: 0;
+    }
+    .about-text {
+        grid-column: 6 / -1;
+    }
+}

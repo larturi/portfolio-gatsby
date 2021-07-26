@@ -1,0 +1,14 @@
+@import '../sass/variables.scss';
+
+.error-page {
+    display: grid;
+    place-items: center;
+    background: $clr-primary-10;
+    text-align: center;
+}
+
+.error-page h1 {
+    text-transform: uppercase;
+    color: $clr-primary-1;
+    margin-bottom: 2rem;
+}
