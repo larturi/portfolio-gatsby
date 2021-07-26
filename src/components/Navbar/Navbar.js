@@ -1,14 +1,16 @@
+import './Navbar.scss';
+
 import React from 'react';
 import logo from '../../images/logo.svg';
 import { FaAlignRight } from 'react-icons/fa';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 
-import './Navbar.scss';
+import Languaje from '../Languaje';
 
 const query = graphql`
   {
     strapi {
-      navs(locale: "en") {
+      navs(locale: "en", sort: "order") {
         text
         order
         url
@@ -34,6 +36,10 @@ const Navbar = () => {
               <Link to={link.url}>{link.text}</Link>
             </li>
           ))}
+
+          <li>
+            <Languaje />
+          </li>
         </ul>
       </div>
     </nav>
