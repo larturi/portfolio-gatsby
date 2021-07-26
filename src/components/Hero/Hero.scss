@@ -1,0 +1,133 @@
+@import '../../sass/variables.scss';
+
+.hero {
+    margin-top: -5rem;
+    padding-top: 5rem;
+    height: 100vh;
+    background: $clr-primary-10;
+    position: relative;
+}
+  
+.hero-center {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.hero .underline {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+.hero-info {
+  background: $clr-primary-10;
+}
+
+.hero-img {
+  display: none;
+}
+
+.hero-info h4 {
+  color: $clr-grey-5;
+}
+
+.hero-icons {
+  justify-items: flex-start;
+}
+
+.hero .btn {
+  margin-top: 1.25rem;
+}
+  
+@media screen and (min-width: 992px) {
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 65%;
+        right: 0;
+        bottom: 0;
+        background: $clr-white;
+    }
+    .hero-center {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .hero h4 {
+        font-size: 0.85rem;
+    }
+    .hero-info {
+        grid-row: 1/1;
+        grid-column: 1 / span 8;
+    }
+    .hero-img {
+        display: block;
+        grid-row: 1/1;
+        grid-column: 6/-1;
+    }
+}
+
+.section {
+    padding: 5rem 0;
+  }
+  
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: $clr-primary-5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.bg-grey {
+  background: $clr-grey-10;
+}
+
+@media screen and (min-width: 1170px) {
+    .hero h4 {
+        font-size: 1rem;
+    }
+
+    .hero-info {
+        grid-column: 1 / span 8;
+    }
+
+    .hero h4 {
+        line-height: 1;
+    }
+}
+
+.social-links {
+    margin-top: 2rem;
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-link {
+    font-size: 1.75rem;
+    color: $clr-grey-1;
+    transition: $transition;
+}
+
+.social-link:hover {
+    color: $clr-primary-5;
+}
