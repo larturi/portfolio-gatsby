@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 // import Sidebar from './Sidebar';
-// import Footer from './Footer';
+import Footer from '../../components/Footer';
 
 import GlobalContextProvider from '../../context/GlobalContextProvider';
 
@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
       <GlobalContextProvider>
         <Navbar />
         {children}
+        <Footer />
       </GlobalContextProvider>
     </>
   );

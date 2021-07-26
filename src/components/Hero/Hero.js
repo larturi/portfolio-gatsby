@@ -4,8 +4,6 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
-// import heroImg from '../../images/hero.svg';
-import { StaticImage } from 'gatsby-plugin-image';
 import Img from 'gatsby-image';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
