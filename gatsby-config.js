@@ -8,6 +8,8 @@ module.exports = {
     description: `Portfolio de Leandro Arturi: Licenciado en Sistemas (UBA) & Desarrollador Web Full Stack.`,
     author: `@leandroarturi`,
     image: `https://twitter.com/leandroarturi/photo`,
+    url: `https://www.leandroarturi.com.ar`,
+    twitterUsername: '@leandroarturi',
   },
   flags: {
     DEV_SSR: false,

@@ -3,11 +3,13 @@ import '../sass/pages.scss';
 import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../layouts/Layout/Layout';
-// import Seo from '../components/Seo';
+import Seo from '../components/Seo';
 
 const Error = () => {
   return (
     <Layout>
+      <Seo title="Not Found" />
+
       <main className="error-page">
         <div className="error-container">
           <h1>oops it's a dead end</h1>

@@ -11,6 +11,8 @@ const query = graphql`
         defaultTitle: title
         defaultDescription: description
         defaultImage: image
+        siteUrl: url
+        twitterUsername
       }
     }
   }
@@ -20,7 +22,13 @@ const SEO = ({ title, description, image }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription, defaultImage } = site.siteMetadata;
+  const {
+    defaultTitle,
+    defaultDescription,
+    defaultImage,
+    siteUrl,
+    twitterUsername,
+  } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
