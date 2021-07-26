@@ -61,7 +61,7 @@ module.exports = {
           `socials`,
           // `tecnologias`,
         ],
-        singleTypes: [`about`],
+        singleTypes: [`about`, `home`],
         availableLngs: ['es-AR', 'en'],
       },
     },

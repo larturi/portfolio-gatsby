@@ -64,6 +64,7 @@
   transition: $transition;
   padding-bottom: 7px;
   margin-top: 4px;
+  font-size: 11px;
 }
 
 .link-button:hover {
@@ -93,9 +94,8 @@
   }
 
   .nav-links a {
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: $clr-grey-1;
-    font-weight: 700;
     letter-spacing: $spacing;
     transition: $transition;
     padding: 0.5rem 0;

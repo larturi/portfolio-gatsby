@@ -9,17 +9,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: $ff-secondary;
+  font-family: $ff-primary;
   background: $clr-white;
   color: $clr-grey-1;
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -34,6 +37,7 @@ h4 {
   margin-bottom: 0.75rem;
   font-family: $ff-primary;
 }
+
 h1 {
   font-size: 3rem;
 }
@@ -46,10 +50,12 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   color: $clr-grey-3;
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -73,7 +79,6 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
 
 .btn {
   text-transform: uppercase;
@@ -91,14 +96,50 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: $radius;
 }
+
 .btn:hover {
   color: $clr-primary-1;
   background: $clr-primary-8;
 }
+
 .center-btn {
   display: block;
   width: 12rem;
   text-align: center;
   margin: 0 auto;
   margin-top: 3rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: $clr-primary-5;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.bg-grey {
+  background: $clr-grey-10;
 }
