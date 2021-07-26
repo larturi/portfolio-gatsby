@@ -1,0 +1,58 @@
+@import '../../sass/variables.scss';
+
+.service {
+    background: $clr-white;
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: $radius;
+    text-align: center;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+.service p {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+.service:hover {
+  background: $clr-primary-5;
+  color: $clr-primary-9;
+}
+
+.service:hover p {
+  color: $clr-primary-9;
+}
+
+.service:hover .underline {
+  background: $clr-primary-9;
+}
+
+@media screen and (min-width: 676px) {
+ .services-center {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   -webkit-column-gap: 2rem;
+   -moz-column-gap: 2rem;
+   column-gap: 2rem;
+ }
+}
+
+@media screen and (min-width: 992px) {
+  .services-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+  
