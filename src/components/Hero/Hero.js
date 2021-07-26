@@ -5,7 +5,6 @@ import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
-import { StaticImage } from 'gatsby-plugin-image';
 import heroImg from '../../images/hero.svg';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
@@ -26,24 +25,15 @@ const query = graphql`
         locale
       }
     }
-    image: file(relativePath: { eq: "hero.svg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `;
 
 const Hero = () => {
   const state = useContext(GlobalStateContext);
 
-  const { dataES, dataEN, image } = useStaticQuery(query);
+  const { dataES, dataEN } = useStaticQuery(query);
 
   const data = state.selectedLang === 'es-AR' ? dataES : dataEN;
-
-  console.log(data);
 
   return (
     <header className="hero">
@@ -59,7 +49,13 @@ const Hero = () => {
             <div className="social-links">
               {socialLinks.map(link => {
                 return (
-                  <a href={link.url} key={link.id} className="social-link">
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={link.id}
+                    className="social-link"
+                  >
                     {link.icon}
                   </a>
                 );
@@ -68,11 +64,6 @@ const Hero = () => {
           </div>
         </article>
 
-        {/* <Img
-          fluid={image.childImageSharp.fluid}
-          alt="Foto Leandro Arturi"
-          className="hero-img"
-        /> */}
         <img src={heroImg} alt="portfolio" className="hero-img-svg" />
       </section>
     </header>
