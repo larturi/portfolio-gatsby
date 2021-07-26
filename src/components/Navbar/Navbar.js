@@ -2,7 +2,8 @@ import './Navbar.scss';
 
 import React, { useContext } from 'react';
 import logo from '../../images/logo.svg';
-import { FaAlignRight } from 'react-icons/fa';
+import { FaAlignRight, FaLinkedin } from 'react-icons/fa';
+import { HiTranslate } from 'react-icons/hi';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 
 import {
@@ -36,7 +37,18 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="logo" />
+          <button
+            className="link-button"
+            type="button"
+            onClick={() => {
+              dispatch({ type: 'TOOGLE_LANGUAGE' });
+            }}
+          >
+            <HiTranslate className="nav-language-icon" />
+            <span className="nav-language-text">
+              {state.selectedLang === 'es-AR' ? 'English' : 'Español'}
+            </span>
+          </button>
           <button type="button" className="toggle-btn">
             <FaAlignRight />
           </button>
@@ -47,18 +59,6 @@ const Navbar = () => {
               <Link to={link.url}>{link.text}</Link>
             </li>
           ))}
-
-          <li key="lang">
-            <button
-              className="link-button"
-              type="button"
-              onClick={() => {
-                dispatch({ type: 'TOOGLE_LANGUAGE' });
-              }}
-            >
-              {state.selectedLang === 'es-AR' ? 'English' : 'Español'}
-            </button>
-          </li>
         </ul>
       </div>
     </nav>
