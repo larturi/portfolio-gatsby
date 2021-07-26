@@ -39,8 +39,6 @@ const Hero = () => {
   const { dataES, dataEN, img } = useStaticQuery(query);
   const data = state.selectedLang === 'es-AR' ? dataES : dataEN;
 
-  console.log(img);
-
   return (
     <header className="hero">
       <section className="section-center hero-center">

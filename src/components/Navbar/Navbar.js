@@ -1,7 +1,7 @@
 import './Navbar.scss';
 
 import React, { useContext } from 'react';
-import { FaAlignRight, FaLinkedin } from 'react-icons/fa';
+import { FaAlignRight } from 'react-icons/fa';
 import { HiTranslate } from 'react-icons/hi';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 

@@ -49,7 +49,6 @@ const Projects = () => {
       <Title title="Portfolio" />
       <div className="section-center-50 projects-center">
         {projects.map((project, index) => {
-          console.log(project);
           return <Project key={project.order} index={index} {...project} />;
         })}
       </div>

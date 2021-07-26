@@ -1,11 +1,23 @@
-import React from 'react';
+import '../sass/pages.scss';
 
-const NotFoundPage = () => {
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../layouts/Layout/Layout';
+// import Seo from '../components/Seo';
+
+const Error = () => {
   return (
-    <div>
-      <h1>404 - Not Found</h1>
-    </div>
+    <Layout>
+      <main className="error-page">
+        <div className="error-container">
+          <h1>oops it's a dead end</h1>
+          <Link to="/" className="btn">
+            back home
+          </Link>
+        </div>
+      </main>
+    </Layout>
   );
 };
 
-export default NotFoundPage;
+export default Error;
