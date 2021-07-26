@@ -5,9 +5,9 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Portfolio Leandro Arturi`,
-    description: `Leandro Arturi: Licenciado en Sistemas de Información. Desarrollador Web Full Stack.`,
+    description: `Portfolio de Leandro Arturi: Licenciado en Sistemas (UBA) & Desarrollador Web Full Stack.`,
     author: `@leandroarturi`,
-    siteUrl: `https://leandroarturi.com.ar`,
+    image: `https://twitter.com/leandroarturi/photo`,
   },
   flags: {
     DEV_SSR: false,

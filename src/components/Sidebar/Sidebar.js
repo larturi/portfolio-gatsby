@@ -5,10 +5,7 @@ import socialLinks from '../../constants/social_links';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { FaTimes } from 'react-icons/fa';
 
-import {
-  GlobalDispatchContext,
-  GlobalStateContext,
-} from '../../context/GlobalContextProvider';
+import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
 const query = graphql`
   {
@@ -24,7 +21,6 @@ const query = graphql`
 `;
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-  const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
   const dataAll = useStaticQuery(query);
 

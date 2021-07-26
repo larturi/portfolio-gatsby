@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaShareSquare } from 'react-icons/fa';
-import { ItemMeta } from 'semantic-ui-react';
 
 const Project = ({ description, title, tecnologias, url }) => {
   return (
