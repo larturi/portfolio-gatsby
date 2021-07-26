@@ -46,25 +46,6 @@ module.exports = {
         url: process.env.GATSBY_STRAPI_GRAPHQL_ENDPOINT + '/graphql',
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: process.env.GATSBY_STRAPI_GRAPHQL_ENDPOINT,
-        queryLimit: 10000,
-        collectionTypes: [
-          // `cursos`,
-          // `docencias`,
-          // `educations`,
-          `navs`,
-          // `jobs`,
-          // `projects`,
-          `socials`,
-          // `tecnologias`,
-        ],
-        singleTypes: [`about`, `home`],
-        availableLngs: ['es-AR', 'en'],
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

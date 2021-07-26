@@ -120,9 +120,19 @@ p {
   max-width: 1170px;
 }
 
+.section-center-50 {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
+  }
+  
+  .section-center-50 {
+    width: 60vw;
   }
 }
 

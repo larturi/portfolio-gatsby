@@ -4,7 +4,9 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
-import heroImg from '../../images/hero.svg';
+// import heroImg from '../../images/hero.svg';
+import { StaticImage } from 'gatsby-plugin-image';
+import Img from 'gatsby-image';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
@@ -24,13 +26,22 @@ const query = graphql`
         locale
       }
     }
+    img: file(relativePath: { eq: "hero.webp" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `;
 
 const Hero = () => {
   const state = useContext(GlobalStateContext);
-  const { dataES, dataEN } = useStaticQuery(query);
+  const { dataES, dataEN, img } = useStaticQuery(query);
   const data = state.selectedLang === 'es-AR' ? dataES : dataEN;
+
+  console.log(img);
 
   return (
     <header className="hero">
@@ -60,8 +71,11 @@ const Hero = () => {
             </div>
           </div>
         </article>
-
-        <img src={heroImg} alt="portfolio" className="hero-img-svg" />
+        <Img
+          fluid={img.childImageSharp.fluid}
+          alt="Foto Leandro Arturi"
+          className="hero-img"
+        />
       </section>
     </header>
   );
