@@ -1,7 +1,6 @@
 import './Hero.scss';
 
 import React, { useContext } from 'react';
-import Img from 'gatsby-image';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
@@ -30,9 +29,7 @@ const query = graphql`
 
 const Hero = () => {
   const state = useContext(GlobalStateContext);
-
   const { dataES, dataEN } = useStaticQuery(query);
-
   const data = state.selectedLang === 'es-AR' ? dataES : dataEN;
 
   return (
