@@ -23,11 +23,11 @@ const query = graphql`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ toggleSidebar }) => {
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
-
   const dataAll = useStaticQuery(query);
+
   const data = dataAll.strapi.navs.filter(
     nav => nav.locale === state.selectedLang
   );
@@ -48,7 +48,7 @@ const Navbar = () => {
               {state.selectedLang === 'es-AR' ? 'English' : 'Español'}
             </span>
           </button>
-          <button type="button" className="toggle-btn">
+          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight />
           </button>
         </div>
