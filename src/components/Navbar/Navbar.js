@@ -13,10 +13,11 @@ import {
 const query = graphql`
   {
     strapi {
-      navs(locale: "en", sort: "order") {
+      navs(locale: "all", sort: "order") {
         text
         order
         url
+        locale
       }
     }
   }
@@ -25,9 +26,12 @@ const query = graphql`
 const Navbar = () => {
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
-  console.log(state);
 
-  const data = useStaticQuery(query);
+  const dataAll = useStaticQuery(query);
+  const data = dataAll.strapi.navs.filter(
+    nav => nav.locale === state.selectedLang
+  );
+
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -38,7 +42,7 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="page-links nav-links">
-          {data.strapi.navs.map(link => (
+          {data.map(link => (
             <li key={link.order}>
               <Link to={link.url}>{link.text}</Link>
             </li>
