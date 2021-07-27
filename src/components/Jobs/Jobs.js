@@ -3,6 +3,7 @@ import './Jobs.scss';
 import React, { useContext } from 'react';
 import Title from '../Title';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import Job from './Job';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
@@ -88,29 +89,11 @@ const Jobs = props => {
         {items > 0
           ? jobs.map((job, index) => {
               if (index < items) {
-                return (
-                  <div className="card-info" key={index}>
-                    <h3 className="card-slug">{job.puesto}</h3>
-                    <div className="card-label">
-                      <span>{job.organization}</span>
-                    </div>
-                    <p className="job-date">{job.periodo}</p>
-                    <p className="card-desc job-desc">{job.description}</p>
-                  </div>
-                );
+                return <Job job={job} index={index} key={index} />;
               }
             })
           : jobs.map((job, index) => {
-              return (
-                <div className="card-info" key={index}>
-                  <h3 className="card-slug">{job.puesto}</h3>
-                  <div className="card-label">
-                    <span>{job.organization}</span>
-                  </div>
-                  <p className="job-date">{job.periodo}</p>
-                  <p className="card-desc job-desc">{job.description}</p>
-                </div>
-              );
+              return <Job job={job} index={index} key={index} />;
             })}
 
         {items > 0 && (
