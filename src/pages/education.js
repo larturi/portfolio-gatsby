@@ -6,7 +6,7 @@ import Seo from '../components/Seo';
 const EducationPage = () => {
   return (
     <Layout>
-      <Seo title="Education" />
+      <Seo title="Leandro Arturi: Educación" />
       <Education />
     </Layout>
   );
