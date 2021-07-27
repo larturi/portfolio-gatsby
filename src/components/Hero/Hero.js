@@ -26,7 +26,7 @@ const query = graphql`
     }
     img: file(relativePath: { eq: "hero.webp" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
   }

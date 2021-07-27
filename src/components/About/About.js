@@ -52,7 +52,7 @@ const About = () => {
         <GatsbyImage
           image={img.childImageSharp.gatsbyImageData}
           alt="Foto Leandro Arturi"
-          className="about-img-svg"
+          className="about-img"
         />
 
         <article className="about-text">
