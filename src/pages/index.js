@@ -1,8 +1,11 @@
 import React from 'react';
 import Layout from '../layouts/Layout/Layout';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
+import About from '../components/About';
 import Jobs from '../components/Jobs';
+import Education from '../components/Education';
+import Projects from '../components/Projects';
+
 import Seo from '../components/Seo';
 
 const Home = () => {
@@ -10,8 +13,10 @@ const Home = () => {
     <Layout>
       <Seo title="Leandro Arturi: Home" />
       <Hero />
-      <Services />
+      <About />
       <Jobs />
+      <Education />
+      <Projects />
     </Layout>
   );
 };
