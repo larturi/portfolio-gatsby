@@ -160,11 +160,10 @@ p {
 // Cards
 .card-info {
     background: $clr-white;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 1px;
     border-bottom-left-radius: $radius;
     border-bottom-right-radius: $radius;
     margin-bottom: 15px;
-
     border-radius: $radius;
     box-shadow: $dark-shadow;
     z-index: 1;
@@ -211,15 +210,16 @@ p {
   color: $clr-grey-3;
 }
 
-.card-stack {
+.card-label {
   margin-bottom: 1rem;
 }
 
-.card-stack span {
+.card-label span {
   display: inline-block;
   background: $clr-grey-9;
   color: $clr-grey-5;
   margin-right: 0.55rem;
+  margin-bottom: 10px;
   padding: 0.25rem 0.5rem;
   border-radius: $radius;
   text-transform: uppercase;

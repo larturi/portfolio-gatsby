@@ -14,7 +14,7 @@ const Project = ({ description, title, tecnologias, url }) => {
       </h3>
 
       <p className="card-desc">{description}</p>
-      <div className="card-stack">
+      <div className="card-label">
         {tecnologias.map(item => {
           return <span key={item.name}>{item.name}</span>;
         })}

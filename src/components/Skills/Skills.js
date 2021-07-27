@@ -95,7 +95,7 @@ const Skills = () => {
   );
 
   return (
-    <section className="section">
+    <section className="section skills">
       <div className="skills-list section-center">
         <Title title="Frontend" />
         <SkillBar

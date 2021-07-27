@@ -72,7 +72,7 @@ const Education = () => {
   return (
     <section className="section educations">
       <Title title="Education" />
-      <div className="section-center-50 projects-center">
+      <div className="section-center-50">
         {degrees.map((degree, index) => {
           return <Degree key={degree.order} index={index} {...degree} />;
         })}
@@ -81,7 +81,7 @@ const Education = () => {
       <div className="education-separador" />
 
       <Title title="Cursos" />
-      <div className="section-center-50 projects-center">
+      <div className="section-center-50">
         {courses.map((course, index) => {
           return <Course key={index} index={index} {...course} />;
         })}

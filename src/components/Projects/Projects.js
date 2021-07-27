@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section className="section projects">
       <Title title="Portfolio" />
-      <div className="section-center-50 projects-center">
+      <div className="section-center-50">
         {projects.map((project, index) => {
           return <Project key={project.order} index={index} {...project} />;
         })}

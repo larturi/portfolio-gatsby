@@ -1,9 +1,7 @@
 @import '../../sass/variables.scss';
 
-.jobs-center {
-    width: 88vw;
-    margin: 0 auto;
-    max-width: $max-width;
+.jobs {
+  background: $clr-grey-10;
 }
 
 .btn-container {
@@ -60,16 +58,11 @@
 }
 
 .job-desc {
+  margin-bottom: 1.6rem !important;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 2rem;
   align-items: center;
-  margin-bottom: 2.25rem;
-}
-
-.job-desc p {
-  margin-bottom: 0;
-  color: $clr-grey-3;
 
   @media only screen and (max-width: 767px) {
     font-size: 1rem;
