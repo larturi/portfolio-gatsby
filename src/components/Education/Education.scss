@@ -64,30 +64,18 @@
     color: $clr-primary-1;
 }
 
-h3.education-title {
-    font-weight: 400;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-h4.education-universidad {
-    text-transform: uppercase;
-    color: $clr-grey-5;
-    display: inline-block;
-    border-radius: $radius;
-    margin-top: 1px;
-    margin-bottom: 19px;
-    font-size: 11px;
-}
-
-h5.education-periodo {
-    margin-top: 5px;
-    font-weight: normal;
-}
-
 .education-separador {
     margin-top: 60px;
+}
+
+.education-periodo {
+    margin-bottom: 1.4rem !important;
+    margin-top: -9px !important;
+}
+
+.education-label {
+    margin-top: 1.3rem;
+    margin-bottom: 0 !important;
 }
 
 @media screen and (min-width: 992px) {

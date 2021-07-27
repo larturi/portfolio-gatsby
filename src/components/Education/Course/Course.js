@@ -5,21 +5,20 @@ import { FaShareSquare } from 'react-icons/fa';
 
 const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   return (
-    <div className="project-info">
-      <h3 className="project-slug">
+    <div className="card-info">
+      <h3 className="card-slug">
         {name}
-        <p className="icon-link-project">
+        <p className="icon-link-card">
           <a href={url} target="_blank" rel="noopener noreferrer">
-            <FaShareSquare className="project-icon"></FaShareSquare>
+            <FaShareSquare className="card-icon"></FaShareSquare>
           </a>
         </p>
       </h3>
 
-      <p className="project-desc">
+      <p className="card-desc">
         {hours} horas - {institution} - {year}
       </p>
-
-      <div className="project-stack">
+      <div className="card-label">
         {tecnologias.map(item => {
           return <span key={item.name}>{item.name}</span>;
         })}

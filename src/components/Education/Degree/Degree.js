@@ -4,10 +4,14 @@ import React from 'react';
 
 const Degree = ({ titulo, universidad, periodo }) => {
   return (
-    <div className="item-info">
-      <h3 className="education-title">{titulo}</h3>
-      <h4 className="education-universidad">{universidad}</h4>
-      <h5 className="education-periodo">{periodo}</h5>
+    <div className="card-info">
+      <h3 className="card-slug">
+        {titulo}
+        <div className="card-label education-label">
+          <span>{universidad}</span>
+        </div>
+      </h3>
+      <p className="card-desc education-periodo">{periodo}</p>
     </div>
   );
 };
