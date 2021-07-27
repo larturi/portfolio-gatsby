@@ -1,6 +1,6 @@
 import './Skills.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import loadable from '@loadable/component';
 import Title from '../Title';
 import {
@@ -66,33 +66,33 @@ const Skills = () => {
 
   const { tecnologias: tecnologiasFront } = skillsFront;
   const frontSkills = [];
-  tecnologiasFront.map((skill, index) => {
-    frontSkills.push({ type: skill.name, level: skill.porcentaje });
-  });
+  tecnologiasFront.map((skill, index) =>
+    frontSkills.push({ type: skill.name, level: skill.porcentaje })
+  );
 
   const { tecnologias: tecnologiasBack } = skillsBack;
   const backSkills = [];
-  tecnologiasBack.map((skill, index) => {
-    backSkills.push({ type: skill.name, level: skill.porcentaje });
-  });
+  tecnologiasBack.map((skill, index) =>
+    backSkills.push({ type: skill.name, level: skill.porcentaje })
+  );
 
   const { tecnologias: tecnologiasDb } = skillsDb;
   const dbSkills = [];
-  tecnologiasDb.map((skill, index) => {
-    dbSkills.push({ type: skill.name, level: skill.porcentaje });
-  });
+  tecnologiasDb.map((skill, index) =>
+    dbSkills.push({ type: skill.name, level: skill.porcentaje })
+  );
 
   const { tecnologias: tecnologiasDevOps } = skillsDevOps;
   const devOpsSkills = [];
-  tecnologiasDevOps.map((skill, index) => {
-    devOpsSkills.push({ type: skill.name, level: skill.porcentaje });
-  });
+  tecnologiasDevOps.map((skill, index) =>
+    devOpsSkills.push({ type: skill.name, level: skill.porcentaje })
+  );
 
   const { tecnologias: tecnologiasOther } = skillsOther;
   const otherSkills = [];
-  tecnologiasOther.map((skill, index) => {
-    otherSkills.push({ type: skill.name, level: skill.porcentaje });
-  });
+  tecnologiasOther.map((skill, index) =>
+    otherSkills.push({ type: skill.name, level: skill.porcentaje })
+  );
 
   return (
     <section className="section">

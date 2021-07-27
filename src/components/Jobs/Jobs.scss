@@ -1,7 +1,7 @@
 @import '../../sass/variables.scss';
 
 .jobs-center {
-    width: 80vw;
+    width: 88vw;
     margin: 0 auto;
     max-width: $max-width;
 }
@@ -39,7 +39,8 @@
 
 .job-info h3 {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .job-info h4 {
@@ -54,7 +55,7 @@
 }
 
 .job-date {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 
@@ -69,6 +70,11 @@
 .job-desc p {
   margin-bottom: 0;
   color: $clr-grey-3;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1rem;
+    line-height: 30px;
+  }
 }
 
 .job-icon {

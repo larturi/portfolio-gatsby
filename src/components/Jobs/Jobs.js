@@ -51,17 +51,20 @@ const Jobs = () => {
   return (
     <section className="section jobs">
       <Title title="experience" />
+
       <div className="jobs-center">
         {jobs.map((job, index) => {
           return (
-            <article key={index} className="job-info">
-              <h3>{job.puesto}</h3>
+            <div className="project-info">
+              <h3 className="project-slug">{job.puesto}</h3>
+
               <h4>{job.organization}</h4>
+
               <p className="job-date">{job.periodo}</p>
               <div className="job-desc">
-                <p>{job.description}</p>
+                <p className="project-desc">{job.description}</p>
               </div>
-            </article>
+            </div>
           );
         })}
       </div>
