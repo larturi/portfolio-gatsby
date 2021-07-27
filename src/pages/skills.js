@@ -1,14 +1,15 @@
 import React from 'react';
 import Layout from '../layouts/Layout/Layout';
+import Skills from '../components/Skills';
 import Seo from '../components/Seo';
 
-const Skills = () => {
+const SkillsPage = () => {
   return (
     <Layout>
       <Seo title="Skills" />
-      <h3>Skills</h3>
+      <Skills />
     </Layout>
   );
 };
 
-export default Skills;
+export default SkillsPage;

@@ -17,8 +17,8 @@ const Footer = () => {
           })}
         </div>
         <h4>
+          <span>Leandro Arturi </span>
           copyright&copy;{new Date().getFullYear()}
-          <span>Leandro Arturi</span> all rights reserved
         </h4>
       </div>
     </footer>

@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
-export const query = graphql`
+const query = graphql`
   {
     projectsES: strapi {
       projects(locale: "es-AR") {
