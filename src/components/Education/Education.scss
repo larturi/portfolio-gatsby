@@ -1,0 +1,108 @@
+@import '../../sass/variables.scss';
+
+.educations {
+    background: $clr-grey-10;
+}
+
+.item {
+    display: grid;
+    margin-bottom: 4rem;
+}
+
+.item-info {
+    background: $clr-white;
+    padding: 2rem 2rem;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    margin-bottom: 15px;
+}
+
+.item-slug {
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem !important;
+    text-transform: uppercase;
+    color: $clr-grey-1;
+    transition: $transition;
+}
+
+.item-slug h3:hover {
+    color: $clr-primary-5;
+}
+
+.item-desc {
+    word-spacing: 3px;
+    color: $clr-grey-3;
+}
+
+.item-stack {
+    margin-bottom: 1rem;
+}
+
+.item-stack span {
+    display: inline-block;
+    background: $clr-grey-9;
+    color: $clr-grey-5;
+    margin-right: 0.55rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: $radius;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+
+.item-icon {
+    color: $clr-primary-5;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    transition: $transition;
+}
+
+.item-icon:hover {
+    color: $clr-primary-1;
+}
+
+h3.education-title {
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h4.education-universidad {
+    text-transform: uppercase;
+    color: $clr-grey-5;
+    background: $clr-grey-9;
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    border-radius: $radius;
+    margin-top: 1px;
+    font-size: 11px;
+}
+
+h5.education-periodo {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.education-separador {
+    margin-top: 60px;
+}
+
+@media screen and (min-width: 992px) {
+    .item {
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+    }
+    .item-info {
+        border-radius: $radius;
+        box-shadow: $dark-shadow;
+        z-index: 1;
+        grid-column: 5 /12;
+        grid-row: 1 / 1;
+        margin-bottom: 15px;
+    }
+    
+}

@@ -2,7 +2,7 @@ import './Projects.scss';
 
 import React, { useContext } from 'react';
 import Title from '../Title';
-import Project from '../Project';
+import Project from './Project';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
