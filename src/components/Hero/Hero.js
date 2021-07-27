@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
 
@@ -26,9 +26,7 @@ const query = graphql`
     }
     img: file(relativePath: { eq: "hero.webp" }) {
       childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(layout: CONSTRAINED)
       }
     }
   }
@@ -67,8 +65,9 @@ const Hero = () => {
             </div>
           </div>
         </article>
-        <Img
-          fluid={img.childImageSharp.fluid}
+
+        <GatsbyImage
+          image={img.childImageSharp.gatsbyImageData}
           alt="Foto Leandro Arturi"
           className="hero-img"
         />

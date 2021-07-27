@@ -3,7 +3,6 @@ import './About.scss';
 import React, { useContext } from 'react';
 import Title from '../../components/Title';
 import { graphql, useStaticQuery } from 'gatsby';
-// import Img from 'gatsby-image';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
