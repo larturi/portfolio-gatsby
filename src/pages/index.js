@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Education from '../components/Education';
 import Jobs from '../components/Jobs';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
 
 import Seo from '../components/Seo';
 
@@ -14,7 +16,9 @@ const Home = () => {
       <Hero />
       <About />
       <Education backgroundWhite={true} items={5} />
-      <Jobs backgroundWhite={false} items={5} />
+      <Jobs items={5} />
+      <Skills backgroundWhite={true} />
+      <Projects items={10} />
     </Layout>
   );
 };

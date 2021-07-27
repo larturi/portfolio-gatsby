@@ -60,7 +60,9 @@ const query = graphql`
 
 const SkillBar = loadable(() => import('react-skillbars'));
 
-const Skills = () => {
+const Skills = props => {
+  const { backgroundWhite = false } = props;
+
   const { skillsFront, skillsBack, skillsDb, skillsDevOps, skillsOther } =
     useStaticQuery(query);
 
@@ -95,7 +97,9 @@ const Skills = () => {
   );
 
   return (
-    <section className="section skills">
+    <section
+      className={'section skills ' + (backgroundWhite && 'background-white')}
+    >
       <div className="skills-list section-center">
         <Title title="Frontend" />
         <SkillBar
