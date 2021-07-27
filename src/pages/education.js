@@ -1,14 +1,15 @@
 import React from 'react';
 import Layout from '../layouts/Layout/Layout';
+import Education from '../components/Education';
 import Seo from '../components/Seo';
 
-const Education = () => {
+const EducationPage = () => {
   return (
     <Layout>
       <Seo title="Education" />
-      <h3>Education</h3>
+      <Education />
     </Layout>
   );
 };
 
-export default Education;
+export default EducationPage;
