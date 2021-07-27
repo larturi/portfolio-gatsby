@@ -40,17 +40,32 @@ const query = graphql`
         }
       }
     }
+    titleES: strapi {
+      navs(locale: "es-AR", where: { url: "/jobs" }) {
+        text
+      }
+    }
+    titleEN: strapi {
+      navs(locale: "en", where: { url: "/jobs" }) {
+        text
+      }
+    }
   }
 `;
 
 const Jobs = () => {
   const state = useContext(GlobalStateContext);
-  const { jobsES, jobsEN } = useStaticQuery(query);
+  const { jobsES, jobsEN, titleES, titleEN } = useStaticQuery(query);
+
   const jobs = state.selectedLang === 'es-AR' ? jobsES.jobs : jobsEN.jobs;
+  const title =
+    state.selectedLang === 'es-AR'
+      ? titleES.navs[0].text
+      : titleEN.navs[0].text;
 
   return (
     <section className="section jobs">
-      <Title title="experience" />
+      <Title title={title} />
 
       <div className="section-center-50">
         {jobs.map((job, index) => {
