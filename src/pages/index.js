@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout/Layout';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Education from '../components/Education';
+import Jobs from '../components/Jobs';
 
 import Seo from '../components/Seo';
 
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <About />
       <Education backgroundWhite={true} items={5} />
+      <Jobs backgroundWhite={false} items={5} />
     </Layout>
   );
 };

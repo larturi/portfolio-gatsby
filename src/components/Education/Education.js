@@ -92,7 +92,6 @@ const query = graphql`
 `;
 
 const Education = props => {
-  console.log(props);
   const { backgroundWhite = false, items = 0 } = props;
 
   const state = useContext(GlobalStateContext);
