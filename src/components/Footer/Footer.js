@@ -16,10 +16,10 @@ const Footer = () => {
             );
           })}
         </div>
-        <h4>
+        <p>
           <span>Leandro Arturi </span>
           copyright&copy;{new Date().getFullYear()}
-        </h4>
+        </p>
       </div>
     </footer>
   );

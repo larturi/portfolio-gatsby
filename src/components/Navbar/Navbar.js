@@ -50,6 +50,9 @@ const Navbar = ({ toggleSidebar }) => {
           </button>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight />
+            <span className="material-icons" aria-hidden="true">
+              Menu
+            </span>
           </button>
         </div>
         <ul className="page-links nav-links">

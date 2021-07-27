@@ -44,7 +44,7 @@ const Hero = () => {
           <div>
             <div className="underline"></div>
             <h1>Leandro Arturi</h1>
-            <h4>{data.home.text}</h4>
+            <h2 className="home-profesion">{data.home.text}</h2>
             <Link to="/about" className="btn">
               {data.home.aboutLink}
             </Link>
