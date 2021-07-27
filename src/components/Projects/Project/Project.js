@@ -5,12 +5,15 @@ const Project = ({ description, title, tecnologias, url }) => {
   return (
     <div className="card-info">
       <h3 className="card-slug">
-        {title}
-        <p className="icon-link-card">
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
+
+        <span className="icon-link-card">
           <a href={url} target="_blank" rel="noopener noreferrer">
             <FaShareSquare className="card-icon"></FaShareSquare>
           </a>
-        </p>
+        </span>
       </h3>
 
       <p className="card-desc">{description}</p>

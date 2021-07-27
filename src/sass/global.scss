@@ -23,6 +23,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: $font-color-dark;
 }
 
 h1,
@@ -203,6 +204,10 @@ p {
 
 .icon-link-card {
   float: right;
+
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .card-desc {

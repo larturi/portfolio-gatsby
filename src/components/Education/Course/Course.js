@@ -7,7 +7,10 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   return (
     <div className="card-info">
       <h3 className="card-slug">
-        {name}
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+
         <p className="icon-link-card">
           <a href={url} target="_blank" rel="noopener noreferrer">
             <FaShareSquare className="card-icon"></FaShareSquare>
