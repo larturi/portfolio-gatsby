@@ -157,3 +157,73 @@ p {
     background: $clr-grey-10;
 }
 
+// Cards
+.card-info {
+    background: $clr-white;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    margin-bottom: 15px;
+
+    border-radius: $radius;
+    box-shadow: $dark-shadow;
+    z-index: 1;
+    grid-column: 5 /12;
+    grid-row: 1 / 1;
+    margin-bottom: 15px;
+}
+
+.card-slug {
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem !important;
+  text-transform: uppercase;
+  color: $clr-grey-1;
+  transition: $transition;
+}
+
+.card-slug h3:hover {
+  color: $clr-primary-5;
+}
+
+.card-link-project {
+  float: right;
+}
+
+.card-icon {
+  color: $clr-primary-5;
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+  transition: $transition;
+}
+
+.card-icon:hover {
+  color: $clr-primary-1;
+}
+
+.icon-link-card {
+  float: right;
+}
+
+.card-desc {
+  word-spacing: 3px;
+  color: $clr-grey-3;
+}
+
+.card-stack {
+  margin-bottom: 1rem;
+}
+
+.card-stack span {
+  display: inline-block;
+  background: $clr-grey-9;
+  color: $clr-grey-5;
+  margin-right: 0.55rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: $radius;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+

@@ -9,15 +9,6 @@
     margin-bottom: 4rem;
 }
 
-
-.project-info {
-    background: $clr-white;
-    padding: 1rem 2rem;
-    border-bottom-left-radius: $radius;
-    border-bottom-right-radius: $radius;
-    margin-bottom: 15px;
-}
-
 .project-number {
     display: inline-block;
     font-size: 1.25rem;
@@ -25,34 +16,6 @@
     margin-bottom: 0.75rem;
 }
 
-.project-slug {
-    font-weight: 500;
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    margin-top: 1rem !important;
-    text-transform: uppercase;
-    color: $clr-grey-1;
-    transition: $transition;
-}
-
-.project-slug h3:hover {
-    color: $clr-primary-5;
-}
-
-.icon-link-project {
-    float: right;
-}
-
-.project-desc {
-    word-spacing: 3px;
-    color: $clr-grey-3;
-}
-
-.project-stack {
-    margin-bottom: 1rem;
-}
-
-.project-stack span,
 .about-stack span {
     display: inline-block;
     background: $clr-grey-9;
@@ -67,17 +30,6 @@
 
 .about-stack span {
     margin-top: 0.5rem;
-}
-
-.project-icon {
-    color: $clr-primary-5;
-    font-size: 1.25rem;
-    margin-right: 0.5rem;
-    transition: $transition;
-}
-
-.project-icon:hover {
-    color: $clr-primary-1;
 }
 
 @media screen and (min-width: 576px) {
@@ -105,19 +57,11 @@
         border-radius: $radius;
         box-shadow: $dark-shadow;
     }
-    .project-info {
-        border-radius: $radius;
-        box-shadow: $dark-shadow;
-        z-index: 1;
-        grid-column: 5 /12;
-        grid-row: 1 / 1;
-        margin-bottom: 15px;
-    }
     .project:nth-of-type(even) .project-img {
         grid-column: 5 / -1;
         grid-row: 1 / 1;
     }
-    .project:nth-of-type(even) .project-info {
+    .project:nth-of-type(even) {
         grid-column: 2 / span 7;
         grid-row: 1 / 1;
         text-align: left;
