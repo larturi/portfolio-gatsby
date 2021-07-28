@@ -88,7 +88,7 @@ module.exports = {
       options: {
         typeName: 'STRAPI',
         fieldName: 'strapi',
-        url: process.env.GATSBY_STRAPI_GRAPHQL_ENDPOINT + '/graphql',
+        url: 'http://apirest.com.ar:3100/graphql',
       },
     },
     `gatsby-plugin-offline`,
