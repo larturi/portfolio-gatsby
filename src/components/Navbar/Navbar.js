@@ -30,15 +30,19 @@ const Navbar = props => {
   const dataAll = useStaticQuery(query);
 
   let currentLanguaje = state.language || 'es-AR';
-  if (localStorage.getItem('locale'))
-    currentLanguaje = localStorage.getItem('locale');
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('locale'))
+      currentLanguaje = localStorage.getItem('locale');
+  }
 
   const data = dataAll.strapi.navs.filter(
     nav => nav.locale === currentLanguaje
   );
 
-  if (!localStorage.getItem('locale')) {
-    localStorage.setItem('locale', 'es-AR');
+  if (typeof window !== 'undefined') {
+    if (!localStorage.getItem('locale')) {
+      localStorage.setItem('locale', 'es-AR');
+    }
   }
 
   return (

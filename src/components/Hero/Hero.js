@@ -37,8 +37,10 @@ const Hero = () => {
   const { dataES, dataEN, img } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
-  if (localStorage.getItem('locale'))
-    currentLanguaje = localStorage.getItem('locale');
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('locale'))
+      currentLanguaje = localStorage.getItem('locale');
+  }
 
   const data = currentLanguaje === 'es-AR' ? dataES : dataEN;
 

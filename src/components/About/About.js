@@ -44,8 +44,11 @@ const About = () => {
   const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
-  if (localStorage.getItem('locale'))
-    currentLanguaje = localStorage.getItem('locale');
+
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('locale'))
+      currentLanguaje = localStorage.getItem('locale');
+  }
 
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
 

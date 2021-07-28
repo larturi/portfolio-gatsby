@@ -109,8 +109,10 @@ const Education = props => {
   } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
-  if (localStorage.getItem('locale'))
-    currentLanguaje = localStorage.getItem('locale');
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('locale'))
+      currentLanguaje = localStorage.getItem('locale');
+  }
 
   const degrees =
     currentLanguaje === 'es-AR' ? degreeES.educations : degreeEN.educations;

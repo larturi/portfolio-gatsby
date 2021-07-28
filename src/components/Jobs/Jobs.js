@@ -72,8 +72,10 @@ const Jobs = props => {
     useStaticQuery(query);
 
   let currentLanguaje = state.language;
-  if (localStorage.getItem('locale'))
-    currentLanguaje = localStorage.getItem('locale');
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('locale'))
+      currentLanguaje = localStorage.getItem('locale');
+  }
 
   const jobs = currentLanguaje === 'es-AR' ? jobsES.jobs : jobsEN.jobs;
   const title =
