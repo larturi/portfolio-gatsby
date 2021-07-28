@@ -110,6 +110,7 @@ const Skills = props => {
           skills={frontSkills}
           colors={frontendSkillsColors}
           height={24}
+          animationDelay={100}
         />
 
         <div className="separador-section-skills" />
@@ -118,11 +119,19 @@ const Skills = props => {
           skills={backSkills}
           colors={backendSkillsColors}
           height={24}
+          animationDelay={100}
+          offset={-24}
         />
 
         <div className="separador-section-skills" />
         <SubTitle title="Database" />
-        <SkillBar skills={dbSkills} colors={dbSkillsColors} height={24} />
+        <SkillBar
+          skills={dbSkills}
+          colors={dbSkillsColors}
+          height={24}
+          animationDelay={100}
+          offset={-24}
+        />
 
         <div className="separador-section-skills" />
         <SubTitle title="DevOps" />
@@ -130,11 +139,19 @@ const Skills = props => {
           skills={devOpsSkills}
           colors={devOpsSkillsColors}
           height={24}
+          animationDelay={100}
+          offset={-24}
         />
 
         <div className="separador-section-skills" />
         <SubTitle title="Other" />
-        <SkillBar skills={otherSkills} colors={moreSkillsColors} height={24} />
+        <SkillBar
+          skills={otherSkills}
+          colors={moreSkillsColors}
+          height={24}
+          animationDelay={100}
+          offset={-24}
+        />
       </div>
     </section>
   );

@@ -73,6 +73,7 @@ const Projects = props => {
                   <Project key={project.order} index={index} {...project} />
                 );
               }
+              return null;
             })
           : projects.map((project, index) => {
               return <Project key={project.order} index={index} {...project} />;

@@ -55,6 +55,8 @@
 .job-date {
   font-size: 1rem;
   letter-spacing: 1px;
+  color: $clr-grey-5;
+  margin-top: -8px;
 }
 
 .job-desc {
@@ -63,6 +65,7 @@
   grid-template-columns: auto 1fr;
   column-gap: 2rem;
   align-items: center;
+  color: $clr-grey-3;
 
   @media only screen and (max-width: 767px) {
     font-size: 1rem;
@@ -96,6 +99,8 @@
     .job-date {
         font-size: 1rem;
         letter-spacing: $spacing;
+        color: $clr-grey-5;
+        margin-top: -8px;
     }
 }
   

@@ -10,7 +10,7 @@ import { GlobalStateContext } from '../../context/GlobalContextProvider';
 const query = graphql`
   {
     jobsES: strapi {
-      jobs(locale: "es-AR") {
+      jobs(locale: "es-AR", sort: "order:desc") {
         description
         fechaDesde
         fechaHasta
@@ -26,7 +26,7 @@ const query = graphql`
       }
     }
     jobsEN: strapi {
-      jobs(locale: "en") {
+      jobs(locale: "en", sort: "order:desc") {
         description
         fechaDesde
         fechaHasta
@@ -91,6 +91,7 @@ const Jobs = props => {
               if (index < items) {
                 return <Job job={job} index={index} key={index} />;
               }
+              return null;
             })
           : jobs.map((job, index) => {
               return <Job job={job} index={index} key={index} />;

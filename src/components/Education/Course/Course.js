@@ -18,7 +18,7 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
         </p>
       </h3>
 
-      <p className="card-desc">
+      <p className="card-desc desc-course">
         {hours} horas - {institution} - {year}
       </p>
       <div className="card-label">

@@ -199,10 +199,14 @@ p {
   text-transform: uppercase;
   color: $clr-grey-1;
   transition: $transition;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
 }
 
 .card-slug h3:hover {
-  color: $clr-primary-5;
+  color: $font-color-dark;
 }
 
 .card-link-project {
@@ -230,7 +234,7 @@ p {
 
 .card-desc {
   word-spacing: 3px;
-  color: $clr-grey-3;
+  color: $clr-grey-5;
 }
 
 .card-label {

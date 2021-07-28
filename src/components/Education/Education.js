@@ -147,6 +147,7 @@ const Education = props => {
               if (index < items) {
                 return <Course key={index} index={index} {...course} />;
               }
+              return null;
             })
           : courses.map((course, index) => {
               return <Course key={index} index={index} {...course} />;

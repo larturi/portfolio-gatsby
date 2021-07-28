@@ -78,6 +78,11 @@
     margin-bottom: 0 !important;
 }
 
+.desc-course {
+    margin-top: -5px;
+    font-size: 13px;
+}
+
 @media screen and (min-width: 992px) {
     .item {
         grid-template-columns: repeat(12, 1fr);
