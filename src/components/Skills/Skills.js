@@ -3,6 +3,8 @@ import './Skills.scss';
 import React from 'react';
 import loadable from '@loadable/component';
 import Title from '../Title';
+import SubTitle from '../Title/SubTitle';
+
 import {
   frontendSkillsColors,
   backendSkillsColors,
@@ -68,31 +70,31 @@ const Skills = props => {
 
   const { tecnologias: tecnologiasFront } = skillsFront;
   const frontSkills = [];
-  tecnologiasFront.map((skill, index) =>
+  tecnologiasFront.map(skill =>
     frontSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
   const { tecnologias: tecnologiasBack } = skillsBack;
   const backSkills = [];
-  tecnologiasBack.map((skill, index) =>
+  tecnologiasBack.map(skill =>
     backSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
   const { tecnologias: tecnologiasDb } = skillsDb;
   const dbSkills = [];
-  tecnologiasDb.map((skill, index) =>
+  tecnologiasDb.map(skill =>
     dbSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
   const { tecnologias: tecnologiasDevOps } = skillsDevOps;
   const devOpsSkills = [];
-  tecnologiasDevOps.map((skill, index) =>
+  tecnologiasDevOps.map(skill =>
     devOpsSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
   const { tecnologias: tecnologiasOther } = skillsOther;
   const otherSkills = [];
-  tecnologiasOther.map((skill, index) =>
+  tecnologiasOther.map(skill =>
     otherSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
@@ -100,8 +102,10 @@ const Skills = props => {
     <section
       className={'section skills ' + (backgroundWhite && 'background-white')}
     >
+      <Title title="Skills" />
+
       <div className="skills-list section-center">
-        <Title title="Frontend" />
+        <SubTitle title="Frontend" />
         <SkillBar
           skills={frontSkills}
           colors={frontendSkillsColors}
@@ -109,7 +113,7 @@ const Skills = props => {
         />
 
         <div className="separador-section-skills" />
-        <Title title="Backend" />
+        <SubTitle title="Backend" />
         <SkillBar
           skills={backSkills}
           colors={backendSkillsColors}
@@ -117,11 +121,11 @@ const Skills = props => {
         />
 
         <div className="separador-section-skills" />
-        <Title title="Database" />
+        <SubTitle title="Database" />
         <SkillBar skills={dbSkills} colors={dbSkillsColors} height={24} />
 
         <div className="separador-section-skills" />
-        <Title title="DevOps" />
+        <SubTitle title="DevOps" />
         <SkillBar
           skills={devOpsSkills}
           colors={devOpsSkillsColors}
@@ -129,7 +133,7 @@ const Skills = props => {
         />
 
         <div className="separador-section-skills" />
-        <Title title="Other" />
+        <SubTitle title="Other" />
         <SkillBar skills={otherSkills} colors={moreSkillsColors} height={24} />
       </div>
     </section>

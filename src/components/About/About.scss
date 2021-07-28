@@ -18,13 +18,16 @@
     @media only screen and (max-width: 767px) {
         margin: 0  auto;
         max-width: 130px;
-        margin-bottom: 2rem;
     }
 }
 
 .about-text .section-title {
     margin-bottom: 2rem;
     text-align: left;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 2rem;
+    }
 }
 
 .about-text .underline {
