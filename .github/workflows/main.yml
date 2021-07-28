@@ -1,0 +1,24 @@
+on: push
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: yarn
+      - name: Build
+        run: yarn build
+
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        with:
+          username: 'root'
+          server: '66.97.46.237'
+          port: '5972'
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          local_path: './dist/*'
+          remote_path: '/var/www/leandroarturi.com.ar/public_html'
+          args: '-o ConnectTimeout=5'
