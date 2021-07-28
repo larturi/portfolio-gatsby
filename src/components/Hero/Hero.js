@@ -43,7 +43,7 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>Leandro Arturi 👋</h1>
+            <h1>Leandro Arturi! 👋</h1>
             <h2 className="home-profesion">{data.home.text}</h2>
             <Link to="/about" className="btn btn-hero">
               {data.home.aboutLink}
