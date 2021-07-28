@@ -6,12 +6,12 @@
 
 .skills-list {
     .skillbar {
-        width: 47%;
+        width: 30%;
         display: inline-block;
         margin-right: 20px;
         background-color: #dcdcdc !important;
 
-        &:nth-child(2n) {
+        &:nth-child(3n) {
             margin-right: 0;
             margin-left: 20px;
         }
@@ -20,11 +20,21 @@
             border-radius: 0px !important;
         }
 
+        @media only screen and (max-width: 992px) {
+            width: 47%;
+            margin-right: 20px;
+
+            &:nth-child(1n) {
+                margin-right: 0px;
+                margin-left: 20px;
+            }
+        }
+
         @media only screen and (max-width: 767px) {
             width: 99%;
             margin-right: 0px;
 
-            &:nth-child(2n) {
+            &:nth-child(1n) {
                 margin-right: 0;
                 margin-left: 0;
             }

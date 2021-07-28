@@ -1,5 +1,5 @@
 import '../sass/pages.scss';
-import './404.scss';
+import './not-found.scss';
 
 import React from 'react';
 import { Link } from 'gatsby';
@@ -13,9 +13,9 @@ const Error = () => {
 
       <main className="error-page">
         <div className="error-container">
-          <h1>oops it's a dead end</h1>
+          <h1>Oops it's a 404 error</h1>
           <Link to="/" className="btn">
-            back home
+            Back home
           </Link>
         </div>
       </main>

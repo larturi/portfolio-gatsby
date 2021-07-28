@@ -130,7 +130,6 @@ const Skills = props => {
           colors={dbSkillsColors}
           height={24}
           animationDelay={100}
-          offset={-24}
         />
 
         <div className="separador-section-skills" />
@@ -140,7 +139,6 @@ const Skills = props => {
           colors={devOpsSkillsColors}
           height={24}
           animationDelay={100}
-          offset={-24}
         />
 
         <div className="separador-section-skills" />
@@ -150,7 +148,6 @@ const Skills = props => {
           colors={moreSkillsColors}
           height={24}
           animationDelay={100}
-          offset={-24}
         />
       </div>
     </section>
