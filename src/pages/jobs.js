@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout/Layout';
 import Jobs from '../components/Jobs';
 import Seo from '../components/Seo';
 
-const JobsPage = () => {
+const JobsPage = props => {
   return (
-    <Layout>
-      <Seo title="Leandro Arturi: Carrera" />
+    <Layout path={props.uri}>
+      <Seo title="Leandro Arturi - Carrera" />
       <Jobs />
     </Layout>
   );

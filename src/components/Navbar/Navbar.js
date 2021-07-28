@@ -23,7 +23,8 @@ const query = graphql`
   }
 `;
 
-const Navbar = ({ toggleSidebar }) => {
+const Navbar = props => {
+  const { toggleSidebar, path } = props;
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
   const dataAll = useStaticQuery(query);
@@ -56,11 +57,19 @@ const Navbar = ({ toggleSidebar }) => {
           </button>
         </div>
         <ul className="page-links nav-links">
-          {data.map(link => (
-            <li key={link.order}>
-              <Link to={link.url}>{link.text}</Link>
-            </li>
-          ))}
+          {data.map(link => {
+            return (
+              <li key={link.order}>
+                <Link
+                  to={link.url}
+                  activeClassName="active"
+                  className={path === link.url ? 'active' : ''}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </nav>

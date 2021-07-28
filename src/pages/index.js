@@ -9,10 +9,10 @@ import Projects from '../components/Projects';
 
 import Seo from '../components/Seo';
 
-const Home = () => {
+const Home = props => {
   return (
-    <Layout>
-      <Seo title="Leandro Arturi: Inicio" />
+    <Layout path={props.uri}>
+      <Seo title="Leandro Arturi - Portfolio" />
       <Hero />
       <About />
       <Education backgroundWhite={true} items={5} />

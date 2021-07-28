@@ -6,9 +6,9 @@ import { Link } from 'gatsby';
 import Layout from '../layouts/Layout/Layout';
 import Seo from '../components/Seo';
 
-const Error = () => {
+const Error = props => {
   return (
-    <Layout>
+    <Layout path={props.uri}>
       <Seo title="Not Found" />
 
       <main className="error-page">
