@@ -131,7 +131,7 @@ const Education = props => {
         'section educations ' + (backgroundWhite && 'background-white')
       }
     >
-      <Title title={titleEducation} />
+      <Title title={titleEducation + ' 🤓'} />
       <div className="section-center-50">
         {degrees.map((degree, index) => {
           return <Degree key={degree.order} index={index} {...degree} />;
