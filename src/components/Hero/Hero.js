@@ -68,7 +68,7 @@ const Hero = () => {
 
         <GatsbyImage
           image={img.childImageSharp.gatsbyImageData}
-          alt="Foto Leandro Arturi"
+          alt="Leandro Arturi Foto"
           className="hero-img"
         />
       </section>
