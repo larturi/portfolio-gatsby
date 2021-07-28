@@ -71,13 +71,15 @@ const Jobs = props => {
   const { jobsES, jobsEN, titleES, titleEN, moreES, moreEN } =
     useStaticQuery(query);
 
-  const jobs = state.selectedLang === 'es-AR' ? jobsES.jobs : jobsEN.jobs;
+  let currentLanguaje = state.language;
+  if (localStorage.getItem('locale'))
+    currentLanguaje = localStorage.getItem('locale');
+
+  const jobs = currentLanguaje === 'es-AR' ? jobsES.jobs : jobsEN.jobs;
   const title =
-    state.selectedLang === 'es-AR'
-      ? titleES.navs[0].text
-      : titleEN.navs[0].text;
+    currentLanguaje === 'es-AR' ? titleES.navs[0].text : titleEN.navs[0].text;
   const titleBtnMore =
-    state.selectedLang === 'es-AR'
+    currentLanguaje === 'es-AR'
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 

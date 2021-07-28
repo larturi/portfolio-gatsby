@@ -29,9 +29,17 @@ const Navbar = props => {
   const state = useContext(GlobalStateContext);
   const dataAll = useStaticQuery(query);
 
+  let currentLanguaje = state.language || 'es-AR';
+  if (localStorage.getItem('locale'))
+    currentLanguaje = localStorage.getItem('locale');
+
   const data = dataAll.strapi.navs.filter(
-    nav => nav.locale === state.selectedLang
+    nav => nav.locale === currentLanguaje
   );
+
+  if (!localStorage.getItem('locale')) {
+    localStorage.setItem('locale', 'es-AR');
+  }
 
   return (
     <nav className="navbar">
@@ -41,12 +49,14 @@ const Navbar = props => {
             className="link-button"
             type="button"
             onClick={() => {
-              dispatch({ type: 'TOOGLE_LANGUAGE' });
+              const selectedLang = currentLanguaje === 'es-AR' ? 'en' : 'es-AR';
+              localStorage.setItem('locale', selectedLang);
+              dispatch({ type: 'SET_LANGUAGE', payload: selectedLang });
             }}
           >
             <HiTranslate className="nav-language-icon" />
             <span className="nav-language-text">
-              {state.selectedLang === 'es-AR' ? 'English' : 'Español'}
+              {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
             </span>
           </button>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>

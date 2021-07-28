@@ -42,7 +42,12 @@ const query = graphql`
 const About = () => {
   const state = useContext(GlobalStateContext);
   const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
-  const about = state.selectedLang === 'es-AR' ? aboutES.about : aboutEN.about;
+
+  let currentLanguaje = state.language;
+  if (localStorage.getItem('locale'))
+    currentLanguaje = localStorage.getItem('locale');
+
+  const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
 
   const { tecnologias } = skills;
 

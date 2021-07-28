@@ -54,11 +54,15 @@ const Projects = props => {
   const state = useContext(GlobalStateContext);
   const { projectsES, projectsEN, moreES, moreEN } = useStaticQuery(query);
 
+  let currentLanguaje = state.language;
+  if (localStorage.getItem('locale'))
+    currentLanguaje = localStorage.getItem('locale');
+
   const projects =
-    state.selectedLang === 'es-AR' ? projectsES.projects : projectsEN.projects;
+    currentLanguaje === 'es-AR' ? projectsES.projects : projectsEN.projects;
 
   const titleBtnMore =
-    state.selectedLang === 'es-AR'
+    currentLanguaje === 'es-AR'
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 

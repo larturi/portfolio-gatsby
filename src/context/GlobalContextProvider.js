@@ -9,10 +9,10 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'TOOGLE_LANGUAGE': {
+    case 'SET_LANGUAGE': {
       return {
         ...state,
-        selectedLang: state.selectedLang === 'es-AR' ? 'en' : 'es-AR',
+        selectedLang: action.payload,
       };
     }
 

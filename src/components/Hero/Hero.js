@@ -35,7 +35,12 @@ const query = graphql`
 const Hero = () => {
   const state = useContext(GlobalStateContext);
   const { dataES, dataEN, img } = useStaticQuery(query);
-  const data = state.selectedLang === 'es-AR' ? dataES : dataEN;
+
+  let currentLanguaje = state.language;
+  if (localStorage.getItem('locale'))
+    currentLanguaje = localStorage.getItem('locale');
+
+  const data = currentLanguaje === 'es-AR' ? dataES : dataEN;
 
   return (
     <header className="hero">

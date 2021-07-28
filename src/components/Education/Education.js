@@ -93,8 +93,8 @@ const query = graphql`
 
 const Education = props => {
   const { backgroundWhite = false, items = 0 } = props;
-
   const state = useContext(GlobalStateContext);
+
   const {
     coursesEN,
     coursesES,
@@ -108,20 +108,24 @@ const Education = props => {
     moreEN,
   } = useStaticQuery(query);
 
+  let currentLanguaje = state.language;
+  if (localStorage.getItem('locale'))
+    currentLanguaje = localStorage.getItem('locale');
+
   const degrees =
-    state.selectedLang === 'es-AR' ? degreeES.educations : degreeEN.educations;
+    currentLanguaje === 'es-AR' ? degreeES.educations : degreeEN.educations;
   const courses =
-    state.selectedLang === 'es-AR' ? coursesES.cursos : coursesEN.cursos;
+    currentLanguaje === 'es-AR' ? coursesES.cursos : coursesEN.cursos;
   const titleEducation =
-    state.selectedLang === 'es-AR'
+    currentLanguaje === 'es-AR'
       ? titleEducationES.navs[0].text
       : titleEducationEN.navs[0].text;
   const titleCourses =
-    state.selectedLang === 'es-AR'
+    currentLanguaje === 'es-AR'
       ? titleCoursesES.translates[0].text
       : titleCoursesEN.translates[0].text;
   const titleBtnMore =
-    state.selectedLang === 'es-AR'
+    currentLanguaje === 'es-AR'
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
