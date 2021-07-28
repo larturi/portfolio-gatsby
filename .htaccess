@@ -1,0 +1,12 @@
+ErrorDocument 404 https://www.leandroarturi.com.ar/not-found/
+ErrorDocument 500 https://www.leandroarturi.com.ar/error/
+# or map them to one error document:
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ /not-found [L]
+
+RewriteCond %{REQUEST_URI} ^/500/$
+RewriteRule ^(.*)$ /error [L]
