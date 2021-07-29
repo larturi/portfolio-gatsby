@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="underline"></div>
             <h1 className="home-name-hello">Leandro Arturi 👋</h1>
             <h2 className="home-profesion">{data.home.text}</h2>
-            <Link to="/about" className="btn btn-hero" ariaLabel="About">
+            <Link to="/about" className="btn btn-hero" aria-label="About">
               {data.home.aboutLink}
             </Link>
             <div className="social-links">
@@ -63,7 +63,7 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={link.id}
-                    ariaLabel={link.text}
+                    aria-label={link.text}
                     className="social-link"
                   >
                     {link.icon}

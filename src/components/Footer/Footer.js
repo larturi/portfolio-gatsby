@@ -14,7 +14,7 @@ const Footer = () => {
                 href={link.url}
                 key={link.id}
                 className="social-link"
-                ariaLabel={link.text}
+                aria-label={link.text}
               >
                 {link.icon}
               </a>

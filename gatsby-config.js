@@ -92,13 +92,6 @@ module.exports = {
         url: 'http://apirest.com.ar:3100/graphql',
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://leandroarturi.com.ar',
-      },
-    },
-
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

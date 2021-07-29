@@ -66,7 +66,7 @@ const Navbar = props => {
           <button
             type="button"
             className="toggle-btn"
-            ariaLabel="menu"
+            aria-label="menu"
             onClick={toggleSidebar}
           >
             <FaAlignRight />
