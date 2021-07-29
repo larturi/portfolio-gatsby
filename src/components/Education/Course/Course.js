@@ -2,12 +2,14 @@ import '../Education.scss';
 
 import React from 'react';
 import { FaShareSquare } from 'react-icons/fa';
+import IconoFa from '../../IconFa';
 
 const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   return (
     <div className="card-info">
       <h3 className="card-slug">
         <a href={url} target="_blank" rel="noopener noreferrer">
+          <IconoFa name={logo} />
           {name}
         </a>
 
