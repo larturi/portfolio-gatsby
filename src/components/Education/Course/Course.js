@@ -12,7 +12,12 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
         </a>
 
         <p className="icon-link-card">
-          <a href={url} target="_blank" rel="noopener noreferrer">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to the course"
+          >
             <FaShareSquare className="card-icon"></FaShareSquare>
           </a>
         </p>

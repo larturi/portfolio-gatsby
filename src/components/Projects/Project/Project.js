@@ -10,7 +10,12 @@ const Project = ({ description, title, tecnologias, url }) => {
         </a>
 
         <span className="icon-link-card">
-          <a href={url} target="_blank" rel="noopener noreferrer">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to project"
+          >
             <FaShareSquare className="card-icon"></FaShareSquare>
           </a>
         </span>
