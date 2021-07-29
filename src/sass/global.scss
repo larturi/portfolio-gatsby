@@ -147,14 +147,15 @@ p {
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
+
+    @media screen and (min-width: 992px) {
+        width: 75vw;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .section-center {
         width: 95vw;
-    }
-    .section-center-50 {
-        width: 60vw;
     }
 }
 
@@ -191,9 +192,22 @@ p {
     border-radius: $radius;
     box-shadow: $dark-shadow;
     z-index: 1;
-    grid-column: 5 /12;
+    grid-column: 5 / 12;
     grid-row: 1 / 1;
     margin-bottom: 15px;
+
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-info-left {
+    width: 140px;
+    min-width: 140px;
+
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .card-slug {
@@ -227,14 +241,6 @@ p {
 
 .card-icon:hover {
   color: $clr-primary-1;
-}
-
-.icon-link-card {
-  float: right;
-
-  @media only screen and (max-width: 767px) {
-    display: none;
-  }
 }
 
 .card-desc {
@@ -280,9 +286,4 @@ p {
         font-size: 0.7rem;  
     }
 
-}
-
-.tech-icon {
-    margin: 0px 6px -3px 0;
-    color: $clr-grey-1;
 }

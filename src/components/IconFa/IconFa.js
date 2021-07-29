@@ -24,8 +24,6 @@ import {
 } from 'react-icons/si';
 
 const IconFa = props => {
-  console.log(props);
-
   switch (props.name) {
     case 'fab fa-react':
       return <FaReact className="tech-icon"></FaReact>;

@@ -111,6 +111,10 @@
     margin-top: -10px;
 }
 
+.card-info-right-degree {
+    margin-bottom: 20px;
+}
+
 .desc-course {
     margin-top: 2rem;
     margin-bottom: 2.7rem !important;
@@ -136,4 +140,15 @@
         margin-bottom: 15px;
     }
     
+}
+
+.card-curso {
+    display: flex;
+    flex-direction: row;
+}
+
+.tech-icon {
+    color: $clr-grey-4;
+    font-size: 5rem;
+    margin: 35px 15px 0 20px;
 }

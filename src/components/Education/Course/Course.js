@@ -1,37 +1,30 @@
 import '../Education.scss';
 
 import React from 'react';
-import { FaShareSquare } from 'react-icons/fa';
 import IconoFa from '../../IconFa';
 
 const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   return (
-    <div className="card-info">
-      <h3 className="card-slug">
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <IconoFa name={logo} />
-          {name}
-        </a>
+    <div className="card-info card-curso">
+      <div className="card-info-left">
+        <IconoFa name={logo} />
+      </div>
 
-        <p className="icon-link-card">
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to the course"
-          >
-            <FaShareSquare className="card-icon"></FaShareSquare>
+      <div>
+        <h3 className="card-slug">
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {name}
           </a>
-        </p>
-      </h3>
+        </h3>
 
-      <p className="card-desc desc-course">
-        {hours} horas - {institution} - {year}
-      </p>
-      <div className="card-label card-label-course">
-        {tecnologias.map(item => {
-          return <span key={item.name}>{item.name}</span>;
-        })}
+        <p className="card-desc desc-course">
+          {hours} horas - {institution} - {year}
+        </p>
+        <div className="card-label card-label-course">
+          {tecnologias.map(item => {
+            return <span key={item.name}>{item.name}</span>;
+          })}
+        </div>
       </div>
     </div>
   );
