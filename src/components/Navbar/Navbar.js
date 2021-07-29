@@ -63,7 +63,12 @@ const Navbar = props => {
               {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
             </span>
           </button>
-          <button type="button" className="toggle-btn" onClick={toggleSidebar}>
+          <button
+            type="button"
+            className="toggle-btn"
+            aria-label="menu"
+            onClick={toggleSidebar}
+          >
             <FaAlignRight />
             <span className="material-icons" aria-hidden="true">
               Menu

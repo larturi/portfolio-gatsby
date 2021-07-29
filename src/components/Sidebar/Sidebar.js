@@ -57,7 +57,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           {socialLinks.map(link => {
             return (
               <li key={link.id}>
-                <a href={link.url} className="social-link">
+                <a
+                  href={link.url}
+                  className="social-link"
+                  aria-label={link.text}
+                >
                   {link.icon}
                 </a>
               </li>
