@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Leandro Arturi - Portfolio",
+  "version": "1.0.0",
+  "author": "Leandro Arturi <lea.arturi@gmail.com>",
   "dependencies": {
     "@loadable/component": "^5.15.0",
     "gatsby": "^3.10.1",
@@ -35,7 +35,7 @@
     "prettier": "2.3.2"
   },
   "keywords": [
-    "gatsby"
+    "leandro arturi, portfolio, gatsby"
   ],
   "license": "0BSD",
   "scripts": {
