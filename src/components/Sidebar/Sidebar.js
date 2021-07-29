@@ -60,7 +60,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <a
                   href={link.url}
                   className="social-link"
-                  aria-label={link.text}
+                  ariaLabel={link.text}
                 >
                   {link.icon}
                 </a>
