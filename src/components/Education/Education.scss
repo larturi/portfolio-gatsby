@@ -69,18 +69,57 @@
 }
 
 .education-periodo {
-    margin-bottom: 1.4rem !important;
-    margin-top: -9px !important;
+    margin-bottom: 1rem !important;
+    margin-top: -7px !important;
+
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 1rem !important;
+        margin-top: -20px !important;
+    }
 }
 
 .education-label {
-    margin-top: 1.3rem;
+    margin-top: 1.4rem;
     margin-bottom: 0 !important;
+    font-size: 13px;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 1rem;
+        margin-bottom: 27px !important;
+    }
+}
+
+.education-label span {
+    display: inline-block;
+    background: #dae2ec;
+    color: #617d98;
+    margin-right: 0.55rem;
+    margin-bottom: 10px;
+    padding: 0.38rem 0.70rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.80rem;
+
+    @media only screen and (max-width: 767px) {
+        padding: 0.20rem 0.5rem;
+        margin-bottom: 6px;
+    }
+}
+
+.card-label-course {
+    margin-top: -10px;
 }
 
 .desc-course {
-    margin-top: -5px;
+    margin-top: 2rem;
+    margin-bottom: 2.7rem !important;
     font-size: 13px;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: -10px;
+        margin-bottom: 25px !important;
+    }
 }
 
 @media screen and (min-width: 992px) {

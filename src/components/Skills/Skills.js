@@ -120,7 +120,6 @@ const Skills = props => {
           colors={backendSkillsColors}
           height={24}
           animationDelay={100}
-          offset={-24}
         />
 
         <div className="separador-section-skills" />

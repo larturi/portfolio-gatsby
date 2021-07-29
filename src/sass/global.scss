@@ -238,24 +238,47 @@ p {
 }
 
 .card-desc {
-  word-spacing: 3px;
-  color: $clr-grey-5;
-}
+    margin-bottom: 1.6rem !important;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: center;
+    word-spacing: 3px;
+    color: $clr-grey-3;
+  
+    @media only screen and (max-width: 767px) {
+      font-size: 1rem;
+      line-height: 30px;
+    }
+  }
 
 .card-label {
   margin-bottom: 1rem;
 }
 
 .card-label span {
-  display: inline-block;
-  background: $clr-grey-9;
-  color: $clr-grey-5;
-  margin-right: 0.55rem;
-  margin-bottom: 10px;
-  padding: 0.25rem 0.5rem;
-  border-radius: $radius;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
+    display: inline-block;
+    background: #dae2ec;
+    color: #617d98;
+    margin-right: 0.55rem;
+    margin-bottom: 10px;
+    padding: 0.22rem 0.54em;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.80rem;
+
+    @media screen and (max-width: 576px) {
+        display: inline-block;
+        background: #dae2ec;
+        color: #324d67;
+        margin-right: 0.45rem;
+        padding: 0.20rem 0.45rem;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.7rem;  
+    }
+
 }
 

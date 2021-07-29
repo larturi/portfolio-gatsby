@@ -7,7 +7,7 @@ const Degree = ({ titulo, universidad, periodo }) => {
     <div className="card-info">
       <h3 className="card-slug">
         {titulo}
-        <div className="card-label education-label">
+        <div className="education-label">
           <span>{universidad}</span>
         </div>
       </h3>

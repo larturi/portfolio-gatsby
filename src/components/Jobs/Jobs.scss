@@ -54,23 +54,16 @@
 
 .job-date {
   font-size: 1rem;
-  letter-spacing: 1px;
-  color: $clr-grey-5;
+  color: $clr-grey-4;
   margin-top: -8px;
-}
-
-.job-desc {
-  margin-bottom: 1.6rem !important;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 2rem;
-  align-items: center;
-  color: $clr-grey-3;
+  letter-spacing: $spacing;
 
   @media only screen and (max-width: 767px) {
-    font-size: 1rem;
-    line-height: 30px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.7px;
   }
+
 }
 
 .job-icon {
@@ -96,11 +89,5 @@
         box-shadow: -2px 0 $clr-primary-5;
     }
 
-    .job-date {
-        font-size: 1rem;
-        letter-spacing: $spacing;
-        color: $clr-grey-5;
-        margin-top: -8px;
-    }
 }
   

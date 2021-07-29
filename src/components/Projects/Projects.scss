@@ -26,11 +26,22 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.85rem;
+    margin-top: 0.5rem;
+
+    @media screen and (max-width: 576px) {
+        display: inline-block;
+        background: #dae2ec;
+        color: #324d67;
+        margin-right: 0.45rem;
+        padding: 0.20rem 0.45rem;
+        border-radius: 0.25rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+        
+    }
 }
 
-.about-stack span {
-    margin-top: 0.5rem;
-}
 
 @media screen and (min-width: 576px) {
     .project-img {
