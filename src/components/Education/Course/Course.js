@@ -10,7 +10,7 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
         <IconoFa name={logo} />
       </div>
 
-      <div>
+      <div className="card-info-right">
         <h3 className="card-slug">
           <a href={url} target="_blank" rel="noopener noreferrer">
             {name}
