@@ -2,7 +2,6 @@ import '../Education.scss';
 
 import React from 'react';
 import IconoFa from '../../IconFa';
-import { FaShareSquare } from 'react-icons/fa';
 
 const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   return (

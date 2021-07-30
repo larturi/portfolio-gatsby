@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaShareSquare } from 'react-icons/fa';
 
 const Project = ({ description, title, tecnologias, url }) => {
   return (

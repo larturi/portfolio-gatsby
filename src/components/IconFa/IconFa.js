@@ -23,6 +23,8 @@ import {
   SiXampp,
 } from 'react-icons/si';
 
+import { DiScrum } from 'react-icons/di';
+
 const IconFa = props => {
   switch (props.name) {
     case 'fab fa-react':
@@ -75,6 +77,9 @@ const IconFa = props => {
 
     case 'SiXampp':
       return <SiXampp className="tech-icon"></SiXampp>;
+
+    case 'DiScrum':
+      return <DiScrum className="tech-icon"></DiScrum>;
 
     default:
       return <FaGraduationCap className="tech-icon"></FaGraduationCap>;
