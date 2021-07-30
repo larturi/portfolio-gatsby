@@ -11,7 +11,7 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
       </div>
 
       <div className="card-info-right">
-        <h3 className="card-slug">
+        <h3 className="card-slug card-slug-curso">
           <a href={url} target="_blank" rel="noopener noreferrer">
             {name}
           </a>
