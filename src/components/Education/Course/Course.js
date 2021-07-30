@@ -2,6 +2,7 @@ import '../Education.scss';
 
 import React from 'react';
 import IconoFa from '../../IconFa';
+import { FaShareSquare } from 'react-icons/fa';
 
 const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   return (
@@ -19,6 +20,7 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
 
         <p className="card-desc desc-course">
           {hours} horas - {institution} - {year}
+          {/* <FaShareSquare className="card-icon"></FaShareSquare> */}
         </p>
         <div className="card-label card-label-course">
           {tecnologias.map(item => {
