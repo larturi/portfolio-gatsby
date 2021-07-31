@@ -4,6 +4,7 @@ import React from 'react';
 import loadable from '@loadable/component';
 import Title from '../Title';
 import SubTitle from '../Title/SubTitle';
+import GithubCal from '../GithubCal';
 
 import {
   frontendSkillsColors,
@@ -99,57 +100,68 @@ const Skills = props => {
   );
 
   return (
-    <section
-      className={'section skills ' + (backgroundWhite && 'background-white')}
-    >
-      <Title title="Skills" />
+    <>
+      <section
+        className={'section skills ' + (backgroundWhite && 'background-white')}
+      >
+        <Title title="Skills" />
 
-      <div className="skills-list section-center">
-        <SubTitle title="Frontend" />
-        <SkillBar
-          skills={frontSkills}
-          colors={frontendSkillsColors}
-          height={24}
-          animationDelay={100}
-        />
+        <div className="skills-list section-center">
+          <SubTitle title="Frontend" />
+          <SkillBar
+            skills={frontSkills}
+            colors={frontendSkillsColors}
+            height={24}
+            animationDelay={100}
+          />
 
-        <div className="separador-section-skills" />
-        <SubTitle title="Backend" />
-        <SkillBar
-          skills={backSkills}
-          colors={backendSkillsColors}
-          height={24}
-          animationDelay={100}
-        />
+          <div className="separador-section-skills" />
+          <SubTitle title="Backend" />
+          <SkillBar
+            skills={backSkills}
+            colors={backendSkillsColors}
+            height={24}
+            animationDelay={100}
+          />
 
-        <div className="separador-section-skills" />
-        <SubTitle title="Database" />
-        <SkillBar
-          skills={dbSkills}
-          colors={dbSkillsColors}
-          height={24}
-          animationDelay={100}
-        />
+          <div className="separador-section-skills" />
+          <SubTitle title="Database" />
+          <SkillBar
+            skills={dbSkills}
+            colors={dbSkillsColors}
+            height={24}
+            animationDelay={100}
+          />
 
-        <div className="separador-section-skills" />
-        <SubTitle title="DevOps" />
-        <SkillBar
-          skills={devOpsSkills}
-          colors={devOpsSkillsColors}
-          height={24}
-          animationDelay={100}
-        />
+          <div className="separador-section-skills" />
+          <SubTitle title="DevOps" />
+          <SkillBar
+            skills={devOpsSkills}
+            colors={devOpsSkillsColors}
+            height={24}
+            animationDelay={100}
+          />
 
-        <div className="separador-section-skills" />
-        <SubTitle title="Other" />
-        <SkillBar
-          skills={otherSkills}
-          colors={moreSkillsColors}
-          height={24}
-          animationDelay={100}
-        />
-      </div>
-    </section>
+          <div className="separador-section-skills" />
+          <SubTitle title="Other" />
+          <SkillBar
+            skills={otherSkills}
+            colors={moreSkillsColors}
+            height={24}
+            animationDelay={100}
+          />
+        </div>
+      </section>
+
+      <section
+        className={'section skills ' + (backgroundWhite && 'background-white')}
+      >
+        <div className="about-github-cal">
+          <Title title="GitHub" />
+          <GithubCal />
+        </div>
+      </section>
+    </>
   );
 };
 

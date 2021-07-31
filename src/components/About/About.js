@@ -66,6 +66,7 @@ const About = () => {
         <article className="about-text">
           <Title title={about.title} />
           <p>{about.info}</p>
+
           <div className="about-stack">
             {tecnologias.map(skill => {
               return <span key={skill.id}>{skill.name}</span>;

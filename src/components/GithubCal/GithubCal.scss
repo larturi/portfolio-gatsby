@@ -1,0 +1,10 @@
+@import '../../sass/variables.scss';
+
+.about-github-cal {
+    text-align: center;
+    margin-top: -5rem;
+
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+}
