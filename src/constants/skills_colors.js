@@ -1,39 +1,39 @@
 export const frontendSkillsColors = {
-  bar: 'hsl(184, 77%, 34%)',
+  bar: '#2caeba',
   title: {
     text: '#fff',
-    background: 'hsl(184, 77%, 34%)',
+    background: '#2caeba',
   },
 };
 
 export const backendSkillsColors = {
-  bar: 'hsl(184, 77%, 34%)',
+  bar: '#2caeba',
   title: {
     text: '#fff',
-    background: 'hsl(184, 77%, 34%)',
+    background: '#2caeba',
   },
 };
 
 export const dbSkillsColors = {
-  bar: 'hsl(184, 77%, 34%)',
+  bar: '#2caeba',
   title: {
     text: '#fff',
-    background: 'hsl(184, 77%, 34%)',
+    background: '#2caeba',
   },
 };
 
 export const devOpsSkillsColors = {
-  bar: 'hsl(184, 77%, 34%)',
+  bar: '#2caeba',
   title: {
     text: '#fff',
-    background: 'hsl(184, 77%, 34%)',
+    background: '#2caeba',
   },
 };
 
 export const moreSkillsColors = {
-  bar: 'hsl(184, 77%, 34%)',
+  bar: '#2caeba',
   title: {
     text: '#fff',
-    background: 'hsl(184, 77%, 34%)',
+    background: '#2caeba',
   },
 };
