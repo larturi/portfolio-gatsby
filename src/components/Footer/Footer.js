@@ -15,6 +15,8 @@ const Footer = () => {
                 key={link.id}
                 className="social-link"
                 aria-label={link.text}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {link.icon}
               </a>
