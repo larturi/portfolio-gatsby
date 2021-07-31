@@ -26,6 +26,11 @@ a {
     color: $font-color-dark;
 }
 
+a:hover {
+    text-decoration: none;
+    color: $clr-primary-1;
+}
+
 h1,
 h2,
 h3,

@@ -157,8 +157,17 @@ const Skills = props => {
         className={'section skills ' + (backgroundWhite && 'background-white')}
       >
         <div className="about-github-cal">
-          <Title title="GitHub" />
-          <GithubCal />
+          <a
+            href="https://github.com/larturi"
+            aria-label="@larturi on GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Title title="@larturi on GitHub" />
+          </a>
+          <div className="react-github-container">
+            <GithubCal />
+          </div>
         </div>
       </section>
     </>
