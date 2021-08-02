@@ -25,7 +25,7 @@ const query = graphql`
 `;
 
 const Navbar = props => {
-  const [isDarkMode, setIsDarkMode] = useState(state?.selectedTheme || false);
+  const [isDarkMode, setIsDarkMode] = useState(null);
 
   const { toggleSidebar, path } = props;
   const dispatch = useContext(GlobalDispatchContext);
@@ -42,6 +42,9 @@ const Navbar = props => {
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('theme')) {
       currentTheme = localStorage.getItem('theme');
+      if (isDarkMode === null) {
+        setIsDarkMode(currentTheme === 'dark');
+      }
     }
   }
 
@@ -64,7 +67,7 @@ const Navbar = props => {
     const selectedTheme = isDarkMode ? 'dark' : 'light';
     localStorage.setItem('theme', selectedTheme);
     dispatch({ type: 'SET_THEME', payload: selectedTheme });
-  }, [isDarkMode]);
+  }, [isDarkMode, dispatch]);
 
   return (
     <nav className={`navbar ${page} ${currentTheme}`}>

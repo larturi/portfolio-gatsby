@@ -9,13 +9,9 @@ import { GlobalStateContext } from '../../context/GlobalContextProvider';
 const GithubCal = () => {
   const state = useContext(GlobalStateContext);
 
-  let currentLanguaje = state.language;
   let currentTheme = state.selectedTheme;
 
   if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
-
     if (localStorage.getItem('theme'))
       currentTheme = localStorage.getItem('theme');
   }

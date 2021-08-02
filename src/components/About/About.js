@@ -43,24 +43,26 @@ const About = () => {
   const state = useContext(GlobalStateContext);
   const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
 
-  let currentLanguaje = state.selectedLang;
-  let currentTheme = state.selectedTheme;
+  // let currentLanguaje = state.selectedLang;
+  // let currentTheme = state.selectedTheme;
 
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
+  // if (typeof window !== 'undefined') {
+  //   if (localStorage.getItem('locale'))
+  //     currentLanguaje = localStorage.getItem('locale');
 
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  //   if (localStorage.getItem('theme'))
+  //     currentTheme = localStorage.getItem('theme');
+  // }
 
-  const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
+  console.log(localStorage.getItem('theme'));
 
-  const { tecnologias } = skills;
+  // const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
+
+  // const { tecnologias } = skills;
 
   return (
     <section className="about-page">
-      <div className="section-center-50 about-center">
+      {/* <div className="section-center-50 about-center">
         <GatsbyImage
           image={img.childImageSharp.gatsbyImageData}
           alt="Foto Leandro Arturi"
@@ -80,7 +82,7 @@ const About = () => {
             })}
           </div>
         </article>
-      </div>
+      </div> */}
     </section>
   );
 };
