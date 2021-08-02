@@ -152,6 +152,14 @@ p {
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
+
+    @media only screen and (max-width: 767px) {
+        margin: -3rem auto;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 95vw;
+    }
 }
 
 .section-center-50 {
@@ -161,12 +169,6 @@ p {
 
     @media screen and (min-width: 992px) {
         width: 75vw;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .section-center {
-        width: 95vw;
     }
 }
 
