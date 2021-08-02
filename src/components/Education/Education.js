@@ -131,6 +131,8 @@ const Education = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
+  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
+
   return (
     <section
       className={
@@ -161,7 +163,7 @@ const Education = props => {
 
         {items > 0 && (
           <div className="btnCenter">
-            <Link to="/education" className="btn">
+            <Link to="/education" className={`btn ${theme}`}>
               {titleBtnMore}
             </Link>
           </div>

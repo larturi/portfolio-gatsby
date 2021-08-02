@@ -85,6 +85,8 @@ const Jobs = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
+  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
+
   return (
     <section className="section jobs">
       <Title title={title} />
@@ -103,7 +105,7 @@ const Jobs = props => {
 
         {items > 0 && (
           <div className="btnCenter">
-            <Link to="/jobs" className="btn">
+            <Link to="/jobs" className={`btn ${theme}`}>
               {titleBtnMore}
             </Link>
           </div>
