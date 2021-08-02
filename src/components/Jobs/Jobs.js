@@ -72,9 +72,14 @@ const Jobs = props => {
     useStaticQuery(query);
 
   let currentLanguaje = state.language;
+  let currentTheme = state.selectedTheme;
+
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
+
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
   }
 
   const jobs = currentLanguaje === 'es-AR' ? jobsES.jobs : jobsEN.jobs;
@@ -85,11 +90,9 @@ const Jobs = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
-
   return (
     <section className="section jobs">
-      <Title title={title} theme={theme === 'dark' ? 'dark' : 'light'} />
+      <Title title={title} theme={currentTheme === 'dark' ? 'dark' : 'light'} />
 
       <div className="section-center-50">
         {items > 0
@@ -105,7 +108,7 @@ const Jobs = props => {
 
         {items > 0 && (
           <div className="btnCenter">
-            <Link to="/jobs" className={`btn ${theme}`}>
+            <Link to="/jobs" className={`btn ${currentTheme}`}>
               {titleBtnMore}
             </Link>
           </div>

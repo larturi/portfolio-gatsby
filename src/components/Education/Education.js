@@ -109,9 +109,14 @@ const Education = props => {
   } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
+  let currentTheme = state.selectedTheme;
+
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
+
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
   }
 
   const degrees =
@@ -131,8 +136,6 @@ const Education = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
-
   return (
     <section
       className={
@@ -141,7 +144,7 @@ const Education = props => {
     >
       <Title
         title={titleEducation}
-        theme={theme === 'dark' ? 'dark' : 'light'}
+        theme={currentTheme === 'dark' ? 'dark' : 'light'}
       />
       <div className="section-center-50">
         {degrees.map((degree, index) => {
@@ -151,7 +154,10 @@ const Education = props => {
 
       <div className="education-separador" />
 
-      <Title title={titleCourses} theme={theme === 'dark' ? 'dark' : 'light'} />
+      <Title
+        title={titleCourses}
+        theme={currentTheme === 'dark' ? 'dark' : 'light'}
+      />
       <div className="section-center-50">
         {items > 0
           ? courses.map((course, index) => {
@@ -166,7 +172,7 @@ const Education = props => {
 
         {items > 0 && (
           <div className="btnCenter">
-            <Link to="/education" className={`btn ${theme}`}>
+            <Link to="/education" className={`btn ${currentTheme}`}>
               {titleBtnMore}
             </Link>
           </div>

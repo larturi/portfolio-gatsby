@@ -10,17 +10,20 @@ const GithubCal = () => {
   const state = useContext(GlobalStateContext);
 
   let currentLanguaje = state.language;
+  let currentTheme = state.selectedTheme;
+
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
-  }
 
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
+  }
 
   return (
     <GitHubCalendar
       username="larturi"
-      color={theme === 'dark' ? '#4f348d' : 'hsl(185, 81%, 29%)'}
+      color={currentTheme === 'dark' ? '#4f348d' : 'hsl(185, 81%, 29%)'}
       blockSize={12}
       blockMargin={4}
     >

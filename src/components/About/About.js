@@ -43,15 +43,18 @@ const About = () => {
   const state = useContext(GlobalStateContext);
   const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
 
-  let currentLanguaje = state.language;
+  let currentLanguaje = state.selectedLang;
+  let currentTheme = state.selectedTheme;
 
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
+
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
   }
 
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
 
   const { tecnologias } = skills;
 
@@ -67,7 +70,7 @@ const About = () => {
         <article className="about-text">
           <Title
             title={about.title}
-            theme={theme === 'dark' ? 'dark' : 'light'}
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
           />
           <p>{about.info}</p>
 

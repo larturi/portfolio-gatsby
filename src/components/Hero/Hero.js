@@ -47,20 +47,30 @@ const Hero = () => {
       currentLanguaje = localStorage.getItem('locale');
   }
 
+  let currentTheme = state.selectedTheme || 'dark';
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('theme')) {
+      currentTheme = localStorage.getItem('theme');
+    }
+  }
+
   const data = currentLanguaje === 'es-AR' ? dataES : dataEN;
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
 
   return (
-    <header className={`hero ${theme}`}>
+    <header className={`hero ${currentTheme}`}>
       <section className="section-center hero-center">
-        <article className={`hero-info ${theme}`}>
+        <article className={`hero-info ${currentTheme}`}>
           <div>
-            <div className={`underline ${theme}`}></div>
-            <h1 className={`home-name-hello ${theme}`}>Leandro Arturi 👋</h1>
-            <h2 className={`home-profesion ${theme}`}>{data.home.text}</h2>
+            <div className={`underline ${currentTheme}`}></div>
+            <h1 className={`home-name-hello ${currentTheme}`}>
+              Leandro Arturi 👋
+            </h1>
+            <h2 className={`home-profesion ${currentTheme}`}>
+              {data.home.text}
+            </h2>
             <Link
               to="/about"
-              className={`btn btn-hero ${theme}`}
+              className={`btn btn-hero ${currentTheme}`}
               aria-label="About"
             >
               {data.home.aboutLink}
@@ -74,7 +84,7 @@ const Hero = () => {
                     rel="noopener noreferrer"
                     key={link.id}
                     aria-label={link.text}
-                    className={`social-link ${theme}`}
+                    className={`social-link ${currentTheme}`}
                   >
                     {link.icon}
                   </a>
@@ -86,7 +96,7 @@ const Hero = () => {
 
         <GatsbyImage
           image={
-            theme === 'dark'
+            currentTheme === 'dark'
               ? imgDark.childImageSharp.gatsbyImageData
               : img.childImageSharp.gatsbyImageData
           }

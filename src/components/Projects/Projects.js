@@ -55,9 +55,14 @@ const Projects = props => {
   const { projectsES, projectsEN, moreES, moreEN } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
+  let currentTheme = state.selectedTheme;
+
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
+
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
   }
 
   const projects =
@@ -68,11 +73,12 @@ const Projects = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
-
   return (
     <section className="section projects">
-      <Title title="Portfolio" theme={theme === 'dark' ? 'dark' : 'light'} />
+      <Title
+        title="Portfolio"
+        theme={currentTheme === 'dark' ? 'dark' : 'light'}
+      />
       <div className="section-center-50">
         {items > 0
           ? projects.map((project, index) => {
@@ -89,7 +95,7 @@ const Projects = props => {
 
         {items > 0 && (
           <div className="btnCenter">
-            <Link to="/projects" className={`btn ${theme}`}>
+            <Link to="/projects" className={`btn ${currentTheme}`}>
               {titleBtnMore}
             </Link>
           </div>

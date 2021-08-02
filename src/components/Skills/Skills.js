@@ -63,9 +63,14 @@ const Skills = props => {
   const state = useContext(GlobalStateContext);
 
   let currentLanguaje = state.language;
+  let currentTheme = state.selectedTheme;
+
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
+
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
   }
 
   const { backgroundWhite = false } = props;
@@ -103,23 +108,24 @@ const Skills = props => {
     otherSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
-
   return (
     <>
       <section
         className={'section skills ' + (backgroundWhite && 'background-white')}
       >
-        <Title title="Skills" theme={theme === 'dark' ? 'dark' : 'light'} />
+        <Title
+          title="Skills"
+          theme={currentTheme === 'dark' ? 'dark' : 'light'}
+        />
 
         <div className="skills-list section-center">
           <SubTitle
             title="Frontend"
-            theme={theme === 'dark' ? 'dark' : 'light'}
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
           />
           <SkillBar
             skills={frontSkills}
-            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -128,7 +134,7 @@ const Skills = props => {
           <SubTitle title="Backend" />
           <SkillBar
             skills={backSkills}
-            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -137,7 +143,7 @@ const Skills = props => {
           <SubTitle title="Database" />
           <SkillBar
             skills={dbSkills}
-            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -146,7 +152,7 @@ const Skills = props => {
           <SubTitle title="DevOps" />
           <SkillBar
             skills={devOpsSkills}
-            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -155,7 +161,7 @@ const Skills = props => {
           <SubTitle title="Other" />
           <SkillBar
             skills={otherSkills}
-            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -174,7 +180,7 @@ const Skills = props => {
           >
             <Title
               title="@larturi on GitHub"
-              theme={theme === 'dark' ? 'dark' : 'light'}
+              theme={currentTheme === 'dark' ? 'dark' : 'light'}
             />
           </a>
           <div className="react-github-container">

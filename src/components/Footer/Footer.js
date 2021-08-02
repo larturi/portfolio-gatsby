@@ -9,12 +9,15 @@ const Footer = () => {
   const state = useContext(GlobalStateContext);
 
   let currentLanguaje = state.language;
+  let currentTheme = state.selectedTheme;
+
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
-  }
 
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
+  }
 
   return (
     <footer className="footer">
@@ -25,7 +28,7 @@ const Footer = () => {
               <a
                 href={link.url}
                 key={link.id}
-                className={`social-link ${theme}`}
+                className={`social-link ${currentTheme}`}
                 aria-label={link.text}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,7 +39,7 @@ const Footer = () => {
           })}
         </div>
         <p>
-          <span className={`copyright-autor-name ${theme}`}>
+          <span className={`copyright-autor-name ${currentTheme}`}>
             Leandro Arturi{' '}
           </span>
           copyright&copy;{new Date().getFullYear()}

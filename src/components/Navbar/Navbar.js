@@ -1,6 +1,6 @@
 import './Navbar.scss';
 
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
 import { HiTranslate } from 'react-icons/hi';
 import { graphql, useStaticQuery, Link } from 'gatsby';
@@ -25,54 +25,60 @@ const query = graphql`
 `;
 
 const Navbar = props => {
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  const [isDarkMode, setIsDarkMode] = useState(state?.selectedTheme || false);
 
   const { toggleSidebar, path } = props;
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
   const dataAll = useStaticQuery(query);
 
-  let currentLanguaje = state.language || 'es-AR';
+  let currentLanguaje = state.selectedLang || 'es-AR';
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
+  }
+
+  let currentTheme = state.selectedTheme || 'dark';
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('theme')) {
+      currentTheme = localStorage.getItem('theme');
+    }
+  }
+
+  if (typeof window !== 'undefined') {
+    if (!localStorage.getItem('locale')) {
+      localStorage.setItem('locale', 'es-AR');
+    }
+    if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'dark');
+    }
   }
 
   const data = dataAll.strapi.navs.filter(
     nav => nav.locale === currentLanguaje
   );
 
-  if (typeof window !== 'undefined') {
-    if (!localStorage.getItem('locale')) {
-      localStorage.setItem('locale', 'es-AR');
-    }
-  }
-
-  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
-
   const page = path !== '/' ? 'page' : '';
 
-  console.log(isDarkMode);
-
-  const toggleTheme = () => {
+  useEffect(() => {
     const selectedTheme = isDarkMode ? 'dark' : 'light';
-    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('theme', selectedTheme);
     dispatch({ type: 'SET_THEME', payload: selectedTheme });
-  };
+  }, [isDarkMode]);
 
   return (
-    <nav className={`navbar ${page} ${theme}`}>
+    <nav className={`navbar ${page} ${currentTheme}`}>
       <div className="nav-center">
         <div className="nav-header">
           <DarkModeToggle
-            onChange={toggleTheme}
+            onChange={setIsDarkMode}
             checked={isDarkMode}
             className="dark-mode-toggle"
             size={60}
           />
 
           <button
-            className={`link-button ${theme}`}
+            className={`link-button ${currentTheme}`}
             type="button"
             onClick={() => {
               const selectedLang = currentLanguaje === 'es-AR' ? 'en' : 'es-AR';
@@ -80,15 +86,15 @@ const Navbar = props => {
               dispatch({ type: 'SET_LANGUAGE', payload: selectedLang });
             }}
           >
-            <HiTranslate className={`nav-language-icon ${theme}`} />
-            <span className={`nav-language-text ${theme}`}>
+            <HiTranslate className={`nav-language-icon ${currentTheme}`} />
+            <span className={`nav-language-text ${currentTheme}`}>
               {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
             </span>
           </button>
 
           <button
             type="button"
-            className={`toggle-btn ${theme}`}
+            className={`toggle-btn ${currentTheme}`}
             aria-label="menu"
             onClick={toggleSidebar}
           >
@@ -98,13 +104,13 @@ const Navbar = props => {
             </span>
           </button>
         </div>
-        <ul className={`page-links nav-links ${theme}`}>
+        <ul className={`page-links nav-links ${currentTheme}`}>
           {data.map(link => {
             return (
               <li key={link.order}>
                 <Link
                   to={link.url}
-                  activeClassName={`active ${theme}`}
+                  activeClassName={`active ${currentTheme}`}
                   className={path === link.url ? 'active' : ''}
                 >
                   {link.text}
