@@ -1,9 +1,10 @@
 import './Navbar.scss';
 
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
 import { HiTranslate } from 'react-icons/hi';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import DarkModeToggle from 'react-dark-mode-toggle';
 
 import {
   GlobalDispatchContext,
@@ -24,6 +25,8 @@ const query = graphql`
 `;
 
 const Navbar = props => {
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
+
   const { toggleSidebar, path } = props;
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
@@ -49,10 +52,25 @@ const Navbar = props => {
 
   const page = path !== '/' ? 'page' : '';
 
+  console.log(isDarkMode);
+
+  const toggleTheme = () => {
+    const selectedTheme = isDarkMode ? 'dark' : 'light';
+    setIsDarkMode(!isDarkMode);
+    dispatch({ type: 'SET_THEME', payload: selectedTheme });
+  };
+
   return (
     <nav className={`navbar ${page} ${theme}`}>
       <div className="nav-center">
         <div className="nav-header">
+          <DarkModeToggle
+            onChange={toggleTheme}
+            checked={isDarkMode}
+            className="dark-mode-toggle"
+            size={60}
+          />
+
           <button
             className={`link-button ${theme}`}
             type="button"
@@ -67,6 +85,7 @@ const Navbar = props => {
               {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
             </span>
           </button>
+
           <button
             type="button"
             className={`toggle-btn ${theme}`}

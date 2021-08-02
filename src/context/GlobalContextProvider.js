@@ -5,6 +5,7 @@ export const GlobalDispatchContext = React.createContext();
 
 const initialState = {
   selectedLang: 'es-AR',
+  selectedTheme: 'dark',
 };
 
 function reducer(state, action) {
@@ -13,6 +14,13 @@ function reducer(state, action) {
       return {
         ...state,
         selectedLang: action.payload,
+      };
+    }
+
+    case 'SET_THEME': {
+      return {
+        ...state,
+        selectedTheme: action.payload,
       };
     }
 
