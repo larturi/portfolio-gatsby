@@ -115,6 +115,21 @@
     }
 }
 
+.link-button-toggle-lang {
+    background: none!important;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $clr-grey-1;
+    letter-spacing: $spacing;
+    transition: $transition;
+    padding-bottom: 7px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 11px;
+}
+
 @media screen and (min-width: 1170px) {
     .home-profesion  {
         font-size: 1rem;

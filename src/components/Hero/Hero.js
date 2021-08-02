@@ -4,9 +4,13 @@ import React, { useContext } from 'react';
 import { Link } from 'gatsby';
 import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
+import { HiTranslate } from 'react-icons/hi';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
+import {
+  GlobalDispatchContext,
+  GlobalStateContext,
+} from '../../context/GlobalContextProvider';
 
 const query = graphql`
   {
@@ -39,6 +43,7 @@ const query = graphql`
 
 const Hero = () => {
   const state = useContext(GlobalStateContext);
+  const dispatch = useContext(GlobalDispatchContext);
   const { dataES, dataEN, img, imgDark } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
@@ -60,6 +65,21 @@ const Hero = () => {
     <header className={`hero ${currentTheme}`}>
       <section className="section-center hero-center">
         <article className={`hero-info ${currentTheme}`}>
+          <button
+            className={`link-button-toggle-lang`}
+            type="button"
+            onClick={() => {
+              const selectedLang = currentLanguaje === 'es-AR' ? 'en' : 'es-AR';
+              localStorage.setItem('locale', selectedLang);
+              dispatch({ type: 'SET_LANGUAGE', payload: selectedLang });
+            }}
+          >
+            <HiTranslate className={`nav-language-icon ${currentTheme}`} />
+            <span className={`nav-language-text ${currentTheme}`}>
+              {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
+            </span>
+          </button>
+
           <div>
             <div className={`underline ${currentTheme}`}></div>
             <h1 className={`home-name-hello ${currentTheme}`}>

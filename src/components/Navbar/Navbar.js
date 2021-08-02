@@ -2,7 +2,6 @@ import './Navbar.scss';
 
 import React, { useState, useContext, useEffect } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
-import { HiTranslate } from 'react-icons/hi';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import DarkModeToggle from 'react-dark-mode-toggle';
 
@@ -79,21 +78,6 @@ const Navbar = props => {
             className="dark-mode-toggle"
             size={60}
           />
-
-          <button
-            className={`link-button ${currentTheme}`}
-            type="button"
-            onClick={() => {
-              const selectedLang = currentLanguaje === 'es-AR' ? 'en' : 'es-AR';
-              localStorage.setItem('locale', selectedLang);
-              dispatch({ type: 'SET_LANGUAGE', payload: selectedLang });
-            }}
-          >
-            <HiTranslate className={`nav-language-icon ${currentTheme}`} />
-            <span className={`nav-language-text ${currentTheme}`}>
-              {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
-            </span>
-          </button>
 
           <button
             type="button"
