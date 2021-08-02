@@ -55,7 +55,8 @@
 }
 
 .social-link:hover {
-    color: $clr-primary-5;
+    &.dark { color: $clr-primary-7-dark; }
+    &.light { color: $clr-primary-5; }
 }
 
 .home-name-hello {

@@ -23,10 +23,24 @@
     margin: 0 auto 1rem auto;
 }
 
-.footer .social-link {
-    color: $clr-white;
+.footer .social-link  {
+    
+    &.dark { 
+        color: $clr-white;
+    }
+    &.light { 
+        color: $clr-white;
+    }
 }
 
 .footer .social-link:hover {
     color: $clr-primary-5;
+}
+.copyright-autor-name {
+    &.dark { 
+        color: $clr-primary-7-dark;
+    }
+    &.light { 
+        color:  $clr-primary-5; 
+    }
 }
