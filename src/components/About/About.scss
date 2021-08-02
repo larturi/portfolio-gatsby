@@ -10,7 +10,7 @@
     }
 }
 
-.about-img, img {
+.about-img {
     margin-bottom: 2rem;
     display: block;
     border-radius: 100%;
@@ -71,9 +71,8 @@
         grid-template-columns: repeat(15, 1fr);
         align-items: center;
         column-gap: 4rem;
-        // margin-top: 90px;
     }
-    .about-img, img {
+    .about-img {
         grid-column: 1 / span 5;
         margin-bottom: 0;
         border-radius: 100%;

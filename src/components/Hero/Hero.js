@@ -29,12 +29,17 @@ const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
+    imgDark: file(relativePath: { eq: "hero-dark.webp" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
   }
 `;
 
 const Hero = () => {
   const state = useContext(GlobalStateContext);
-  const { dataES, dataEN, img } = useStaticQuery(query);
+  const { dataES, dataEN, img, imgDark } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
   if (typeof window !== 'undefined') {
@@ -80,7 +85,11 @@ const Hero = () => {
         </article>
 
         <GatsbyImage
-          image={img.childImageSharp.gatsbyImageData}
+          image={
+            theme === 'dark'
+              ? imgDark.childImageSharp.gatsbyImageData
+              : img.childImageSharp.gatsbyImageData
+          }
           alt="Leandro Arturi"
           className="hero-img"
         />
