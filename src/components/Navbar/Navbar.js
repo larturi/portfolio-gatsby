@@ -107,6 +107,7 @@ const Navbar = props => {
             </span>
           </button>
         </div>
+
         <ul className={`page-links nav-links ${currentTheme}`}>
           {data.map(link => {
             return (
@@ -114,7 +115,7 @@ const Navbar = props => {
                 <Link
                   to={link.url}
                   activeClassName={`active ${currentTheme}`}
-                  className={path === link.url ? 'active' : ''}
+                  className={path === link.url ? `active ${currentTheme}` : ''}
                 >
                   {link.text}
                 </Link>
