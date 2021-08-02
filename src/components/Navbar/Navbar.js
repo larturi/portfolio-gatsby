@@ -24,7 +24,7 @@ const query = graphql`
 `;
 
 const Navbar = props => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(null);
 
   const { toggleSidebar, path } = props;
   const dispatch = useContext(GlobalDispatchContext);
@@ -44,6 +44,8 @@ const Navbar = props => {
       if (isDarkMode === null) {
         setIsDarkMode(currentTheme === 'dark');
       }
+    } else {
+      setIsDarkMode(currentTheme === 'dark');
     }
   }
 
