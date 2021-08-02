@@ -72,7 +72,7 @@ const Projects = props => {
 
   return (
     <section className="section projects">
-      <Title title="Portfolio" />
+      <Title title="Portfolio" theme={theme === 'dark' ? 'dark' : 'light'} />
       <div className="section-center-50">
         {items > 0
           ? projects.map((project, index) => {

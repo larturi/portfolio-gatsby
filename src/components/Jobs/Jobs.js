@@ -89,7 +89,7 @@ const Jobs = props => {
 
   return (
     <section className="section jobs">
-      <Title title={title} />
+      <Title title={title} theme={theme === 'dark' ? 'dark' : 'light'} />
 
       <div className="section-center-50">
         {items > 0

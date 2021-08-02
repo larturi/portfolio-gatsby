@@ -139,7 +139,10 @@ const Education = props => {
         'section educations ' + (backgroundWhite && 'background-white')
       }
     >
-      <Title title={titleEducation} />
+      <Title
+        title={titleEducation}
+        theme={theme === 'dark' ? 'dark' : 'light'}
+      />
       <div className="section-center-50">
         {degrees.map((degree, index) => {
           return <Degree key={degree.order} index={index} {...degree} />;
@@ -148,7 +151,7 @@ const Education = props => {
 
       <div className="education-separador" />
 
-      <Title title={titleCourses} />
+      <Title title={titleCourses} theme={theme === 'dark' ? 'dark' : 'light'} />
       <div className="section-center-50">
         {items > 0
           ? courses.map((course, index) => {

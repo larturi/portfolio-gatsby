@@ -104,17 +104,19 @@ const Skills = props => {
   );
 
   const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
-  console.log(theme);
 
   return (
     <>
       <section
         className={'section skills ' + (backgroundWhite && 'background-white')}
       >
-        <Title title="Skills" />
+        <Title title="Skills" theme={theme === 'dark' ? 'dark' : 'light'} />
 
         <div className="skills-list section-center">
-          <SubTitle title="Frontend" />
+          <SubTitle
+            title="Frontend"
+            theme={theme === 'dark' ? 'dark' : 'light'}
+          />
           <SkillBar
             skills={frontSkills}
             colors={theme === 'dark' ? skillsColorsDark : skillsColors}
@@ -170,7 +172,10 @@ const Skills = props => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Title title="@larturi on GitHub" />
+            <Title
+              title="@larturi on GitHub"
+              theme={theme === 'dark' ? 'dark' : 'light'}
+            />
           </a>
           <div className="react-github-container">
             <GithubCal />

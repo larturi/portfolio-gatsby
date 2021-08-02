@@ -202,7 +202,8 @@ p {
     width: 3rem;
     height: 0.25rem;
     margin-bottom: 2rem;
-    background: $clr-primary-5;
+    &.dark { background: $clr-primary-5-dark; }
+    &.light { background: $clr-primary-5; }
 }
 
 .bg-grey {

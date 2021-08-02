@@ -9,9 +9,6 @@
     display: flex;
     align-items: center;
     z-index: 200;
-
-    &.dark { background: $clr-black; }
-    &.light { background: $clr-white; }
 }
 
 .nav-center {

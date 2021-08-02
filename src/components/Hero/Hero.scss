@@ -79,6 +79,7 @@
 }
 
 @media screen and (min-width: 768px) {
+
     .hero::before {
         content: "";
         position: absolute;
@@ -86,8 +87,16 @@
         left: 65%;
         right: 0;
         bottom: 0;
+    }
+
+    .hero.dark::before {
+        background: $clr-primary-6-dark;
+    }
+
+    .hero.light::before {
         background: $clr-white;
     }
+
     .hero-center {
         grid-template-columns: repeat(12, 1fr);
     }

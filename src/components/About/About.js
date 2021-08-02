@@ -51,6 +51,7 @@ const About = () => {
   }
 
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
+  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
 
   const { tecnologias } = skills;
 
@@ -64,7 +65,10 @@ const About = () => {
         />
 
         <article className="about-text">
-          <Title title={about.title} />
+          <Title
+            title={about.title}
+            theme={theme === 'dark' ? 'dark' : 'light'}
+          />
           <p>{about.info}</p>
 
           <div className="about-stack">
