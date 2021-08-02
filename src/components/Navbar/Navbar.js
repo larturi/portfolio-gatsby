@@ -45,12 +45,14 @@ const Navbar = props => {
     }
   }
 
+  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${theme}`}>
       <div className="nav-center">
         <div className="nav-header">
           <button
-            className="link-button"
+            className={`link-button ${theme}`}
             type="button"
             onClick={() => {
               const selectedLang = currentLanguaje === 'es-AR' ? 'en' : 'es-AR';
@@ -58,14 +60,14 @@ const Navbar = props => {
               dispatch({ type: 'SET_LANGUAGE', payload: selectedLang });
             }}
           >
-            <HiTranslate className="nav-language-icon" />
-            <span className="nav-language-text">
+            <HiTranslate className={`nav-language-icon ${theme}`} />
+            <span className={`nav-language-text ${theme}`}>
               {currentLanguaje === 'es-AR' ? 'English' : 'Español'}
             </span>
           </button>
           <button
             type="button"
-            className="toggle-btn"
+            className={`toggle-btn ${theme}`}
             aria-label="menu"
             onClick={toggleSidebar}
           >
@@ -75,13 +77,13 @@ const Navbar = props => {
             </span>
           </button>
         </div>
-        <ul className="page-links nav-links">
+        <ul className={`page-links nav-links ${theme}`}>
           {data.map(link => {
             return (
               <li key={link.order}>
                 <Link
                   to={link.url}
-                  activeClassName="active"
+                  activeClassName={`active ${theme}`}
                   className={path === link.url ? 'active' : ''}
                 >
                   {link.text}

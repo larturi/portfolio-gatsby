@@ -1,11 +1,13 @@
-@import '../../sass/variables.scss';
+@import '../../sass/index.scss';
 
 .hero {
     margin-top: -5rem;
     padding-top: 5rem;
     height: 100vh;
-    background: $clr-primary-10;
     position: relative;
+
+    &.dark { background: $clr-primary-10-dark; }
+    &.light { background: $clr-primary-10; }
 }
   
 .hero-center {
@@ -20,11 +22,13 @@
 }
 
 .hero-info {
-  background: $clr-primary-10;
+    &.dark { background: $clr-primary-10-dark; }
+    &.light { background: $clr-primary-10; }
 }
 
 .home-profesion {
-  color: $clr-grey-5;
+    &.dark { color: $clr-grey-5-dark; }
+    &.light { color: $clr-grey-5; }
 }
 
 .hero-icons {
@@ -44,12 +48,19 @@
 
 .social-link {
     font-size: 1.75rem;
-    color: $clr-grey-1;
     transition: $transition;
+
+    &.dark { color: $clr-white; }
+    &.light { color: $clr-grey-1; }
 }
 
 .social-link:hover {
     color: $clr-primary-5;
+}
+
+.home-name-hello {
+    &.dark { color: $clr-white; }
+    &.light { color: $clr-black; }
 }
 
 @media only screen and (max-width: 767px) {

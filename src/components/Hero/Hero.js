@@ -43,16 +43,21 @@ const Hero = () => {
   }
 
   const data = currentLanguaje === 'es-AR' ? dataES : dataEN;
+  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
 
   return (
-    <header className="hero">
+    <header className={`hero ${theme}`}>
       <section className="section-center hero-center">
-        <article className="hero-info">
+        <article className={`hero-info ${theme}`}>
           <div>
-            <div className="underline"></div>
-            <h1 className="home-name-hello">Leandro Arturi 👋</h1>
-            <h2 className="home-profesion">{data.home.text}</h2>
-            <Link to="/about" className="btn btn-hero" aria-label="About">
+            <div className={`underline ${theme}`}></div>
+            <h1 className={`home-name-hello ${theme}`}>Leandro Arturi 👋</h1>
+            <h2 className={`home-profesion ${theme}`}>{data.home.text}</h2>
+            <Link
+              to="/about"
+              className={`btn btn-hero ${theme}`}
+              aria-label="About"
+            >
               {data.home.aboutLink}
             </Link>
             <div className="social-links">
@@ -64,7 +69,7 @@ const Hero = () => {
                     rel="noopener noreferrer"
                     key={link.id}
                     aria-label={link.text}
-                    className="social-link"
+                    className={`social-link ${theme}`}
                   >
                     {link.icon}
                   </a>

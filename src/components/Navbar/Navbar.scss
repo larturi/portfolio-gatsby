@@ -1,4 +1,4 @@
-@import '../../sass/variables.scss';
+@import '../../sass/index.scss';
 
 .navbar {
     position: absolute;
@@ -9,7 +9,9 @@
     display: flex;
     align-items: center;
     z-index: 200;
-    background: $clr-white;
+
+    &.dark { background: $clr-black; }
+    &.light { background: $clr-white; }
 }
 
 .nav-center {
@@ -30,23 +32,31 @@
 
 .nav-language-icon {
   margin: -2px 0 -1px 0px;
+  &.dark { color: $font-color-light; }
+  &.light { color: $font-color-dark; }
 }
 
 .nav-language-text {
   margin-left: 5px;
+  &.dark { color: $font-color-light; }
+  &.light { color: $font-color-dark; }
 }
 
 .toggle-btn {
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: $clr-primary-5;
+  
   cursor: pointer;
   transition: $transition;
+
+  &.dark { color: $clr-primary-5-dark; }
+  &.light { color: $clr-primary-5; }
 }
 
 .toggle-btn:hover {
-  color: $clr-primary-2;
+  &.dark { color: $clr-primary-5-dark; }
+  &.light { color: $clr-primary-5; }
 }
 
 .nav-links {
@@ -68,9 +78,27 @@
 }
 
 .link-button:hover {
-  color: $clr-primary-5;
-  box-shadow: 0px 2px $clr-primary-5;
+  &.dark { 
+    color: $clr-primary-5-dark; 
+    box-shadow: 0px 2px $clr-primary-5-dark;
+  }
+  &.light { 
+    color: $clr-primary-5;
+    box-shadow: 0px 2px $clr-primary-5;
+  }
 }
+
+.btn-hero {
+  &.dark { 
+    background: $clr-primary-5-dark;
+    color: $font-color-light;
+  }
+  &.light { 
+    background: $clr-primary-5;
+    color: $clr-primary-10;
+  }
+}
+
   
 @media screen and (min-width: 992px) {
   .navbar {
@@ -87,6 +115,9 @@
   .nav-links {
     display: flex;
     justify-content: flex-end;
+
+    &.dark a { color: $clr-grey-1-dark !important; }
+    &.light a { color: $clr-grey-1 !important; }
   }
 
   .nav-links li {
@@ -95,20 +126,32 @@
 
   .nav-links a {
     text-transform: capitalize;
-    color: $clr-grey-1;
     letter-spacing: $spacing;
     transition: $transition;
     padding: 0.5rem 0;
+
   }
 
   .nav-links a:hover {
-    color: $clr-primary-5;
-    box-shadow: 0px 2px $clr-primary-5;
+    &.dark { 
+      color: $clr-primary-5-dark; 
+      box-shadow: 0px 2px $clr-primary-5-dark;
+    }
+    &.light { 
+      color: $clr-primary-5;
+      box-shadow: 0px 2px $clr-primary-5;
+    }
   }
 
   .active {
-    color: $clr-primary-5;
-    box-shadow: 0px 2px $clr-primary-5;
+    &.dark { 
+      color: $clr-primary-5-dark; 
+      box-shadow: 0px 2px $clr-primary-5-dark;
+    }
+    &.light { 
+      color: $clr-primary-5;
+      box-shadow: 0px 2px $clr-primary-5;
+    }
   }
 
   .nav-center {
