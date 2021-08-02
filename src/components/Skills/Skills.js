@@ -1,18 +1,14 @@
 import './Skills.scss';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import loadable from '@loadable/component';
 import Title from '../Title';
 import SubTitle from '../Title/SubTitle';
 import GithubCal from '../GithubCal';
 
-import {
-  frontendSkillsColors,
-  backendSkillsColors,
-  dbSkillsColors,
-  devOpsSkillsColors,
-  moreSkillsColors,
-} from '../../constants/skills_colors';
+import { GlobalStateContext } from '../../context/GlobalContextProvider';
+
+import { skillsColors, skillsColorsDark } from '../../constants/skills_colors';
 
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -64,6 +60,14 @@ const query = graphql`
 const SkillBar = loadable(() => import('react-skillbars'));
 
 const Skills = props => {
+  const state = useContext(GlobalStateContext);
+
+  let currentLanguaje = state.language;
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('locale'))
+      currentLanguaje = localStorage.getItem('locale');
+  }
+
   const { backgroundWhite = false } = props;
 
   const { skillsFront, skillsBack, skillsDb, skillsDevOps, skillsOther } =
@@ -99,6 +103,9 @@ const Skills = props => {
     otherSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
+  const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
+  console.log(theme);
+
   return (
     <>
       <section
@@ -110,7 +117,7 @@ const Skills = props => {
           <SubTitle title="Frontend" />
           <SkillBar
             skills={frontSkills}
-            colors={frontendSkillsColors}
+            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -119,7 +126,7 @@ const Skills = props => {
           <SubTitle title="Backend" />
           <SkillBar
             skills={backSkills}
-            colors={backendSkillsColors}
+            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -128,7 +135,7 @@ const Skills = props => {
           <SubTitle title="Database" />
           <SkillBar
             skills={dbSkills}
-            colors={dbSkillsColors}
+            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -137,7 +144,7 @@ const Skills = props => {
           <SubTitle title="DevOps" />
           <SkillBar
             skills={devOpsSkills}
-            colors={devOpsSkillsColors}
+            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
@@ -146,7 +153,7 @@ const Skills = props => {
           <SubTitle title="Other" />
           <SkillBar
             skills={otherSkills}
-            colors={moreSkillsColors}
+            colors={theme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
           />
