@@ -47,8 +47,10 @@ const Navbar = props => {
 
   const theme = currentLanguaje === 'es-AR' ? 'dark' : 'light';
 
+  const page = path !== '/' ? 'page' : '';
+
   return (
-    <nav className={`navbar ${theme}`}>
+    <nav className={`navbar ${page} ${theme}`}>
       <div className="nav-center">
         <div className="nav-header">
           <button

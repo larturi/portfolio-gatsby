@@ -11,6 +11,17 @@
     z-index: 200;
 }
 
+.navbar.page {
+  &.dark { 
+    background: $clr-primary-10-dark;
+    color: $clr-grey-1-dark;
+  }
+  &.light { 
+      background: $clr-white;
+      color: $clr-grey-1; 
+  }
+}
+
 .nav-center {
   width: 90vw;
   max-width: 1170px;
