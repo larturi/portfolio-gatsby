@@ -22,8 +22,7 @@
 }
 
 .hero-info {
-    &.dark { background: $clr-primary-10-dark; }
-    &.light { background: $clr-primary-10; }
+    z-index: 2;
 }
 
 .home-profesion {
