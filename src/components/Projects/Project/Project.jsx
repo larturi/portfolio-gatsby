@@ -1,14 +1,8 @@
-import React, { useContext } from 'react';
-import { GlobalStateContext } from '../../../context/GlobalContextProvider';
+import React from 'react';
+import { useCurrentTheme } from '../../../hooks/useCurrentTheme';
 
 const Project = ({ description, title, tecnologias, url }) => {
-  const state = useContext(GlobalStateContext);
-
-  let currentTheme = state.selectedTheme;
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
 
   return (
     <div className="card-info">

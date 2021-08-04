@@ -1,11 +1,11 @@
 import './Projects.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import Title from '../Title';
 import Project from './Project';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
 const query = graphql`
   {
@@ -51,16 +51,10 @@ const query = graphql`
 const Projects = props => {
   const { items = 0 } = props;
 
-  const state = useContext(GlobalStateContext);
   const { projectsES, projectsEN, moreES, moreEN } = useStaticQuery(query);
 
-  let currentLanguaje = state.language;
   let { currentTheme } = useCurrentTheme();
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
-  }
+  let { currentLanguaje } = useCurrentLanguaje();
 
   const projects =
     currentLanguaje === 'es-AR' ? projectsES.projects : projectsEN.projects;

@@ -1,11 +1,11 @@
 import './Sidebar.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import socialLinks from '../../constants/social_links';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { FaTimes } from 'react-icons/fa';
-
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
 const query = graphql`
   {
@@ -21,18 +21,13 @@ const query = graphql`
 `;
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-  const state = useContext(GlobalStateContext);
-  let currentTheme = state.selectedTheme;
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
+  let { currentLanguaje } = useCurrentLanguaje();
 
   const dataAll = useStaticQuery(query);
 
   const links = dataAll.strapi.navs.filter(
-    nav => nav.locale === state.selectedLang
+    nav => nav.locale === currentLanguaje
   );
 
   return (

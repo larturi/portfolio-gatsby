@@ -7,11 +7,9 @@ import socialLinks from '../../constants/social_links';
 import { HiTranslate } from 'react-icons/hi';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
-import {
-  GlobalDispatchContext,
-  GlobalStateContext,
-} from '../../context/GlobalContextProvider';
+import { GlobalDispatchContext } from '../../context/GlobalContextProvider';
 
 const query = graphql`
   {
@@ -43,16 +41,10 @@ const query = graphql`
 `;
 
 const Hero = () => {
-  const state = useContext(GlobalStateContext);
   const dispatch = useContext(GlobalDispatchContext);
   const { dataES, dataEN, img, imgDark } = useStaticQuery(query);
 
-  let currentLanguaje = state.language;
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
-  }
-
+  let { currentLanguaje } = useCurrentLanguaje();
   let { currentTheme } = useCurrentTheme() || 'dark';
 
   const data = currentLanguaje === 'es-AR' ? dataES : dataEN;

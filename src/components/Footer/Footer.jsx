@@ -1,19 +1,11 @@
 import './Footer.scss';
 
-import React, { useContext } from 'react';
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
-
+import React from 'react';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import socialLinks from '../../constants/social_links';
 
 const Footer = () => {
-  const state = useContext(GlobalStateContext);
-
-  let currentTheme = state.selectedTheme;
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
 
   return (
     <footer className="footer">

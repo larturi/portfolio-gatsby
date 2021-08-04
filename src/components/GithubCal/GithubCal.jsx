@@ -1,20 +1,12 @@
 import './GithubCal.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import GitHubCalendar from 'react-github-calendar';
 import ReactTooltip from 'react-tooltip';
-
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 
 const GithubCal = () => {
-  const state = useContext(GlobalStateContext);
-
-  let currentTheme = state.selectedTheme;
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
 
   return (
     <GitHubCalendar

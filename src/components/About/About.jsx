@@ -1,11 +1,11 @@
 import './About.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import Title from '../../components/Title';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
 const query = graphql`
   {
@@ -40,16 +40,10 @@ const query = graphql`
 `;
 
 const About = () => {
-  const state = useContext(GlobalStateContext);
   const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
 
-  let currentLanguaje = state.selectedLang;
   let { currentTheme } = useCurrentTheme();
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
-  }
+  let { currentLanguaje } = useCurrentLanguaje();
 
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
 

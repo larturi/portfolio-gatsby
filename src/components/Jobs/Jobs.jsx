@@ -1,11 +1,11 @@
 import './Jobs.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import Title from '../Title';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Job from './Job';
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
 const query = graphql`
   {
@@ -67,17 +67,11 @@ const query = graphql`
 const Jobs = props => {
   const { items = 0 } = props;
 
-  const state = useContext(GlobalStateContext);
   const { jobsES, jobsEN, titleES, titleEN, moreES, moreEN } =
     useStaticQuery(query);
 
-  let currentLanguaje = state.language;
+  let { currentLanguaje } = useCurrentLanguaje();
   let { currentTheme } = useCurrentTheme();
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
-  }
 
   const jobs = currentLanguaje === 'es-AR' ? jobsES.jobs : jobsEN.jobs;
   const title =

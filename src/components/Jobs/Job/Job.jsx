@@ -1,16 +1,11 @@
-import React, { useContext } from 'react';
-import { GlobalStateContext } from '../../../context/GlobalContextProvider';
+import React from 'react';
+import { useCurrentTheme } from '../../../hooks/useCurrentTheme';
 
 const Job = props => {
   const { job, index } = props;
   const { puesto, organization, periodo, description } = job;
-  const state = useContext(GlobalStateContext);
 
-  let currentTheme = state.selectedTheme;
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
 
   return (
     <div className="card-info" key={index}>

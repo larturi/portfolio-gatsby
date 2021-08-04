@@ -1,12 +1,12 @@
 import './Education.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import Title from '../../components/Title';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Degree from './Degree';
 import Course from './Course';
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
 const query = graphql`
   {
@@ -93,7 +93,6 @@ const query = graphql`
 
 const Education = props => {
   const { backgroundWhite = false, items = 0 } = props;
-  const state = useContext(GlobalStateContext);
 
   const {
     coursesEN,
@@ -108,13 +107,8 @@ const Education = props => {
     moreEN,
   } = useStaticQuery(query);
 
-  let currentLanguaje = state.language;
+  let { currentLanguaje } = useCurrentLanguaje();
   let { currentTheme } = useCurrentTheme();
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('locale'))
-      currentLanguaje = localStorage.getItem('locale');
-  }
 
   const degrees =
     currentLanguaje === 'es-AR' ? degreeES.educations : degreeEN.educations;
