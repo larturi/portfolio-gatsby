@@ -127,7 +127,10 @@ const Skills = props => {
           />
 
           <div className="separador-section-skills" />
-          <SubTitle title="Backend" />
+          <SubTitle
+            title="Backend"
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
+          />
           <SkillBar
             skills={backSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
@@ -136,7 +139,10 @@ const Skills = props => {
           />
 
           <div className="separador-section-skills" />
-          <SubTitle title="Database" />
+          <SubTitle
+            title="Database"
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
+          />
           <SkillBar
             skills={dbSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
@@ -145,7 +151,10 @@ const Skills = props => {
           />
 
           <div className="separador-section-skills" />
-          <SubTitle title="DevOps" />
+          <SubTitle
+            title="DevOps"
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
+          />
           <SkillBar
             skills={devOpsSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
@@ -154,7 +163,10 @@ const Skills = props => {
           />
 
           <div className="separador-section-skills" />
-          <SubTitle title="Other" />
+          <SubTitle
+            title="Other"
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
+          />
           <SkillBar
             skills={otherSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
