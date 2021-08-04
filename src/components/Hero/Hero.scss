@@ -149,8 +149,19 @@
 @media screen and (max-width: 200px), 
        screen and (max-height: 560px) {
         .hero-img {
-            width: 80%;
-            margin: 0 auto;
-            margin-right: -4px;
+            max-width: 200px;
+            width: 70%;
+            margin: 0px auto;
+            margin-right: -10px;
+            margin-bottom: 15px;
+        }
+
+        .home-profesion {
+            margin: 0;
+        }
+
+        .social-links {
+            width: 10rem;
+            margin-top: -10px;
         }
 }
