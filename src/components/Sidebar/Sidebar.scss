@@ -13,6 +13,13 @@
     opacity: 0;
     transition: $transition;
     transform: translateX(-100%);
+
+    &.dark { 
+        background: $clr-black;
+      }
+    &.light { 
+        background: $clr-primary-9;
+    }
 }
 
 .show-sidebar {
@@ -36,9 +43,22 @@
     border-radius: $radius;
 }
 
-.sidebar-links li a:hover {
-    background: $clr-primary-9;
-    color: $clr-primary-1;
+.sidebar-links.dark li a {
+    color: $clr-grey-1-dark;
+}
+
+.sidebar-links.light li a {
+    color: $font-color-dark;
+}
+
+.sidebar-links.dark li a:hover {
+    background: $clr-primary-6-dark;
+    color: $clr-grey-10;
+}
+
+.sidebar-links.light li a:hover {
+    background: $clr-primary-6;
+    color: $clr-grey-10;
 }
 
 .close-btn {
@@ -48,8 +68,14 @@
     font-size: 2.5rem;
     background: transparent;
     border-color: transparent;
-    color: $clr-red-dark;
     cursor: pointer;
+
+    &.dark { 
+        color: $clr-primary-7-dark;
+      }
+    &.light { 
+        color: $clr-primary-4;
+    }
 }
 
 @media screen and (min-width: 992px) {

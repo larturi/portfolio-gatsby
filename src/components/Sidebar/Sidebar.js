@@ -22,6 +22,13 @@ const query = graphql`
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const state = useContext(GlobalStateContext);
+  let currentTheme = state.selectedTheme;
+
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
+  }
+
   const dataAll = useStaticQuery(query);
 
   const links = dataAll.strapi.navs.filter(
@@ -29,16 +36,22 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   );
 
   return (
-    <aside className={isOpen ? 'sidebar show-sidebar' : 'sidebar'}>
+    <aside
+      className={
+        isOpen
+          ? `sidebar show-sidebar ${currentTheme}`
+          : `sidebar ${currentTheme}`
+      }
+    >
       <button
-        className="close-btn"
+        className={`close-btn ${currentTheme}`}
         type="button"
         onClick={() => toggleSidebar()}
       >
         <FaTimes />
       </button>
       <div className="side-container">
-        <ul className={isOpen ? 'sidebar-links' : null}>
+        <ul className={isOpen ? `sidebar-links ${currentTheme}` : null}>
           {links.map(link => {
             return (
               <li key={link.order}>
@@ -59,8 +72,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               <li key={link.id}>
                 <a
                   href={link.url}
-                  className="social-link"
+                  className={`social-link ${currentTheme}`}
                   aria-label={link.text}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {link.icon}
                 </a>

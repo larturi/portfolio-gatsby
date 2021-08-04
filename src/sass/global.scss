@@ -100,6 +100,10 @@ p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: $radius;
 
+    &:hover {
+        opacity: 0.9;
+    }
+
     &.dark { 
         background: $clr-primary-5-dark;
         color: $font-color-light;
@@ -122,11 +126,6 @@ p {
 .btnCenter {
     text-align: center;
     margin-top: 40px;
-}
-
-.btn:hover {
-    color: $clr-primary-1;
-    background: $clr-primary-8;
 }
 
 .center-btn {
