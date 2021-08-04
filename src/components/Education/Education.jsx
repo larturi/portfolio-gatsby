@@ -5,8 +5,8 @@ import Title from '../../components/Title';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Degree from './Degree';
 import Course from './Course';
-
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 
 const query = graphql`
   {
@@ -109,14 +109,11 @@ const Education = props => {
   } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
-  let currentTheme = state.selectedTheme;
+  let { currentTheme } = useCurrentTheme();
 
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
-
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
   }
 
   const degrees =

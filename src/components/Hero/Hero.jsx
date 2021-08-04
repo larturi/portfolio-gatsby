@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import socialLinks from '../../constants/social_links';
 import { HiTranslate } from 'react-icons/hi';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 
 import {
   GlobalDispatchContext,
@@ -52,12 +53,7 @@ const Hero = () => {
       currentLanguaje = localStorage.getItem('locale');
   }
 
-  let currentTheme = state.selectedTheme || 'dark';
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme')) {
-      currentTheme = localStorage.getItem('theme');
-    }
-  }
+  let { currentTheme } = useCurrentTheme() || 'dark';
 
   const data = currentLanguaje === 'es-AR' ? dataES : dataEN;
 

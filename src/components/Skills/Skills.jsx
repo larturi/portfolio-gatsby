@@ -1,15 +1,12 @@
 import './Skills.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import loadable from '@loadable/component';
 import Title from '../Title';
 import SubTitle from '../Title/SubTitle';
 import GithubCal from '../GithubCal';
-
-import { GlobalStateContext } from '../../context/GlobalContextProvider';
-
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { skillsColors, skillsColorsDark } from '../../constants/skills_colors';
-
 import { graphql, useStaticQuery } from 'gatsby';
 
 const query = graphql`
@@ -60,14 +57,7 @@ const query = graphql`
 const SkillBar = loadable(() => import('react-skillbars'));
 
 const Skills = props => {
-  const state = useContext(GlobalStateContext);
-
-  let currentTheme = state.selectedTheme;
-
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
 
   const { backgroundWhite = false } = props;
 

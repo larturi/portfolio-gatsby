@@ -4,8 +4,8 @@ import React, { useContext } from 'react';
 import Title from '../../components/Title';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 
 const query = graphql`
   {
@@ -44,14 +44,11 @@ const About = () => {
   const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
 
   let currentLanguaje = state.selectedLang;
-  let currentTheme = state.selectedTheme;
+  let { currentTheme } = useCurrentTheme();
 
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
-
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
   }
 
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;

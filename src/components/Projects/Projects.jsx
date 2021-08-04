@@ -4,8 +4,8 @@ import React, { useContext } from 'react';
 import Title from '../Title';
 import Project from './Project';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-
 import { GlobalStateContext } from '../../context/GlobalContextProvider';
+import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 
 const query = graphql`
   {
@@ -55,14 +55,11 @@ const Projects = props => {
   const { projectsES, projectsEN, moreES, moreEN } = useStaticQuery(query);
 
   let currentLanguaje = state.language;
-  let currentTheme = state.selectedTheme;
+  let { currentTheme } = useCurrentTheme();
 
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
-
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
   }
 
   const projects =

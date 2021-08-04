@@ -1,18 +1,11 @@
 import '../Education.scss';
 
-import React, { useContext } from 'react';
+import React from 'react';
 import IconoFa from '../../IconFa';
-
-import { GlobalStateContext } from '../../../context/GlobalContextProvider';
+import { useCurrentTheme } from '../../../hooks/useCurrentTheme';
 
 const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
-  const state = useContext(GlobalStateContext);
-
-  let currentTheme = state.selectedTheme;
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('theme'))
-      currentTheme = localStorage.getItem('theme');
-  }
+  let { currentTheme } = useCurrentTheme();
 
   return (
     <div className="card-info card-curso">
