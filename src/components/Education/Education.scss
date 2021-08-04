@@ -91,8 +91,6 @@
 
 .education-label span {
     display: inline-block;
-    background: #dae2ec;
-    color: #617d98;
     margin-right: 0.55rem;
     margin-bottom: 10px;
     padding: 0.38rem 0.70rem;
@@ -104,6 +102,17 @@
     @media only screen and (max-width: 767px) {
         padding: 0.20rem 0.5rem;
         margin-bottom: 6px;
+    }
+}
+
+.education-label {
+    &.dark span { 
+        border: solid 1px $clr-primary-5-dark;
+        color: $clr-primary-5-dark;
+    }
+    &.light span { 
+        border: solid 1px $clr-primary-3;
+        color: $clr-primary-3; 
     }
 }
 

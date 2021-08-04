@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalStateContext } from '../../../context/GlobalContextProvider';
 
 const Project = ({ description, title, tecnologias, url }) => {
+  const state = useContext(GlobalStateContext);
+
+  let currentTheme = state.selectedTheme;
+  if (typeof window !== 'undefined') {
+    if (localStorage.getItem('theme'))
+      currentTheme = localStorage.getItem('theme');
+  }
+
   return (
     <div className="card-info">
       <h3 className="card-slug">
@@ -10,7 +19,7 @@ const Project = ({ description, title, tecnologias, url }) => {
       </h3>
 
       <p className="card-desc">{description}</p>
-      <div className="card-label">
+      <div className={`card-label ${currentTheme}`}>
         {tecnologias.map(item => {
           return <span key={item.name}>{item.name}</span>;
         })}

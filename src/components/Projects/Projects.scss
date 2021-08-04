@@ -18,8 +18,6 @@
 
 .about-stack span {
     display: inline-block;
-    background: $clr-grey-9;
-    color: $clr-grey-3;
     margin-right: 0.55rem;
     padding: 0.25rem 0.5rem;
     border-radius: $radius;
@@ -30,8 +28,6 @@
 
     @media screen and (max-width: 576px) {
         display: inline-block;
-        background: #dae2ec;
-        color: #324d67;
         margin-right: 0.45rem;
         padding: 0.20rem 0.45rem;
         border-radius: 0.25rem;
@@ -39,6 +35,17 @@
         letter-spacing: 1px;
         font-size: 0.7rem;
         
+    }
+}
+
+.about-stack {
+    &.dark span { 
+        border: solid 1px $clr-primary-5-dark;
+        color: $clr-primary-5-dark;
+    }
+    &.light span { 
+        border: solid 1px $clr-primary-3;
+        color: $clr-primary-3; 
     }
 }
 

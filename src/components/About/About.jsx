@@ -74,7 +74,7 @@ const About = () => {
           />
           <p>{about.info}</p>
 
-          <div className="about-stack">
+          <div className={`about-stack ${currentTheme}`}>
             {tecnologias.map(skill => {
               return <span key={skill.id}>{skill.name}</span>;
             })}
