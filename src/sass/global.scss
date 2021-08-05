@@ -1,5 +1,6 @@
 @import './index.scss';
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Lato:400,700&display=swap");
+
 *,
 ::after,
 ::before {
@@ -325,6 +326,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 0.80rem;
+    font-family: 'Lato';
 
     @media screen and (max-width: 576px) {
         display: inline-block;
