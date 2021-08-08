@@ -27,6 +27,14 @@ const query = graphql`
         category
       }
     }
+    skillsMobile: strapi {
+      tecnologias(where: { category: "Mobile" }, sort: "porcentaje:desc") {
+        name
+        porcentaje
+        logo
+        category
+      }
+    }
     skillsDb: strapi {
       tecnologias(where: { category: "Database" }, sort: "porcentaje:desc") {
         name
@@ -61,8 +69,14 @@ const Skills = props => {
 
   const { backgroundWhite = false } = props;
 
-  const { skillsFront, skillsBack, skillsDb, skillsDevOps, skillsOther } =
-    useStaticQuery(query);
+  const {
+    skillsFront,
+    skillsBack,
+    skillsMobile,
+    skillsDb,
+    skillsDevOps,
+    skillsOther,
+  } = useStaticQuery(query);
 
   const { tecnologias: tecnologiasFront } = skillsFront;
   const frontSkills = [];
@@ -80,6 +94,12 @@ const Skills = props => {
   const dbSkills = [];
   tecnologiasDb.map(skill =>
     dbSkills.push({ type: skill.name, level: skill.porcentaje })
+  );
+
+  const { tecnologias: tecnologiasMobile } = skillsMobile;
+  const mobileSkills = [];
+  tecnologiasMobile.map(skill =>
+    mobileSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
   const { tecnologias: tecnologiasDevOps } = skillsDevOps;
@@ -123,6 +143,18 @@ const Skills = props => {
           />
           <SkillBar
             skills={backSkills}
+            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            height={24}
+            animationDelay={100}
+          />
+
+          <div className="separador-section-skills" />
+          <SubTitle
+            title="Mobile"
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
+          />
+          <SkillBar
+            skills={mobileSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
