@@ -54,7 +54,7 @@
 }
 
 .social-link:hover {
-    &.dark { color: $clr-primary-7-dark; }
+    &.dark { color: $clr-primary-5-dark; }
     &.light { color: $clr-primary-5; }
 }
 
@@ -92,7 +92,7 @@
     }
 
     .hero.dark::before {
-        background: $clr-primary-6-dark;
+        background: $clr-primary-5-dark;
     }
 
     .hero.light::before {

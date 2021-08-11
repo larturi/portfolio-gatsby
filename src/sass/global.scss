@@ -147,7 +147,7 @@ p {
         }
 
         .tech-icon {
-            color: $clr-primary-8-dark;
+            color: $clr-primary-5-dark;
         }
 
         a {
@@ -163,8 +163,8 @@ p {
 
             .about-stack span {
                 color: $clr-white;
-                border: solid 1px $clr-primary-6-dark;
-                background: $clr-primary-6-dark;
+                border: solid 1px $clr-primary-5-dark;
+                background: $clr-primary-5-dark;
             }
 
             p {
@@ -176,13 +176,22 @@ p {
         .education-label {
             span {
                 color: $clr-white;
-                border: solid 1px $clr-primary-6-dark;
-                background: $clr-primary-6-dark;
+                border: solid 1px $clr-primary-5-dark;
+                background: $clr-primary-5-dark;
             }
         }
 
         .card-info {
             background: rgba($clr-primary-10-dark, .95);
+
+            .education-periodo,
+            .job-date {
+                color: rgba($clr-white, .75);
+            }
+
+            .job-desc {
+                color: rgba($clr-white, .90);
+            }
         }
     }
 
@@ -195,7 +204,7 @@ p {
         }
 
         .tech-icon {
-            color: $clr-grey-4;
+            color: $clr-primary-5;
         }
 
         a {
@@ -227,6 +236,15 @@ p {
 
         .card-info {
             background: $clr-white;
+
+            .education-periodo,
+            .job-date {
+                color: rgba($clr-primary-1, .75);
+            }
+
+            .job-desc {
+                color: rgba($clr-primary-1, .90);
+            }
         }
     }
     
@@ -277,7 +295,7 @@ p {
     margin-left: auto;
     margin-right: auto;
 
-    &.dark { background: $clr-primary-7-dark; }
+    &.dark { background: $clr-primary-5-dark; }
     &.light { background: $clr-primary-5; }
 }
 
