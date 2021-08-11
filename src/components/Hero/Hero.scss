@@ -6,7 +6,7 @@
     height: 100vh;
     position: relative;
 
-    &.dark { background: $clr-primary-10-dark; }
+    &.dark { background: rgba($clr-primary-10-dark, .98); }
     &.light { background: $clr-primary-10; }
 }
   
@@ -96,7 +96,7 @@
     }
 
     .hero.light::before {
-        background: $clr-white;
+        background: rgba($clr-white, .9);
     }
 
     .hero-center {

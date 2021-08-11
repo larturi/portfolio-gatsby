@@ -139,7 +139,7 @@ p {
     padding: 5rem 0;
 
     &.dark { 
-        background: rgba($clr-primary-10-dark, .95);
+        background: $clr-primary-10-dark;
         color: $clr-white;
 
         h1, h2, h3, h4, a, p {
@@ -182,7 +182,8 @@ p {
         }
 
         .card-info {
-            background: rgba($clr-primary-10-dark, .95);
+            background: $clr-primary-10-dark;
+            border: solid 1px $clr-primary-7-dark;
 
             .education-periodo,
             .job-date {
