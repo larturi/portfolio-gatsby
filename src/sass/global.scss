@@ -23,12 +23,10 @@ ul {
 
 a {
     text-decoration: none;
-    color: $font-color-dark;
 }
 
 a:hover {
     text-decoration: none;
-    color: $clr-primary-1;
 }
 
 h1,
@@ -60,7 +58,7 @@ h4 {
 
 p {
     margin-bottom: 1.25rem;
-    color: $clr-grey-3;
+    // color: $clr-grey-3;
 }
 
 @media screen and (min-width: 800px) {
@@ -139,8 +137,112 @@ p {
 
 .section {
     padding: 5rem 0;
+
+    &.dark { 
+        background: rgba($clr-primary-10-dark, .95);
+        color: $clr-white;
+
+        h1, h2, h3, h4, a, p {
+            color: $clr-white;
+        }
+
+        .tech-icon {
+            color: $clr-primary-8-dark;
+        }
+
+        a {
+            color: $clr-white;
+
+            :hover {
+                color: rgb($clr-white, .9);
+            }
+        }
+
+        &.about-page {
+            background: $clr-primary-10-dark;
+
+            .about-stack span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-6-dark;
+                background: $clr-primary-6-dark;
+            }
+
+            p {
+                color: rgba($clr-white, .8)
+            }
+        }
+
+        .card-label,
+        .education-label {
+            span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-6-dark;
+                background: $clr-primary-6-dark;
+            }
+        }
+
+        .card-info {
+            background: rgba($clr-primary-10-dark, .95);
+        }
+    }
+
+    &.light { 
+        background: $clr-white;
+        color: $clr-black; 
+
+        h1, h2, h3, h4, a, p {
+            color: $clr-black;
+        }
+
+        .tech-icon {
+            color: $clr-grey-4;
+        }
+
+        a {
+            color: $font-color-dark;
+
+            :hover {
+                color: $clr-primary-1;
+            }
+        }
+
+        &.about-page {
+            background: $clr-white;
+
+            .about-stack span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-5;
+                background: $clr-primary-5;
+            }
+        }
+
+        .card-label,
+        .education-label {
+            span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-5;
+                background: $clr-primary-5;
+            }
+        }
+
+        .card-info {
+            background: $clr-white;
+        }
+    }
+    
     @media only screen and (max-width: 767px) {
         padding: 2rem 0;
+    }
+}
+
+.tech-icon {
+    font-size: 7rem;
+    margin: 25px 15px 0 15px;
+
+    @media only screen and (max-width: 767px) {
+        width: 50px;
+        font-size: 7rem;
+        margin: 0;
     }
 }
 
@@ -152,10 +254,6 @@ p {
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
-
-    // @media only screen and (max-width: 767px) {
-    //     margin: -3rem auto;
-    // }
 
     @media screen and (min-width: 992px) {
         width: 95vw;
@@ -206,7 +304,6 @@ p {
 
 // Cards
 .card-info {
-    background: $clr-white;
     padding: 1rem 2rem 1px;
     border-bottom-left-radius: $radius;
     border-bottom-right-radius: $radius;
@@ -244,25 +341,12 @@ p {
     width: -webkit-fill-available;
 }
 
-.tech-icon {
-    color: $clr-grey-4;
-    font-size: 7rem;
-    margin: 25px 15px 0 15px;
-
-    @media only screen and (max-width: 767px) {
-        width: 50px;
-        font-size: 7rem;
-        margin: 0;
-    }
-}
-
 .card-slug {
   font-weight: 500;
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   margin-top: 1rem !important;
   text-transform: uppercase;
-  color: $clr-grey-1;
   transition: $transition;
 
   @media only screen and (max-width: 767px) {
@@ -306,15 +390,6 @@ p {
 
 .card-label {
   margin-bottom: 1rem;
-
-    &.dark span { 
-        border: solid 1px $clr-primary-5-dark;
-        color: $clr-primary-5-dark;
-    }
-    &.light span { 
-        border: solid 1px $clr-primary-3;
-        color: $clr-primary-3; 
-    }
 }
 
 .card-label span {

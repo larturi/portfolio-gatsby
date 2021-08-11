@@ -65,7 +65,11 @@ const Projects = props => {
       : moreEN.translates[0].text;
 
   return (
-    <section className="section projects">
+    <section
+      className={
+        'section projects ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+      }
+    >
       <Title
         title="Portfolio"
         theme={currentTheme === 'dark' ? 'dark' : 'light'}

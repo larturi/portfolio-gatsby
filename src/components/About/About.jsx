@@ -50,7 +50,11 @@ const About = () => {
   const { tecnologias } = skills;
 
   return (
-    <section className="about-page">
+    <section
+      className={
+        'section about-page ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+      }
+    >
       <div className="section-center-50 about-center">
         <GatsbyImage
           image={img.childImageSharp.gatsbyImageData}

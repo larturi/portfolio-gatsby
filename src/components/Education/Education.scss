@@ -1,9 +1,5 @@
 @import '../../sass/index.scss';
 
-.educations {
-    background: $clr-grey-10;
-}
-
 .item {
     display: grid;
     margin-bottom: 4rem;
@@ -23,7 +19,6 @@
     margin-bottom: 1.5rem;
     margin-top: 1rem !important;
     text-transform: uppercase;
-    color: $clr-grey-1;
     transition: $transition;
 }
 
@@ -42,8 +37,6 @@
 
 .item-stack span {
     display: inline-block;
-    background: $clr-grey-9;
-    color: $clr-grey-5;
     margin-right: 0.55rem;
     padding: 0.25rem 0.5rem;
     border-radius: $radius;
@@ -103,17 +96,6 @@
     @media only screen and (max-width: 767px) {
         padding: 0.20rem 0.5rem;
         margin-bottom: 6px;
-    }
-}
-
-.education-label {
-    &.dark span { 
-        border: solid 1px $clr-primary-5-dark;
-        color: $clr-primary-5-dark;
-    }
-    &.light span { 
-        border: solid 1px $clr-primary-3;
-        color: $clr-primary-3; 
     }
 }
 

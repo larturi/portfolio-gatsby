@@ -8,7 +8,11 @@ const Degree = ({ titulo, universidad, periodo }) => {
   let { currentTheme } = useCurrentTheme();
 
   return (
-    <div className="card-info card-curso">
+    <div
+      className={`card-info card-curso ${
+        currentTheme === 'dark' ? 'dark' : 'light'
+      }`}
+    >
       <div className="card-info-left">
         <IconoFa name="university" />
       </div>

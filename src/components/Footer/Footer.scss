@@ -2,45 +2,58 @@
 
 .footer {
     height: 9rem;
-    background: #222;
     text-align: center;
     display: grid;
     place-items: center;
+
+    &.dark {
+        background: $clr-primary-10-dark;
+
+        p {
+            color: $clr-white;
+
+            span {
+                color: $clr-primary-6-dark;
+            }
+        }
+
+        .social-link  {
+            color: $clr-white
+        }
+
+        .copyright-autor-name {
+            color: $clr-primary-7-dark;
+        }
+    }
+
+    &.light {
+        background: $clr-white;
+
+        p {
+            color: $clr-black;
+
+            span {
+                color: $clr-primary-5;
+            }
+        }
+
+        .social-link  {
+            color: $clr-black
+        }
+
+        .copyright-autor-name {
+            color: $clr-primary-5;
+        }
+    }
 }
 
 .footer p {
     margin-top: 0.5rem;
-    color: $clr-white;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.footer p span {
-    color: $clr-primary-5;
-}
 
 .footer-links {
     margin: 0 auto 1rem auto;
-}
-
-.footer .social-link  {
-    
-    &.dark { 
-        color: $clr-white;
-    }
-    &.light { 
-        color: $clr-white;
-    }
-}
-
-.footer .social-link:hover {
-    color: $clr-primary-5;
-}
-.copyright-autor-name {
-    &.dark { 
-        color: $clr-primary-7-dark;
-    }
-    &.light { 
-        color:  $clr-primary-5; 
-    }
 }

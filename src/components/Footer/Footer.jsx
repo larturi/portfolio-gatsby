@@ -8,7 +8,9 @@ const Footer = () => {
   let { currentTheme } = useCurrentTheme();
 
   return (
-    <footer className="footer">
+    <footer
+      className={'footer ' + (currentTheme === 'dark' ? 'dark ' : 'light ')}
+    >
       <div>
         <div className="footer-links social-links">
           {socialLinks.map(link => {

@@ -1,9 +1,5 @@
 @import '../../sass/index.scss';
 
-.projects {
-    background: $clr-grey-10;
-}
-
 .project {
     display: grid;
     margin-bottom: 4rem;
@@ -36,17 +32,6 @@
         letter-spacing: 1px;
         font-size: 0.7rem;
         
-    }
-}
-
-.about-stack {
-    &.dark span { 
-        border: solid 1px $clr-primary-5-dark;
-        color: $clr-primary-5-dark;
-    }
-    &.light span { 
-        border: solid 1px $clr-primary-3;
-        color: $clr-primary-3; 
     }
 }
 

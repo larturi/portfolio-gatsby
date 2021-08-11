@@ -117,7 +117,10 @@ const Skills = props => {
   return (
     <>
       <section
-        className={'section skills ' + (backgroundWhite && 'background-white')}
+        // className={'section skills ' + (backgroundWhite && 'background-white')}
+        className={
+          'section skills ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+        }
       >
         <Title
           title="Skills"
@@ -199,7 +202,9 @@ const Skills = props => {
       </section>
 
       <section
-        className={'section skills ' + (backgroundWhite && 'background-white')}
+        className={
+          'section skills ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+        }
       >
         <div className="about-github-cal">
           <a

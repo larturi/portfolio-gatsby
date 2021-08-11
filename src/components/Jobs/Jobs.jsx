@@ -82,7 +82,11 @@ const Jobs = props => {
       : moreEN.translates[0].text;
 
   return (
-    <section className="section jobs">
+    <section
+      className={
+        'section jobs ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+      }
+    >
       <Title title={title} theme={currentTheme === 'dark' ? 'dark' : 'light'} />
 
       <div className="section-center-50">

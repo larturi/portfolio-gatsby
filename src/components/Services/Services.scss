@@ -29,15 +29,15 @@
 
 .service:hover {
   background: $clr-primary-5;
-  color: $clr-primary-9;
+  color: $clr-primary-5;
 }
 
 .service:hover p {
-  color: $clr-primary-9;
+  color: $clr-primary-5;
 }
 
 .service:hover .underline {
-  background: $clr-primary-9;
+  background: $clr-primary-5;
 }
 
 @media screen and (min-width: 676px) {

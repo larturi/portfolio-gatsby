@@ -1,15 +1,11 @@
 @import '../../sass/index.scss';
 
-.skills {
-    background: $clr-grey-10;
-}
-
 .skills-list {
     .skillbar {
         width: 31.1%;
         display: inline-block;
         margin-right: 20px;
-        background-color: #dcdcdc !important;
+        background-color: white !important;
 
         &:nth-child(3n) {
             margin-right: 0;
