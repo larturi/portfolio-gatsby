@@ -92,7 +92,7 @@ const query = graphql`
 `;
 
 const Education = props => {
-  const { backgroundWhite = false, items = 0 } = props;
+  const { items = 0 } = props;
 
   const {
     coursesEN,

@@ -67,8 +67,6 @@ const SkillBar = loadable(() => import('react-skillbars'));
 const Skills = props => {
   let { currentTheme } = useCurrentTheme();
 
-  const { backgroundWhite = false } = props;
-
   const {
     skillsFront,
     skillsBack,

@@ -15,6 +15,7 @@ body {
     font-size: 0.875rem;
     margin-top: 5rem;
     background-color: $clr-white;
+    height: auto;
 }
 
 ul {
@@ -58,7 +59,6 @@ h4 {
 
 p {
     margin-bottom: 1.25rem;
-    // color: $clr-grey-3;
 }
 
 @media screen and (min-width: 800px) {
@@ -441,6 +441,11 @@ p {
 
 .card-label {
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 576px) {
+    max-height: 25px;
+    overflow-y: hidden;
+}
 }
 
 .card-label span {
