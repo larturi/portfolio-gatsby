@@ -195,6 +195,7 @@ p {
 
             .job-desc {
                 color: rgba($clr-white, .90);
+                display: flex;
             }
 
             .card-desc {
@@ -267,6 +268,7 @@ p {
 
             .job-desc {
                 color: rgba($font-color-dark, .90);
+                display: flex;
             }
 
             .card-desc {
@@ -443,7 +445,7 @@ p {
   margin-bottom: 1rem;
 
   @media screen and (max-width: 576px) {
-    max-height: 25px;
+    max-height: 30px;
     overflow-y: hidden;
 }
 }
