@@ -196,6 +196,10 @@ p {
             .job-desc {
                 color: rgba($clr-white, .90);
             }
+
+            .card-desc {
+                color: rgba($clr-white, .80);
+            }
         }
 
         .react-github-container svg {
@@ -263,6 +267,10 @@ p {
 
             .job-desc {
                 color: rgba($font-color-dark, .90);
+            }
+
+            .card-desc {
+                color: rgba($font-color-dark, .80);
             }
         }
 
@@ -424,7 +432,6 @@ p {
     column-gap: 2rem;
     align-items: center;
     word-spacing: 3px;
-    color: $clr-grey-3;
   
     @media only screen and (max-width: 767px) {
       font-size: 1rem;
