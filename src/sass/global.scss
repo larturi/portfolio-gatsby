@@ -109,7 +109,7 @@ p {
       }
     &.light { 
         background: $clr-primary-5;
-        color: $clr-primary-10;
+        color: $clr-white !important;
     }
 
     @media only screen and (max-width: 576px) { 
@@ -142,12 +142,16 @@ p {
         background: $clr-primary-10-dark;
         color: $clr-white;
 
+        &.color-less {
+            background: rgba($clr-primary-10-dark, .991);
+        }
+
         h1, h2, h3, h4, a, p {
             color: $clr-white;
         }
 
         .tech-icon {
-            color: $clr-primary-5-dark;
+            color: $font-color-dark;
         }
 
         a {
@@ -182,8 +186,7 @@ p {
         }
 
         .card-info {
-            background: $clr-primary-10-dark;
-            border: solid 1px $clr-primary-7-dark;
+            background: #0a0a0a;
 
             .education-periodo,
             .job-date {
@@ -194,18 +197,33 @@ p {
                 color: rgba($clr-white, .90);
             }
         }
+
+        .react-github-container svg {
+            border: solid 1px #dedede;
+            background: #1a1a1a;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .react-github-container svg > * {
+            fill: white !important;
+        }
     }
 
     &.light { 
         background: $clr-white;
         color: $clr-black; 
 
+        &.color-less {
+            background: rgba($clr-grey-10, .4);
+        }
+
         h1, h2, h3, h4, a, p {
             color: $clr-black;
         }
 
         .tech-icon {
-            color: $clr-primary-5;
+            color: $clr-grey-5;
         }
 
         a {
@@ -240,12 +258,19 @@ p {
 
             .education-periodo,
             .job-date {
-                color: rgba($clr-primary-1, .75);
+                color: rgba($font-color-dark, .75);
             }
 
             .job-desc {
-                color: rgba($clr-primary-1, .90);
+                color: rgba($font-color-dark, .90);
             }
+        }
+
+        .react-github-container svg {
+            border: solid 1px #dedede;
+            background: white;
+            border-radius: 5px;
+            padding: 1rem;
         }
     }
     

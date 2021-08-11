@@ -48,9 +48,9 @@
 }
 
 .job-date {
-  font-size: 1rem;
+  font-size: 12.5px;
   margin-top: -8px;
-  letter-spacing: $spacing;
+  letter-spacing: 1px;
 
   @media only screen and (max-width: 767px) {
     font-size: 0.85rem;

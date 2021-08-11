@@ -130,7 +130,8 @@ const Education = props => {
   return (
     <section
       className={
-        'section educations ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+        'section educations color-less ' +
+        (currentTheme === 'dark' ? 'dark ' : 'light ')
       }
     >
       <Title
