@@ -7,9 +7,9 @@ export const skillsColors = {
 };
 
 export const skillsColorsDark = {
-  bar: '#4f348d',
+  bar: '#8f62f7',
   title: {
     text: '#fff',
-    background: '#4f348d',
+    background: '#6234c3',
   },
 };

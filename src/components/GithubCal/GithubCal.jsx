@@ -11,7 +11,7 @@ const GithubCal = () => {
   return (
     <GitHubCalendar
       username="larturi"
-      color={currentTheme === 'dark' ? '#4f348d' : 'hsl(185, 81%, 29%)'}
+      color={currentTheme === 'dark' ? '#BB86FC' : 'hsl(185, 81%, 29%)'}
       blockSize={12}
       blockMargin={4}
     >
