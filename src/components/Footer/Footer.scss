@@ -7,7 +7,7 @@
     place-items: center;
 
     &.dark {
-        background: rgba($clr-primary-10-dark, .98);
+        background: $clr-primary-10-dark;
 
         p {
             color: $clr-white;
