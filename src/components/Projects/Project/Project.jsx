@@ -1,4 +1,5 @@
 import React from 'react';
+import IconoFa from '../../IconFa';
 import { useCurrentTheme } from '../../../hooks/useCurrentTheme';
 
 const Project = ({ description, title, tecnologias, url }) => {
@@ -15,7 +16,12 @@ const Project = ({ description, title, tecnologias, url }) => {
       <p className="card-desc">{description}</p>
       <div className={`card-label ${currentTheme}`}>
         {tecnologias.map(item => {
-          return <span key={item.name}>{item.name}</span>;
+          return (
+            <span key={item.name}>
+              <IconoFa name={item.logo} />
+              {item.name}
+            </span>
+          );
         })}
       </div>
     </div>

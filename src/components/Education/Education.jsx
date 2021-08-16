@@ -35,6 +35,7 @@ const query = graphql`
         year
         tecnologias {
           name
+          logo
         }
         logo
         institution
@@ -50,6 +51,7 @@ const query = graphql`
         year
         tecnologias {
           name
+          logo
         }
         logo
         institution

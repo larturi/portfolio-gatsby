@@ -29,7 +29,12 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
         </p>
         <div className={`card-label card-label-course ${currentTheme}`}>
           {tecnologias.map(item => {
-            return <span key={item.name}>{item.name}</span>;
+            return (
+              <span key={item.name}>
+                <IconoFa name={item.logo} />
+                {item.name}
+              </span>
+            );
           })}
         </div>
       </div>

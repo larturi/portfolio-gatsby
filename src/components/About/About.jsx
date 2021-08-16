@@ -73,7 +73,6 @@ const About = () => {
 
           <div className={`about-stack ${currentTheme}`}>
             {tecnologias.map(skill => {
-              console.log(skill.logo);
               return (
                 <span key={skill.id}>
                   <IconoFa name={skill.logo} />

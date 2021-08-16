@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  FaAws,
   FaReact,
   FaGraduationCap,
   FaVuejs,
@@ -12,16 +13,20 @@ import {
 } from 'react-icons/fa';
 
 import {
+  SiApollographql,
   SiJavascript,
   SiTypescript,
   SiDart,
   SiFlutter,
   SiGatsby,
+  SiIonic,
   SiMysql,
   SiPhp,
   SiBootstrap,
   SiDocker,
+  SiGitlab,
   SiAndroid,
+  SiCss3,
   SiXampp,
   SiStrapi,
   SiNextDotJs,
@@ -29,12 +34,24 @@ import {
   SiGraphql,
   SiMongodb,
   SiSocketDotIo,
+  SiFirebase,
+  SiJest,
+  SiSass,
+  SiTailwindcss,
+  SiWebpack,
+  SiHtml5,
 } from 'react-icons/si';
 
 import { DiScrum } from 'react-icons/di';
 
 const IconFa = props => {
   switch (props.name) {
+    case 'FaAws':
+      return <FaAws className="tech-icon"></FaAws>;
+
+    case 'SiApollographql':
+      return <SiApollographql className="tech-icon"></SiApollographql>;
+
     case 'fab fa-react':
       return <FaReact className="tech-icon"></FaReact>;
 
@@ -74,8 +91,14 @@ const IconFa = props => {
     case 'FaGithub':
       return <FaGithub className="tech-icon"></FaGithub>;
 
+    case 'SiGitlab':
+      return <SiGitlab className="tech-icon"></SiGitlab>;
+
     case 'SiBootstrap':
       return <SiBootstrap className="tech-icon"></SiBootstrap>;
+
+    case 'SiIonic':
+      return <SiIonic className="tech-icon"></SiIonic>;
 
     case 'SiDocker':
       return <SiDocker className="tech-icon"></SiDocker>;
@@ -112,6 +135,27 @@ const IconFa = props => {
 
     case 'SiSocketDotIo':
       return <SiSocketDotIo className="tech-icon"></SiSocketDotIo>;
+
+    case 'SiFirebase':
+      return <SiFirebase className="tech-icon"></SiFirebase>;
+
+    case 'SiJest':
+      return <SiJest className="tech-icon"></SiJest>;
+
+    case 'SiSass':
+      return <SiSass className="tech-icon"></SiSass>;
+
+    case 'SiTailwindcss':
+      return <SiTailwindcss className="tech-icon"></SiTailwindcss>;
+
+    case 'SiWebpack':
+      return <SiWebpack className="tech-icon"></SiWebpack>;
+
+    case 'SiHtml5':
+      return <SiHtml5 className="tech-icon"></SiHtml5>;
+
+    case 'SiCss3':
+      return <SiCss3 className="tech-icon"></SiCss3>;
 
     default:
       return <FaGraduationCap className="tech-icon"></FaGraduationCap>;
