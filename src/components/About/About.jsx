@@ -2,6 +2,7 @@ import './About.scss';
 
 import React from 'react';
 import Title from '../../components/Title';
+import IconoFa from '../../components/IconFa';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
@@ -27,8 +28,9 @@ const query = graphql`
     }
     skills: strapi {
       tecnologias(limit: 14, sort: "destacado:desc") {
-        name
         id
+        name
+        logo
       }
     }
     img: file(relativePath: { eq: "profile.jpg" }) {
@@ -71,7 +73,13 @@ const About = () => {
 
           <div className={`about-stack ${currentTheme}`}>
             {tecnologias.map(skill => {
-              return <span key={skill.id}>{skill.name}</span>;
+              console.log(skill.logo);
+              return (
+                <span key={skill.id}>
+                  <IconoFa name={skill.logo} />
+                  {skill.name}
+                </span>
+              );
             })}
           </div>
         </article>

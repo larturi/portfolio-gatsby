@@ -17,10 +17,18 @@ import {
   SiDart,
   SiFlutter,
   SiGatsby,
+  SiMysql,
+  SiPhp,
   SiBootstrap,
   SiDocker,
   SiAndroid,
   SiXampp,
+  SiStrapi,
+  SiNextDotJs,
+  SiNuxtDotJs,
+  SiGraphql,
+  SiMongodb,
+  SiSocketDotIo,
 } from 'react-icons/si';
 
 import { DiScrum } from 'react-icons/di';
@@ -39,7 +47,7 @@ const IconFa = props => {
     case 'fab fa-python':
       return <FaPython className="tech-icon"></FaPython>;
 
-    case 'fab fa-laravel':
+    case 'FaLaravel':
       return <FaLaravel className="tech-icon"></FaLaravel>;
 
     case 'fab fa-angular':
@@ -80,6 +88,30 @@ const IconFa = props => {
 
     case 'DiScrum':
       return <DiScrum className="tech-icon"></DiScrum>;
+
+    case 'SiMysql':
+      return <SiMysql className="tech-icon"></SiMysql>;
+
+    case 'SiPhp':
+      return <SiPhp className="tech-icon"></SiPhp>;
+
+    case 'SiStrapi':
+      return <SiStrapi className="tech-icon"></SiStrapi>;
+
+    case 'SiNextDotJs':
+      return <SiNextDotJs className="tech-icon"></SiNextDotJs>;
+
+    case 'SiNuxtDotJs':
+      return <SiNuxtDotJs className="tech-icon"></SiNuxtDotJs>;
+
+    case 'SiGraphql':
+      return <SiGraphql className="tech-icon"></SiGraphql>;
+
+    case 'SiMongodb':
+      return <SiMongodb className="tech-icon"></SiMongodb>;
+
+    case 'SiSocketDotIo':
+      return <SiSocketDotIo className="tech-icon"></SiSocketDotIo>;
 
     default:
       return <FaGraduationCap className="tech-icon"></FaGraduationCap>;
