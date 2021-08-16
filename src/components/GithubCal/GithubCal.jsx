@@ -13,7 +13,7 @@ const GithubCal = () => {
       username="larturi"
       color={currentTheme === 'dark' ? '#BB86FC' : 'hsl(185, 81%, 29%)'}
       blockSize={12}
-      blockMargin={4}
+      blockMargin={5}
     >
       <ReactTooltip delayShow={50} html />
     </GitHubCalendar>

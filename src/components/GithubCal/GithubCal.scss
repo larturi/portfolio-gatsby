@@ -6,6 +6,17 @@
     padding: 3rem;
 
     @media only screen and (max-width: 767px) {
-        display: none;
+        padding: 20px; 
+    }
+
+    .section-title {
+
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 767px) {
+            h2 {
+                margin-top: 40px;
+            }
+        }
     }
 }
