@@ -1,11 +1,9 @@
-import '../sass/pages.scss';
-
 import React from 'react';
-import Layout from '../layouts/Layout/Layout';
 import Seo from '../components/Seo';
 import NotFound from '../components/NotFound';
+import Layout from '../layouts/Layout/Layout';
 
-const Error = props => {
+const NotFoundPage = props => {
   return (
     <Layout path={props.uri}>
       <Seo title="Leandro Arturi - 404" />
@@ -14,4 +12,4 @@ const Error = props => {
   );
 };
 
-export default Error;
+export default NotFoundPage;

@@ -1,0 +1,27 @@
+@import '../../sass/index.scss';
+
+.error-page {
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    &.dark { background: $clr-primary-10-dark; }
+    &.light { background: $clr-white; }
+}
+
+.error-page h1 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.error-page.dark {
+    .error-container h1 { color: $clr-primary-9-dark; }
+}
+
+.error-page.light {
+    .error-container h1 { color:$clr-primary-5; }
+}
+
+.error-container {
+    padding: 20px;
+}
