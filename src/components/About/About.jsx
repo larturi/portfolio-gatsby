@@ -61,7 +61,7 @@ const About = () => {
         <GatsbyImage
           image={img.childImageSharp.gatsbyImageData}
           alt="Foto Leandro Arturi"
-          className="about-img"
+          className={`about-img ${currentTheme === 'dark' ? 'dark' : 'light'}`}
         />
 
         <article className="about-text">
