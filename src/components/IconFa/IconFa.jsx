@@ -40,6 +40,7 @@ import {
   SiTailwindcss,
   SiWebpack,
   SiHtml5,
+  SiOracle,
 } from 'react-icons/si';
 
 import { DiScrum } from 'react-icons/di';
@@ -84,6 +85,9 @@ const IconFa = props => {
 
     case 'FaBitcoin':
       return <FaBitcoin className="tech-icon"></FaBitcoin>;
+
+    case 'SiOracle':
+      return <SiOracle className="tech-icon"></SiOracle>;
 
     case 'SiGatsby':
       return <SiGatsby className="tech-icon"></SiGatsby>;
