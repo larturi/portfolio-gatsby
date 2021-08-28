@@ -33,7 +33,7 @@ const query = graphql`
         logo
       }
     }
-    img: file(relativePath: { eq: "profile.jpg" }) {
+    img: file(relativePath: { eq: "profile.png" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED)
       }
