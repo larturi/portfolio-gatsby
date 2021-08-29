@@ -53,25 +53,25 @@ const IconFa = props => {
     case 'SiApollographql':
       return <SiApollographql className="tech-icon"></SiApollographql>;
 
-    case 'fab fa-react':
+    case 'FaReact':
       return <FaReact className="tech-icon"></FaReact>;
 
-    case 'fab fa-vuejs':
+    case 'FaVuejs':
       return <FaVuejs className="tech-icon"></FaVuejs>;
 
-    case 'fab fa-node-js':
+    case 'FaNodeJs':
       return <FaNodeJs className="tech-icon"></FaNodeJs>;
 
-    case 'fab fa-python':
+    case 'FaPython':
       return <FaPython className="tech-icon"></FaPython>;
 
     case 'FaLaravel':
       return <FaLaravel className="tech-icon"></FaLaravel>;
 
-    case 'fab fa-angular':
+    case 'FaAngular':
       return <FaAngular className="tech-icon"></FaAngular>;
 
-    case 'fab fa-js':
+    case 'SiJavascript':
       return <SiJavascript className="tech-icon"></SiJavascript>;
 
     case 'SiTypescript':
