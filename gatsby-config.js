@@ -6,10 +6,10 @@ module.exports = {
   siteMetadata: {
     title: `Portfolio Leandro Arturi`,
     description: `Portfolio de Leandro Arturi: Licenciado en Sistemas (UBA) & Desarrollador Web Full Stack.`,
-    author: `@leandroarturi`,
-    image: `https://twitter.com/leandroarturi/photo`,
+    author: `@larturi_dev`,
+    image: `https://twitter.com/larturi_dev/photo`,
     url: `https://www.leandroarturi.com.ar`,
-    twitterUsername: '@leandroarturi',
+    twitterUsername: '@larturi_dev',
   },
   flags: {
     DEV_SSR: false,
