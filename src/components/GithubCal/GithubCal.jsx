@@ -14,6 +14,7 @@ const GithubCal = () => {
       color={currentTheme === 'dark' ? '#BB86FC' : 'hsl(185, 81%, 29%)'}
       blockSize={12}
       blockMargin={5}
+      hideColorLegend={true}
     >
       <ReactTooltip delayShow={50} html />
     </GitHubCalendar>
