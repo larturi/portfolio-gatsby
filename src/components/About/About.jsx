@@ -4,7 +4,6 @@ import React from 'react';
 import Title from '../../components/Title';
 import IconoFa from '../../components/IconFa';
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 
@@ -33,11 +32,6 @@ const query = graphql`
         logo
       }
     }
-    img: file(relativePath: { eq: "profile.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
-      }
-    }
   }
 `;
 
@@ -58,12 +52,6 @@ const About = () => {
       }
     >
       <div className="section-center-50 about-center">
-        <GatsbyImage
-          image={img.childImageSharp.gatsbyImageData}
-          alt="Foto Leandro Arturi"
-          className={`about-img ${currentTheme === 'dark' ? 'dark' : 'light'}`}
-        />
-
         <article className="about-text">
           <Title
             title={about.title}

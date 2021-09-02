@@ -13,19 +13,15 @@ module.exports = {
   },
   flags: {
     DEV_SSR: false,
-    LMDB_STORE: false,
-    FAST_DEV: false,
-    PRESERVE_FILE_DOWNLOAD_CACHE: false,
-    PARALLEL_SOURCING: false,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-minify`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-minify`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
