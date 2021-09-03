@@ -138,6 +138,12 @@ p {
 .section {
     padding: 5rem 0;
 
+    .card-info {
+        border-radius: 5px;
+        border-width: 3px;
+        border-style: solid;
+    }
+
     &.dark { 
         background: $clr-primary-10-dark;
         color: $clr-white;
@@ -186,8 +192,6 @@ p {
         }
 
         .card-info {
-            background: #242424;
-
             .education-periodo,
             .job-date {
                 color: rgba($clr-white, .75);
@@ -201,6 +205,9 @@ p {
             .card-desc {
                 color: rgba($clr-white, .80);
             }
+
+            border-color: $clr-primary-7-dark;
+            
         }
 
         .react-github-container svg {
@@ -259,7 +266,7 @@ p {
         }
 
         .card-info {
-            background: $clr-white;
+            border-color: $clr-primary-5;
 
             .education-periodo,
             .job-date {
@@ -363,7 +370,6 @@ p {
     border-bottom-right-radius: $radius;
     margin-bottom: 15px;
     border-radius: $radius;
-    box-shadow: $dark-shadow;
     z-index: 1;
     grid-column: 5 / 12;
     grid-row: 1 / 1;

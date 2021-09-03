@@ -37,6 +37,25 @@
     }
 }
 
+.about-text {
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: solid;
+    padding: 3rem;
+
+    &.dark { 
+        border-color: $clr-primary-7-dark;
+      }
+    &.light { 
+        border-color: $clr-primary-5;
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 25px;
+        margin-bottom: 2rem;
+    }
+}
+
 .about-text .section-title {
     margin-bottom: 2rem;
     text-align: left;
@@ -54,7 +73,7 @@
     line-height: 2;
     font-size: 15px;
     margin-top: -4px;
-    text-align: justify;
+    text-align: justify; 
 }
 
 .stack-container {
@@ -83,7 +102,6 @@
 @media screen and (min-width: 992px) {
     .about-center {
         display: grid;
-        // grid-template-columns: repeat(15, 1fr);
         align-items: center;
         column-gap: 4rem;
         padding: 10rem;

@@ -36,7 +36,7 @@ const query = graphql`
 `;
 
 const About = () => {
-  const { aboutES, aboutEN, skills, img } = useStaticQuery(query);
+  const { aboutES, aboutEN, skills } = useStaticQuery(query);
 
   let { currentTheme } = useCurrentTheme();
   let { currentLanguaje } = useCurrentLanguaje();
@@ -52,7 +52,11 @@ const About = () => {
       }
     >
       <div className="section-center-50 about-center">
-        <article className="about-text">
+        <article
+          className={`about-text  ${
+            currentTheme === 'dark' ? 'dark ' : 'light '
+          }`}
+        >
           <Title
             title={about.title}
             theme={currentTheme === 'dark' ? 'dark' : 'light'}
