@@ -10,6 +10,7 @@ import {
   FaAngular,
   FaBitcoin,
   FaGithub,
+  FaUbuntu,
 } from 'react-icons/fa';
 
 import {
@@ -41,6 +42,11 @@ import {
   SiWebpack,
   SiHtml5,
   SiOracle,
+  SiDjango,
+  SiConfluence,
+  SiJira,
+  SiJquery,
+  SiVisualstudio,
 } from 'react-icons/si';
 
 import { DiScrum } from 'react-icons/di';
@@ -107,6 +113,9 @@ const IconFa = props => {
     case 'SiDocker':
       return <SiDocker className="tech-icon"></SiDocker>;
 
+    case 'SiDjango':
+      return <SiDjango className="tech-icon"></SiDjango>;
+
     case 'SiAndroid':
       return <SiAndroid className="tech-icon"></SiAndroid>;
 
@@ -155,11 +164,26 @@ const IconFa = props => {
     case 'SiWebpack':
       return <SiWebpack className="tech-icon"></SiWebpack>;
 
+    case 'SiJira':
+      return <SiJira className="tech-icon"></SiJira>;
+
+    case 'SiConfluence':
+      return <SiConfluence className="tech-icon"></SiConfluence>;
+
     case 'SiHtml5':
       return <SiHtml5 className="tech-icon"></SiHtml5>;
 
     case 'SiCss3':
       return <SiCss3 className="tech-icon"></SiCss3>;
+
+    case 'SiJquery':
+      return <SiJquery className="tech-icon"></SiJquery>;
+
+    case 'SiVisualstudio':
+      return <SiVisualstudio className="tech-icon"></SiVisualstudio>;
+
+    case 'FaUbuntu':
+      return <FaUbuntu className="tech-icon"></FaUbuntu>;
 
     default:
       return <FaGraduationCap className="tech-icon"></FaGraduationCap>;
