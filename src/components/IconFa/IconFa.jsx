@@ -47,6 +47,7 @@ import {
   SiJira,
   SiJquery,
   SiVisualstudio,
+  SiPostgresql,
 } from 'react-icons/si';
 
 import { DiScrum } from 'react-icons/di';
@@ -103,6 +104,9 @@ const IconFa = props => {
 
     case 'SiGitlab':
       return <SiGitlab className="tech-icon"></SiGitlab>;
+
+    case 'SiPostgresql':
+      return <SiPostgresql className="tech-icon"></SiPostgresql>;
 
     case 'SiBootstrap':
       return <SiBootstrap className="tech-icon"></SiBootstrap>;
