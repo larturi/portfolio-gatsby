@@ -10,7 +10,7 @@ import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 const query = graphql`
   {
     projectsES: strapi {
-      projects(locale: "es-AR") {
+      projects(locale: "es-AR", sort: "order:DESC") {
         locale
         order
         tecnologias {
@@ -23,7 +23,7 @@ const query = graphql`
       }
     }
     projectsEN: strapi {
-      projects(locale: "en") {
+      projects(locale: "en", sort: "order:DESC") {
         locale
         order
         tecnologias {
