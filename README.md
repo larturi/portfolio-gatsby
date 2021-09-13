@@ -2,8 +2,6 @@
 
 ### React, Strapi, Node and Mongo
 
-##### Made with ❤️ by Leandro Arturi
-
 ## 🚀 Quick start
 
 **Start developing.**
@@ -32,3 +30,5 @@ Build the app for production
 ```shell
 yarn build
 ```
+
+##### Made with ❤️ by Leandro Arturi
