@@ -1,14 +1,8 @@
-<h1 align="center">
-  Leandro Arturi's Portfolio
-</h1>
+#Leandro Arturi's Portfolio
 
-<h3 align="center">
-  -- React, Strapi, Node and Mongo --
-</h3>
+### -- React, Strapi, Node and Mongo --
 
-<h5 align="center">
-  Made with ❤️ by Leandro Arturi
-</h5>
+##### Made with ❤️ by Leandro Arturi
 
 ## 🚀 Quick start
 
