@@ -1,6 +1,6 @@
-#Leandro Arturi's Portfolio
+# Leandro Arturi's Portfolio
 
-### -- React, Strapi, Node and Mongo --
+### React, Strapi, Node and Mongo
 
 ##### Made with ❤️ by Leandro Arturi
 
