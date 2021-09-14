@@ -9,14 +9,13 @@
 Navigate into your new site’s directory and start it up.
 
 ```shell
-cd my-default-starter/
-yarn add
+yarn install
 ```
 
 Start in development mode
 
 ```shell
-yarn develop
+yarn start
 ```
 
 Clean cache
