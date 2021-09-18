@@ -11,14 +11,21 @@
     z-index: 200;
 }
 
-.navbar.page.isHome {
+.navbar {
   &.dark { 
     background: $clr-primary-10-dark;
     color: $clr-grey-1-dark;
+    &.isHome {
+      background: transparent;
+    }
+    
   }
   &.light { 
-      background: $clr-white;
-      color: $clr-grey-1; 
+    background: $clr-white;
+    color: $clr-grey-1; 
+    &.isHome {
+      background: transparent;
+    }
   }
 }
 
