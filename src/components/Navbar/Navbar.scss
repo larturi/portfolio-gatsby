@@ -11,7 +11,7 @@
     z-index: 200;
 }
 
-.navbar.page {
+.navbar.page.isHome {
   &.dark { 
     background: $clr-primary-10-dark;
     color: $clr-grey-1-dark;

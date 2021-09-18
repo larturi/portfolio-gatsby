@@ -25,6 +25,7 @@ const query = graphql`
 
 const Navbar = props => {
   const [isDarkMode, setIsDarkMode] = useState(null);
+  const [isHome, setIsHome] = useState(false);
 
   const { toggleSidebar, path } = props;
   const dispatch = useContext(GlobalDispatchContext);
@@ -62,7 +63,9 @@ const Navbar = props => {
     nav => nav.locale === currentLanguaje
   );
 
-  const page = path !== '/' ? 'page' : '';
+  const checkIsHome = () => {
+    return path !== '/' ? 'isHome' : '';
+  };
 
   useEffect(() => {
     const selectedTheme = isDarkMode ? 'dark' : 'light';
@@ -71,7 +74,7 @@ const Navbar = props => {
   }, [isDarkMode, dispatch]);
 
   return (
-    <nav className={`navbar ${page} ${currentTheme}`}>
+    <nav className={`navbar page ${currentTheme} ${checkIsHome()}`}>
       <div className="nav-center">
         <div className="nav-header">
           <DarkModeToggle
