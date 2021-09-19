@@ -25,6 +25,7 @@ const query = graphql`
 
 const Navbar = props => {
   const [isDarkMode, setIsDarkMode] = useState(null);
+  const [transparentNavbar, setTransparentNavbar] = useState('');
 
   const { toggleSidebar, path } = props;
 
@@ -64,9 +65,14 @@ const Navbar = props => {
   );
 
   const checkIsHome = () => {
-    console.log(path === '/' ? 'isHome' : '');
-    return path === '/' ? 'isHome' : '';
+    const isHome = path.length <= 1 ? 'isHome' : '';
+    console.log(isHome);
+    setTransparentNavbar(isHome);
   };
+
+  useEffect(() => {
+    checkIsHome();
+  });
 
   useEffect(() => {
     const selectedTheme = isDarkMode ? 'dark' : 'light';
@@ -75,7 +81,7 @@ const Navbar = props => {
   }, [isDarkMode, dispatch]);
 
   return (
-    <nav className={`navbar ${currentTheme} ${checkIsHome()}`}>
+    <nav className={`navbar ${currentTheme} ${transparentNavbar}`}>
       <div className="nav-center">
         <div className="nav-header">
           <DarkModeToggle
