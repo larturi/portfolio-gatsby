@@ -149,7 +149,7 @@ p {
         color: $clr-white;
 
         &.color-less {
-            background: rgba($clr-primary-10-dark, .99);
+            background: rgba($clr-primary-10-dark, .995);
         }
 
         h1, h2, h3, h4, a, p {
@@ -227,7 +227,7 @@ p {
         color: $clr-black; 
 
         &.color-less {
-            background: rgba($clr-grey-10, .4);
+            background: rgba($clr-grey-10, .3);
         }
 
         h1, h2, h3, h4, a, p {

@@ -66,7 +66,6 @@ const Navbar = props => {
 
   const checkIsHome = () => {
     const isHome = path.length <= 1 ? 'isHome' : '';
-    console.log(isHome);
     setTransparentNavbar(isHome);
   };
 
