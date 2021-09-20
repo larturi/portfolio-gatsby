@@ -16,7 +16,7 @@ const data = [
   {
     id: 3,
     icon: <FaTwitter />,
-    url: 'https://twitter.com/larturi_dev',
+    url: 'https://twitter.com/leandroarturi',
   },
   {
     id: 4,
