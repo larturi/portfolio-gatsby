@@ -63,16 +63,18 @@ const About = () => {
           />
           <p>{about.info}</p>
 
+          <h3>Stack Principal</h3>
           <div className={`about-stack ${currentTheme}`}>
-            {tecnologias.map(skill => {
-              return (
-                <span key={skill.id}>
-                  <IconoFa name={skill.logo} />
-                  {skill.name}
-                </span>
-              );
-            })}
+            <span><IconoFa name='FaReact'/>React</span>
+            <span><IconoFa name='SiDjango'/>Django</span>
+            <span><IconoFa name='SiGraphql'/>GraphQL</span>
+            <span><IconoFa name='SiBootstrap'/>Bootstrap</span>
+            <span><IconoFa name='SiPostgresql'/>PostgreSQL</span>
+            <span><IconoFa name='SiDocker'/>Docker</span>
+            <span><IconoFa name='FaGithub'/>GitHub</span>
           </div>
+
+
         </article>
       </div>
     </section>
