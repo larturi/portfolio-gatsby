@@ -115,7 +115,6 @@ const Skills = props => {
   return (
     <>
       <section
-        // className={'section skills ' + (backgroundWhite && 'background-white')}
         className={
           'section skills color-less ' +
           (currentTheme === 'dark' ? 'dark ' : 'light ')

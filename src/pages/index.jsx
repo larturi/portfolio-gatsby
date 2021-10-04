@@ -15,9 +15,9 @@ const Home = props => {
       <Seo title="Leandro Arturi - Portfolio" />
       <Hero />
       <About />
-      <Education backgroundWhite={true} items={5} />
-      <Jobs items={5} />
       <Skills backgroundWhite={true} />
+      <Jobs items={5} />
+      <Education backgroundWhite={true} items={5} />
       <Projects items={10} />
     </Layout>
   );

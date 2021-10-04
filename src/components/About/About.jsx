@@ -25,13 +25,6 @@ const query = graphql`
         title
       }
     }
-    skills: strapi {
-      tecnologias(limit: 14, sort: "destacado:desc") {
-        id
-        name
-        logo
-      }
-    }
   }
 `;
 
@@ -42,8 +35,6 @@ const About = () => {
   let { currentLanguaje } = useCurrentLanguaje();
 
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
-
-  const { tecnologias } = skills;
 
   return (
     <section
