@@ -15,6 +15,7 @@ const query = graphql`
         info
         locale
         title
+        title_stack
       }
     }
     aboutEN: strapi {
@@ -23,13 +24,14 @@ const query = graphql`
         info
         locale
         title
+        title_stack
       }
     }
   }
 `;
 
 const About = () => {
-  const { aboutES, aboutEN, skills } = useStaticQuery(query);
+  const { aboutES, aboutEN } = useStaticQuery(query);
 
   let { currentTheme } = useCurrentTheme();
   let { currentLanguaje } = useCurrentLanguaje();
@@ -54,7 +56,7 @@ const About = () => {
           />
           <p>{about.info}</p>
 
-          <h3>Stack Principal</h3>
+          <h3>{about.title_stack}</h3>
           <div className={`about-stack ${currentTheme}`}>
             <span><IconoFa name='FaReact'/>React</span>
             <span><IconoFa name='SiDjango'/>Django</span>
