@@ -12,7 +12,7 @@ import Seo from '../components/Seo';
 const Home = props => {
   return (
     <Layout path={props.uri}>
-      <Seo title="Leandro Arturi - Portfolio" />
+      <Seo title="Leandro Arturi - Portfolio" seoIndex={true} seoFollow={true}  />
       <Hero />
       <About />
       <Skills backgroundWhite={true} />

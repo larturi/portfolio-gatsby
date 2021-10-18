@@ -18,7 +18,7 @@ const query = graphql`
   }
 `;
 
-const SEO = ({ title, description, image }) => {
+const SEO = ({ title, description, image, seoIndex = false, seoFollow = false }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
 
@@ -42,6 +42,8 @@ const SEO = ({ title, description, image }) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="lang" content="es-AR" />
+
+      <meta name="robots" content={`${seoIndex ? `index`:`noindex`}, ${seoFollow ? `follow`:`nofollow`}`}/>
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
