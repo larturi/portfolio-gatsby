@@ -3,7 +3,7 @@ import './Navbar.scss';
 import React, { useState, useContext, useEffect } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { DarkModeToggle } from 'react-dark-mode-toggle-2';
+import DarkModeToggle from 'react-dark-mode-toggle';
 
 import {
   GlobalDispatchContext,
@@ -85,7 +85,7 @@ const Navbar = props => {
         <div className="nav-header">
           <DarkModeToggle
             onChange={setIsDarkMode}
-            isDarkMode={isDarkMode}
+            checked={isDarkMode}
             className="dark-mode-toggle"
             size={60}
           />
