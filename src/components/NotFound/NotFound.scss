@@ -4,6 +4,7 @@
     display: grid;
     place-items: center;
     text-align: center;
+    height: calc(100vh - 5rem - 9rem);
 
     &.dark { background: $clr-primary-10-dark; }
     &.light { background: $clr-white; }
