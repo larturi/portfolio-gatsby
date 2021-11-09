@@ -1,4 +1,4 @@
-ErrorDocument 404 https://www.leandroarturi.com.ar/
+ErrorDocument 404 https://www.leandroarturi.com.ar/404
 # or map them to one error document:
 
 RewriteEngine On
