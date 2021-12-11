@@ -28,12 +28,12 @@ const Footer = () => {
             );
           })}
         </div>
+       
         <p>
-          <span className={`copyright-autor-name ${currentTheme}`}>
-            Leandro Arturi{' '}
-          </span>
-          copyright&copy;{new Date().getFullYear()}
-        </p>
+          Made with <span className="footer-author-name">❤️</span>{' '} by Leandro Arturi with 
+          <span className={`copyright-autor-name ${currentTheme}`}> React</span>, 
+          <span className={`copyright-autor-name ${currentTheme}`}> Gatsby</span> & 
+          <span className={`copyright-autor-name ${currentTheme}`}> Strapi</span></p>
       </div>
     </footer>
   );

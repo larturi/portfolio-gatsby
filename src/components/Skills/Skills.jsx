@@ -12,7 +12,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const query = graphql`
   {
     skillsFront: strapi {
-      tecnologias(where: { category: "Frontend" }, sort: "porcentaje:desc") {
+      tecnologias(where: { category: "Frontend", destacado: 1 }, sort: "sort:asc") {
         name
         porcentaje
         logo
@@ -20,7 +20,7 @@ const query = graphql`
       }
     }
     skillsBack: strapi {
-      tecnologias(where: { category: "Backend" }, sort: "porcentaje:desc") {
+      tecnologias(where: { category: "Backend", destacado: 1 }, sort: "sort:asc") {
         name
         porcentaje
         logo
@@ -28,7 +28,7 @@ const query = graphql`
       }
     }
     skillsMobile: strapi {
-      tecnologias(where: { category: "Mobile" }, sort: "porcentaje:desc") {
+      tecnologias(where: { category: "Mobile", destacado: 1 }, sort: "sort:asc") {
         name
         porcentaje
         logo
@@ -36,7 +36,7 @@ const query = graphql`
       }
     }
     skillsDb: strapi {
-      tecnologias(where: { category: "Database" }, sort: "porcentaje:desc") {
+      tecnologias(where: { category: "Database", destacado: 1 }, sort: "sort:asc") {
         name
         porcentaje
         logo
@@ -44,7 +44,7 @@ const query = graphql`
       }
     }
     skillsDevOps: strapi {
-      tecnologias(where: { category: "DevOps" }, sort: "porcentaje:desc") {
+      tecnologias(where: { category: "DevOps", destacado: 1 }, sort: "sort:asc") {
         name
         porcentaje
         logo
@@ -52,7 +52,7 @@ const query = graphql`
       }
     }
     skillsOther: strapi {
-      tecnologias(where: { category: "Other" }, sort: "porcentaje:desc") {
+      tecnologias(where: { category: "Other", destacado: 1 }, sort: "sort:asc") {
         name
         porcentaje
         logo
