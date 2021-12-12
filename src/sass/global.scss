@@ -175,6 +175,7 @@ p {
                 color: $clr-white;
                 border: solid 1px $clr-primary-5-dark;
                 background: $clr-primary-5-dark;
+                font-size: 10px;
             }
 
             p {
@@ -253,6 +254,7 @@ p {
                 color: $clr-white;
                 border: solid 1px $clr-primary-5;
                 background: $clr-primary-5;
+                font-size: 10px;
             }
         }
 
@@ -484,4 +486,8 @@ p {
         font-size: 0.7rem;  
     }
 
+}
+
+.skillbar-percent {
+    display: none !important;
 }

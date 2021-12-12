@@ -151,11 +151,11 @@ const Skills = props => {
 
           <div className="separador-section-skills" />
           <SubTitle
-            title="Mobile"
+            title="DevOps"
             theme={currentTheme === 'dark' ? 'dark' : 'light'}
           />
           <SkillBar
-            skills={mobileSkills}
+            skills={devOpsSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}
@@ -175,11 +175,11 @@ const Skills = props => {
 
           <div className="separador-section-skills" />
           <SubTitle
-            title="DevOps"
+            title="Mobile"
             theme={currentTheme === 'dark' ? 'dark' : 'light'}
           />
           <SkillBar
-            skills={devOpsSkills}
+            skills={mobileSkills}
             colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
             height={24}
             animationDelay={100}

@@ -9,7 +9,7 @@
     &.dark {
         background: $clr-primary-10-dark;
 
-        p {
+        a, p {
             color: $clr-white;
 
             span {
@@ -21,7 +21,7 @@
             color: $clr-white
         }
 
-        .copyright-autor-name {
+        a, .copyright-autor-name {
             color: $clr-primary-7-dark;
         }
     }
@@ -29,10 +29,10 @@
     &.light {
         background: $clr-white;
 
-        p {
+        a, p {
             color: $clr-black;
 
-            span {
+            a, span {
                 color: $clr-primary-5;
             }
         }
@@ -57,5 +57,5 @@
 }
 
 .footer-author-name {
-    margin: 0px 5px 0px 2px;
+    margin: 0px 5px 0px 1px;
 }
