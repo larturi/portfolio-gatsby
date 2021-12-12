@@ -6,6 +6,7 @@ import IconoFa from '../../components/IconFa';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
+import SubTitle from '../Title/SubTitle';
 
 const query = graphql`
   {
@@ -56,7 +57,12 @@ const About = () => {
           />
           <p>{about.info}</p>
 
-          <h3>{about.title_stack}</h3>
+          <br />
+
+          <SubTitle
+            title={about.title_stack}
+            theme={currentTheme === 'dark' ? 'dark' : 'light'}
+          />
           <div className={`about-stack ${currentTheme}`}>
             <span><IconoFa name='FaReact'/>React</span>
             <span><IconoFa name='SiDjango'/>Django</span>
