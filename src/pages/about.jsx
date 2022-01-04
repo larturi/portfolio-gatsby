@@ -5,7 +5,7 @@ import Seo from '../components/Seo';
 
 const AboutPage = props => {
   return (
-    <Layout path={props.uri}>
+    <Layout path={props.uri} footerHiden={true}>
       <Seo title="Leandro Arturi - About" />
       <About />
     </Layout>

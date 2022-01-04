@@ -4,9 +4,11 @@ import React from 'react';
 import Title from '../../components/Title';
 import IconoFa from '../../components/IconFa';
 import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 import SubTitle from '../Title/SubTitle';
+import Footer from '../Footer';
 
 const query = graphql`
   {
@@ -28,11 +30,21 @@ const query = graphql`
         title_stack
       }
     }
+    img: file(relativePath: { eq: "ninja-light.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
+    imgDark: file(relativePath: { eq: "ninja-dark.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
   }
 `;
 
 const About = () => {
-  const { aboutES, aboutEN } = useStaticQuery(query);
+  const { aboutES, aboutEN, img, imgDark } = useStaticQuery(query);
 
   let { currentTheme } = useCurrentTheme();
   let { currentLanguaje } = useCurrentLanguaje();
@@ -51,6 +63,19 @@ const About = () => {
             currentTheme === 'dark' ? 'dark ' : 'light '
           }`}
         >
+
+          <div className='about-img'>
+                <GatsbyImage
+                  image={
+                    currentTheme === 'dark'
+                      ? imgDark.childImageSharp.gatsbyImageData
+                      : img.childImageSharp.gatsbyImageData
+                  }
+                  alt="Leandro Arturi"
+                  className="hero-img"
+                />
+          </div>
+
           <Title
             title={about.title}
             theme={currentTheme === 'dark' ? 'dark' : 'light'}
@@ -78,6 +103,9 @@ const About = () => {
             <span><IconoFa name='FaGithub'/>GitHub</span>
           </div>
 
+          <div className='footerAbout'>
+            <Footer />
+          </div>
 
         </article>
       </div>

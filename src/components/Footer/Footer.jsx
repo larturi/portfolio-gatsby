@@ -4,8 +4,14 @@ import React from 'react';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import socialLinks from '../../constants/social_links';
 
-const Footer = () => {
+const Footer = (props) => {
   let { currentTheme } = useCurrentTheme();
+
+  const { footerHiden } = props;
+
+  if (footerHiden) {
+    return null;
+  }
 
   return (
     <footer
@@ -31,9 +37,6 @@ const Footer = () => {
        
         <p>
           Made with <span className="footer-author-name">❤️</span>{' '} with 
-          <span className={`copyright-autor-name ${currentTheme}`}>
-            <a href="https://es.reactjs.org/" target="_blank" rel="noopener noreferrer"> React</a>
-          </span>, 
           <span className={`copyright-autor-name ${currentTheme}`}> 
             <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer"> Gatsby</a>
           </span>,
