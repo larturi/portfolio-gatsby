@@ -33,7 +33,7 @@ const Navbar = props => {
   const state = useContext(GlobalStateContext);
   const dataAll = useStaticQuery(query);
 
-  let currentLanguaje = state.selectedLang || 'es-AR';
+  let currentLanguaje = state.selectedLang || 'en';
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
