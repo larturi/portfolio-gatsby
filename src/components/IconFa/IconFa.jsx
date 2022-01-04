@@ -11,6 +11,7 @@ import {
   FaBitcoin,
   FaGithub,
   FaUbuntu,
+  FaWordpress,
 } from 'react-icons/fa';
 
 import {
@@ -68,6 +69,9 @@ const IconFa = props => {
 
     case 'FaNodeJs':
       return <FaNodeJs className="tech-icon"></FaNodeJs>;
+
+    case 'FaWordpress':
+      return <FaWordpress className="tech-icon"></FaWordpress>;
 
     case 'FaPython':
       return <FaPython className="tech-icon"></FaPython>;
