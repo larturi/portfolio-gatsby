@@ -30,12 +30,12 @@ const query = graphql`
         title_stack
       }
     }
-    img: file(relativePath: { eq: "ninja-light.png" }) {
+    img: file(relativePath: { eq: "ninja-light.webp" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
-    imgDark: file(relativePath: { eq: "ninja-dark.png" }) {
+    imgDark: file(relativePath: { eq: "ninja-dark.webp" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
