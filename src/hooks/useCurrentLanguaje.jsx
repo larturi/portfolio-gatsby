@@ -7,8 +7,7 @@ export const useCurrentLanguaje = () => {
   let currentLanguaje = state.selectedLang;
 
   // En caso de que no haya un idioma seleccionado, se toma el idioma por defecto
-  if (typeof window !== 'undefined' && !currentLanguaje) {
-    console.log(1);
+  if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
   }

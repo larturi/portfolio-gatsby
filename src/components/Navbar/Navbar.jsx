@@ -53,7 +53,7 @@ const Navbar = props => {
 
   if (typeof window !== 'undefined') {
     if (!localStorage.getItem('locale')) {
-      localStorage.setItem('locale', 'es-AR');
+      localStorage.setItem('locale', 'en');
     }
     if (!localStorage.getItem('theme')) {
       localStorage.setItem('theme', 'dark');

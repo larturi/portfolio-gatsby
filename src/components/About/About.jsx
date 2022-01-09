@@ -48,6 +48,8 @@ const About = () => {
   let { currentTheme } = useCurrentTheme();
   let { currentLanguaje } = useCurrentLanguaje();
 
+  // console.log(currentLanguaje)
+
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
 
   return (
