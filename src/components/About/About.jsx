@@ -8,7 +8,6 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
 import SubTitle from '../Title/SubTitle';
-import Footer from '../Footer';
 
 const query = graphql`
   {
@@ -101,10 +100,6 @@ const About = () => {
             <span><IconoFa name='SiPostgresql'/>PostgreSQL</span>
             <span><IconoFa name='SiDocker'/>Docker</span>
             <span><IconoFa name='FaGithub'/>GitHub</span>
-          </div>
-
-          <div className='footerAbout'>
-            <Footer />
           </div>
 
         </article>
