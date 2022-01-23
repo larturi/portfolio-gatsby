@@ -22,8 +22,8 @@ const Degree = ({ titulo, universidad, periodo }) => {
           {titulo}
           <div className={`education-label ${currentTheme}`}>
             <span style={{
-              fontSize: '14px',
-              padding: '5px 10px'
+              fontSize: '11px',
+              padding: '5px 8px'
             }}>{universidad}</span>
           </div>
         </h3>

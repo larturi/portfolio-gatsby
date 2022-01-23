@@ -13,12 +13,6 @@
     }
 }
 
-.about-stack span {
-    padding: 5px 9px !important;
-    margin-left: 3px !important;
-    margin-bottom: 3px !important;
-}
-
 .about-stack svg{
     height: 13px;
     width: 13px;
@@ -121,4 +115,12 @@
 
 .footerAbout footer p {
     font-size: 13px !important;
+}
+
+.about-stack span {
+    padding: 4px 8px !important;
+    margin-left: 3px !important;
+    margin-bottom: 3px !important;
+    font-size: 10px !important;
+
 }

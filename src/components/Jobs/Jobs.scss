@@ -84,4 +84,21 @@
     }
 
 }
+
+.enterprise-name {
+  padding: 5px 8px !important;
+  font-size: 11px !important;
+
+  @media only screen and (max-width: 767px) {
+    padding: 5px 8px !important;
+    font-size: 11px !important;
+  }
+}
+
+.card-label {
+  @media only screen and (max-width: 767px) {
+    margin-top: -6px !important;
+    margin-bottom: 22px !important;
+  }
+}
   

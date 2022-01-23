@@ -12,14 +12,10 @@ const Job = props => {
     <div className="card-info" key={index}>
       <h3 className="card-slug">{puesto}</h3>
       <div className={`card-label ${currentTheme}`}>
-        <span style={{
-              fontSize: '14px',
-              padding: '5px 10px'
-        }}>{organization}</span>
+        <span className="enterprise-name">{organization}</span>
       </div>
       <p className="job-date">{periodo}</p>
       <p className="card-desc job-desc">{description}</p>
-
 
       <div 
         className={`card-label card-label-course ${currentTheme}`}
