@@ -19,7 +19,7 @@ const query = graphql`
         organization
         periodo
         puesto
-        tecnologias {
+        tecnologias(sort: "name") {
           logo
           name
         }
@@ -35,7 +35,7 @@ const query = graphql`
         organization
         periodo
         puesto
-        tecnologias {
+        tecnologias(sort: "name") {
           logo
           name
         }
@@ -80,7 +80,7 @@ const Jobs = props => {
     currentLanguaje === 'es-AR'
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
-
+      
   return (
     <section
       className={

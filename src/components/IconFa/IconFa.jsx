@@ -12,6 +12,7 @@ import {
   FaGithub,
   FaUbuntu,
   FaWordpress,
+  FaMountain,
 } from 'react-icons/fa';
 
 import {
@@ -192,6 +193,9 @@ const IconFa = props => {
 
     case 'FaUbuntu':
       return <FaUbuntu className="tech-icon"></FaUbuntu>;
+
+    case 'FaMountain':
+      return <FaMountain className="tech-icon"></FaMountain>;
 
     default:
       return <FaGraduationCap className="tech-icon"></FaGraduationCap>;
