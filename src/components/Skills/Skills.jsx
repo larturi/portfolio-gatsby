@@ -199,7 +199,7 @@ const Skills = props => {
         </div>
       </section>
 
-      <section
+      {/* <section
         className={
           'section skills color-less ' +
           (currentTheme === 'dark' ? 'dark ' : 'light ')
@@ -221,7 +221,7 @@ const Skills = props => {
             <GithubCal />
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

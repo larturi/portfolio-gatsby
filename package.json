@@ -1,61 +1,61 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "Leandro Arturi - Portfolio",
-  "version": "1.0.0",
-  "author": "Leandro Arturi <lea.arturi@gmail.com>",
-  "dependencies": {
-    "@loadable/component": "^5.15.0",
-    "gatsby": "^3.10.1",
-    "gatsby-image": "^3.10.0",
-    "gatsby-plugin-gatsby-cloud": "^2.10.0",
-    "gatsby-plugin-image": "^1.10.1",
-    "gatsby-plugin-manifest": "^3.10.0",
-    "gatsby-plugin-minify": "^0.4.0",
-    "gatsby-plugin-offline": "^4.10.0",
-    "gatsby-plugin-react-helmet": "^4.10.0",
-    "gatsby-plugin-sass": "^4.10.0",
-    "gatsby-plugin-sharp": "^3.10.2",
-    "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-source-graphql": "^3.10.0",
-    "gatsby-source-strapi": "^1.0.2",
-    "gatsby-source-strapi-localized": "^0.1.2",
-    "gatsby-transformer-sharp": "^3.10.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dark-mode-toggle": "^0.2.0",
-    "react-dom": "^17.0.1",
-    "react-github-calendar": "^3.0.8",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.2.0",
-    "react-skillbars": "^1.6.1",
-    "react-tooltip": "^4.2.21",
-    "sass": "^1.36.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3"
-  },
-  "devDependencies": {
-    "gatsby-plugin-favicons": "^2.0.0",
-    "prettier": "2.3.2"
-  },
-  "keywords": [
-    "leandro arturi, portfolio, gatsby"
-  ],
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "name": "gatsby-starter-default",
+    "private": true,
+    "description": "Leandro Arturi - Portfolio",
+    "version": "1.0.0",
+    "author": "Leandro Arturi <lea.arturi@gmail.com>",
+    "dependencies": {
+        "@loadable/component": "^5.15.2",
+        "gatsby": "^4.6.0",
+        "gatsby-image": "^3.10.0",
+        "gatsby-plugin-gatsby-cloud": "^4.6.0",
+        "gatsby-plugin-image": "^2.6.0",
+        "gatsby-plugin-manifest": "^4.6.0",
+        "gatsby-plugin-minify": "^0.4.0",
+        "gatsby-plugin-offline": "^5.6.0",
+        "gatsby-plugin-react-helmet": "^5.6.0",
+        "gatsby-plugin-sass": "^5.6.0",
+        "gatsby-plugin-sharp": "^4.6.0",
+        "gatsby-source-filesystem": "^4.6.0",
+        "gatsby-source-graphql": "^4.6.0",
+        "gatsby-source-strapi": "^1.0.2",
+        "gatsby-source-strapi-localized": "^0.1.2",
+        "gatsby-transformer-sharp": "^4.6.0",
+        "prop-types": "^15.7.2",
+        "react": "^17.0.1",
+        "react-dark-mode-toggle": "^0.2.0",
+        "react-dom": "^17.0.1",
+        "react-github-calendar": "^3.0.8",
+        "react-helmet": "^6.1.0",
+        "react-icons": "^4.2.0",
+        "react-skillbars": "^1.6.1",
+        "react-tooltip": "^4.2.21",
+        "sass": "^1.36.0",
+        "semantic-ui-css": "^2.4.1",
+        "semantic-ui-react": "^2.0.3"
+    },
+    "devDependencies": {
+        "gatsby-plugin-favicons": "^2.0.0",
+        "prettier": "2.3.2"
+    },
+    "keywords": [
+        "leandro arturi, portfolio, gatsby"
+    ],
+    "license": "0BSD",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    },
+    "bugs": {
+        "url": "https://github.com/gatsbyjs/gatsby/issues"
+    }
 }

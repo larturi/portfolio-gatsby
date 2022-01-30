@@ -32,11 +32,11 @@ import {
   SiCss3,
   SiXampp,
   SiStrapi,
-  SiNextDotJs,
-  SiNuxtDotJs,
+  SiNextdotjs,
+  SiNuxtdotjs,
   SiGraphql,
   SiMongodb,
-  SiSocketDotIo,
+  SiSocketdotio,
   SiFirebase,
   SiJest,
   SiSass,
@@ -144,10 +144,10 @@ const IconFa = props => {
       return <SiStrapi className="tech-icon"></SiStrapi>;
 
     case 'SiNextDotJs':
-      return <SiNextDotJs className="tech-icon"></SiNextDotJs>;
+      return <SiNextdotjs className="tech-icon"></SiNextdotjs>;
 
     case 'SiNuxtDotJs':
-      return <SiNuxtDotJs className="tech-icon"></SiNuxtDotJs>;
+      return <SiNuxtdotjs className="tech-icon"></SiNuxtdotjs>;
 
     case 'SiGraphql':
       return <SiGraphql className="tech-icon"></SiGraphql>;
@@ -156,7 +156,7 @@ const IconFa = props => {
       return <SiMongodb className="tech-icon"></SiMongodb>;
 
     case 'SiSocketDotIo':
-      return <SiSocketDotIo className="tech-icon"></SiSocketDotIo>;
+      return <SiSocketdotio className="tech-icon"></SiSocketdotio>;
 
     case 'SiFirebase':
       return <SiFirebase className="tech-icon"></SiFirebase>;

@@ -18,7 +18,7 @@ const Home = props => {
       <Skills backgroundWhite={true} />
       <Jobs items={5} />
       <Education backgroundWhite={true} items={5} />
-      <Projects items={10} />
+      <Projects items={5} />
     </Layout>
   );
 };
