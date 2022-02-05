@@ -1,6 +1,5 @@
 @import './index.scss';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Lato:400,700&display=swap");
-
 *,
 ::after,
 ::before {
@@ -9,16 +8,24 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 14px;
+}
+
 body {
     font-family: $ff-primary;
     line-height: 1.5;
     font-size: 0.875rem;
+    font-size: 14px;
     margin-top: 5rem;
     background-color: $clr-primary-10-dark;
     height: auto;
-
-    &.dark { background-color: $clr-primary-10-dark; }
-    &.light { background-color: $clr-white; }
+    &.dark {
+        background-color: $clr-primary-10-dark;
+    }
+    &.light {
+        background-color: $clr-white;
+    }
 }
 
 ul {
@@ -101,21 +108,18 @@ p {
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: $radius;
-
     &:hover {
         opacity: 0.9;
     }
-
-    &.dark { 
+    &.dark {
         background: $clr-primary-5-dark;
         color: $font-color-light;
-      }
-    &.light { 
+    }
+    &.light {
         background: $clr-primary-5;
         color: $clr-white !important;
     }
-
-    @media only screen and (max-width: 576px) { 
+    @media only screen and (max-width: 576px) {
         margin-bottom: 12px;
         width: 100%;
     }
@@ -140,52 +144,46 @@ p {
 
 .section {
     padding: 5rem 0;
-
     .card-info {
         border-radius: 5px;
         border-width: 2px;
         border-style: solid;
     }
-
-    &.dark { 
+    &.dark {
         background: $clr-primary-10-dark;
         color: $clr-white;
-
         &.color-less {
             background: rgba($clr-primary-10-dark, .995);
         }
-
-        h1, h2, h3, h4, a, p {
+        h1,
+        h2,
+        h3,
+        h4,
+        a,
+        p {
             color: $clr-white;
         }
-
         .tech-icon {
             color: $clr-white;
         }
-
         a {
             color: $clr-white;
-
-            :hover {
+             :hover {
                 color: rgb($clr-white, .9);
             }
         }
-
         &.about-page {
             background: $clr-primary-10-dark;
-
             .about-stack span {
                 color: $clr-white;
                 border: solid 1px $clr-primary-5-dark;
                 background: $clr-primary-5-dark;
                 font-size: 10px;
             }
-
             p {
                 color: rgba($clr-white, .8)
             }
         }
-
         .card-label,
         .education-label {
             span {
@@ -194,65 +192,55 @@ p {
                 background: $clr-primary-5-dark;
             }
         }
-
         .card-info {
             .education-periodo,
             .job-date {
                 color: rgba($clr-white, .75);
             }
-
             .job-desc {
                 color: rgba($clr-white, .90);
                 display: flex;
             }
-
             .card-desc {
                 color: rgba($clr-white, .80);
             }
-
             border-color: $clr-primary-7-dark;
-            
         }
-
         .react-github-container svg {
             border: solid 1px $clr-primary-7-dark;
             background: #1a1a1a;
             border-radius: 5px;
             padding: 1rem;
         }
-
-        .react-github-container svg > * {
+        .react-github-container svg>* {
             fill: white !important;
         }
     }
-
-    &.light { 
+    &.light {
         background: $clr-white;
-        color: $clr-black; 
-
+        color: $clr-black;
         &.color-less {
             background: rgba($clr-grey-10, .3);
         }
-
-        h1, h2, h3, h4, a, p {
+        h1,
+        h2,
+        h3,
+        h4,
+        a,
+        p {
             color: $clr-black;
         }
-
         .tech-icon {
             color: $clr-grey-5;
         }
-
         a {
             color: $font-color-dark;
-
-            :hover {
+             :hover {
                 color: $clr-primary-1;
             }
         }
-
         &.about-page {
             background: $clr-white;
-
             .about-stack span {
                 color: $clr-white;
                 border: solid 1px $clr-primary-5;
@@ -260,7 +248,6 @@ p {
                 font-size: 10px;
             }
         }
-
         .card-label,
         .education-label {
             span {
@@ -269,25 +256,20 @@ p {
                 background: $clr-primary-5;
             }
         }
-
         .card-info {
             border-color: $clr-primary-5;
-
             .education-periodo,
             .job-date {
                 color: rgba($font-color-dark, .75);
             }
-
             .job-desc {
                 color: rgba($font-color-dark, .90);
                 display: flex;
             }
-
             .card-desc {
                 color: rgba($font-color-dark, .80);
             }
         }
-
         .react-github-container svg {
             border: solid 1px $clr-primary-5;
             background: white;
@@ -295,7 +277,6 @@ p {
             padding: 1rem;
         }
     }
-    
     @media only screen and (max-width: 767px) {
         padding: 2rem 0;
     }
@@ -304,7 +285,6 @@ p {
 .tech-icon {
     font-size: 7rem;
     margin: 25px 15px 0 15px;
-
     @media only screen and (max-width: 767px) {
         width: 50px;
         font-size: 7rem;
@@ -320,7 +300,6 @@ p {
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
-
     @media screen and (min-width: 992px) {
         width: 95vw;
     }
@@ -330,7 +309,6 @@ p {
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
-
     @media screen and (min-width: 992px) {
         width: 75vw;
     }
@@ -342,9 +320,12 @@ p {
     margin-bottom: 1.25rem;
     margin-left: auto;
     margin-right: auto;
-
-    &.dark { background: $clr-primary-5-dark; }
-    &.light { background: $clr-primary-5; }
+    &.dark {
+        background: $clr-primary-5-dark;
+    }
+    &.light {
+        background: $clr-primary-5;
+    }
 }
 
 .section-title {
@@ -360,8 +341,12 @@ p {
     width: 3rem;
     height: 0.25rem;
     margin-bottom: 2rem;
-    &.dark { background: $clr-primary-5-dark; }
-    &.light { background: $clr-primary-5; }
+    &.dark {
+        background: $clr-primary-5-dark;
+    }
+    &.light {
+        background: $clr-primary-5;
+    }
 }
 
 .bg-grey {
@@ -379,7 +364,6 @@ p {
     grid-column: 5 / 12;
     grid-row: 1 / 1;
     margin-bottom: 15px;
-
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -390,7 +374,6 @@ p {
     min-width: 120px;
     opacity: 0.6;
     order: 1;
-
     @media only screen and (max-width: 767px) {
         opacity: 0.4;
         order: 1;
@@ -407,35 +390,34 @@ p {
 }
 
 .card-slug {
-  font-weight: 500;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1rem !important;
-  text-transform: uppercase;
-  transition: $transition;
-
-  @media only screen and (max-width: 767px) {
-    font-size: 1rem;
-    width: 100%;
-  }
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem !important;
+    text-transform: uppercase;
+    transition: $transition;
+    @media only screen and (max-width: 767px) {
+        font-size: 1rem;
+        width: 100%;
+    }
 }
 
 .card-slug h3:hover {
-  color: $font-color-dark;
+    color: $font-color-dark;
 }
 
 .card-link-project {
-  float: right;
+    float: right;
 }
 
 .card-icon {
-  font-size: 1.25rem;
-  margin-right: 0.5rem;
-  transition: $transition;
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    transition: $transition;
 }
 
 .card-icon:hover {
-  color: $clr-primary-1;
+    color: $clr-primary-1;
 }
 
 .card-desc {
@@ -445,20 +427,18 @@ p {
     column-gap: 2rem;
     align-items: center;
     word-spacing: 3px;
-  
     @media only screen and (max-width: 767px) {
-      font-size: 1rem;
-      line-height: 30px;
+        font-size: 1rem;
+        line-height: 30px;
     }
-  }
+}
 
 .card-label {
-  margin-bottom: 1rem;
-
-  @media screen and (max-width: 576px) {
-    max-height: 30px;
-    overflow-y: hidden;
-}
+    margin-bottom: 1rem;
+    @media screen and (max-width: 576px) {
+        max-height: 30px;
+        overflow-y: hidden;
+    }
 }
 
 .card-label span {
@@ -471,14 +451,12 @@ p {
     font-size: 0.80rem;
     font-family: 'Lato';
     padding: 0.22rem 0.54em;
-    
-    svg{
+    svg {
         height: 13px;
         width: 13px;
         margin: 1px 6px -2px 0;
         color: #fff !important;
     }
-
     @media screen and (max-width: 576px) {
         display: inline-block;
         margin-right: 0.45rem;
@@ -486,9 +464,8 @@ p {
         border-radius: 0.25rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-size: 0.7rem;  
+        font-size: 0.7rem;
     }
-
 }
 
 .skillbar-percent {
