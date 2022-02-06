@@ -3,7 +3,7 @@ import './Navbar.scss';
 import React, { useState, useContext, useEffect } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import DarkModeToggle from 'react-dark-mode-toggle';
+// import DarkModeToggle from 'react-dark-mode-toggle';
 
 import {
   GlobalDispatchContext,
@@ -24,6 +24,9 @@ const query = graphql`
 `;
 
 const Navbar = props => {
+
+  const isSSR = typeof window === "undefined";
+
   const [isDarkMode, setIsDarkMode] = useState(null);
   const [transparentNavbar, setTransparentNavbar] = useState('');
 
@@ -87,16 +90,25 @@ const Navbar = props => {
     }
   }, [isDarkMode, dispatch]);
 
+  const DarkModeToggle = React.lazy(() =>
+    import("react-dark-mode-toggle")
+  );
+
   return (
     <nav className={`navbar ${currentTheme} ${transparentNavbar}`}>
       <div className="nav-center">
         <div className="nav-header">
-          <DarkModeToggle
-            onChange={setIsDarkMode}
-            checked={isDarkMode}
-            className="dark-mode-toggle"
-            size={60}
-          />
+
+          {!isSSR && (
+            <React.Suspense fallback={<div />}>
+              <DarkModeToggle
+                onChange={setIsDarkMode}
+                checked={isDarkMode}
+                className="dark-mode-toggle"
+                size={60}
+              />
+            </React.Suspense>
+          )}
 
           <button
             type="button"
