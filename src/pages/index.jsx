@@ -15,10 +15,10 @@ const Home = props => {
       <Seo title="Leandro Arturi - Portfolio" seoIndex={true} seoFollow={true}  />
       <Hero />
       <About />
-      {/* <Skills backgroundWhite={true} />
-      <Jobs items={5} />
-      <Education backgroundWhite={true} items={5} />
-      <Projects items={5} /> */}
+      {/* <Skills backgroundWhite={true} /> */}
+      {/* <Jobs items={5} /> */}
+      {/* <Education backgroundWhite={true} items={5} /> */}
+      {/* <Projects items={5} /> */}
     </Layout>
   );
 };
