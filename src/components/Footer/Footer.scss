@@ -1,48 +1,47 @@
 @import '../../sass/index.scss';
-
 .footer {
-    height: 9rem;
+    height: 11rem;
     text-align: center;
     display: grid;
     place-items: center;
-
     &.dark {
-        background: $clr-primary-10-dark;
-
-        a, p {
+        background: $clr-primary-5-dark;
+        a,
+        p {
             color: $clr-white;
-
             span {
-                color: $clr-primary-5-dark;
+                color: $clr-white;
             }
         }
-
-        .social-link  {
+        .social-link {
             color: $clr-white
         }
-
-        a, .copyright-autor-name {
-            color: $clr-primary-7-dark;
+        .social-link:hover {
+            color: $clr-grey-5-dark;
+        }
+        a,
+        .copyright-autor-name {
+            color: $clr-white;
         }
     }
-
     &.light {
-        background: $clr-white;
-
-        a, p {
-            color: $clr-black;
-
-            a, span {
-                color: $clr-primary-5;
+        background: $clr-primary-5;
+        a,
+        p {
+            color: $clr-grey-10;
+            a,
+            span {
+                color: $clr-grey-10;
             }
         }
-
-        .social-link  {
-            color: $clr-black
+        .social-link {
+            color: $clr-white;
         }
-
+        .social-link:hover {
+            color: $clr-grey-5-dark;
+        }
         .copyright-autor-name {
-            color: $clr-primary-5;
+            color: $clr-grey-10;
         }
     }
 }
@@ -51,9 +50,8 @@
     margin-top: 0.5rem;
 }
 
-
 .footer-links {
-    margin: 0 auto 1rem auto;
+    margin: 37px auto 1rem auto;
 }
 
 .footer-author-name {
