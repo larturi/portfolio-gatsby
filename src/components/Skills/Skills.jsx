@@ -4,7 +4,7 @@ import React from 'react';
 import loadable from '@loadable/component';
 import Title from '../Title';
 import SubTitle from '../Title/SubTitle';
-// import GithubCal from '../GithubCal';
+import GithubCal from '../GithubCal';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { skillsColors, skillsColorsDark } from '../../constants/skills_colors';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -199,9 +199,9 @@ const Skills = props => {
         </div>
       </section>
 
-      {/* <section
+      <section
         className={
-          'section skills color-less ' +
+          'section skills ' +
           (currentTheme === 'dark' ? 'dark ' : 'light ')
         }
       >
@@ -221,7 +221,7 @@ const Skills = props => {
             <GithubCal />
           </div>
         </div>
-      </section> */}
+      </section>
     </>
   );
 };
