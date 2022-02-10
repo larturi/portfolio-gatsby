@@ -45,7 +45,7 @@ const query = graphql`
       }
     }
     coursesEN: strapi {
-      cursos(locale: "en", sort: "year:desc") {
+      cursos(locale: "en", sort: "sort:desc") {
         name
         url
         year
