@@ -5,7 +5,7 @@
     display: grid;
     place-items: center;
     &.dark {
-        background: $clr-primary-5-dark;
+        background: $clr-grey-7-dark;
         a,
         p {
             color: $clr-white;
@@ -17,31 +17,37 @@
             color: $clr-white
         }
         .social-link:hover {
-            color: $clr-grey-5-dark;
+            color: $clr-primary-9-dark;
         }
         a,
         .copyright-autor-name {
             color: $clr-white;
+        }
+        a:hover {
+            color: $clr-primary-9-dark;
         }
     }
     &.light {
-        background: $clr-primary-5;
+        background: $clr-grey-10;
         a,
         p {
-            color: $clr-grey-10;
+            color: $font-color-dark;
             a,
             span {
-                color: $clr-grey-10;
+                color: $font-color-dark;
             }
         }
         .social-link {
-            color: $clr-white;
+            color: $font-color-dark;
         }
         .social-link:hover {
-            color: $clr-grey-5-dark;
+            color: $clr-primary-5;
         }
         .copyright-autor-name {
-            color: $clr-grey-10;
+            color: $font-color-dark;
+        }
+        a:hover {
+            color: $clr-primary-5;
         }
     }
 }
