@@ -1,5 +1,4 @@
 @import '../../sass/index.scss';
-
 .item {
     display: grid;
     margin-bottom: 4rem;
@@ -45,7 +44,6 @@
     font-size: 0.85rem;
 }
 
-
 .item-icon {
     color: $clr-primary-5;
     font-size: 1.25rem;
@@ -64,7 +62,6 @@
 .education-periodo {
     margin-bottom: 1rem !important;
     margin-top: -7px !important;
-
     @media only screen and (max-width: 767px) {
         margin-bottom: 1rem !important;
         margin-top: -20px !important;
@@ -75,7 +72,6 @@
     margin-top: 1.4rem;
     margin-bottom: 0 !important;
     font-size: 13px;
-
     @media only screen and (max-width: 767px) {
         margin-top: 1rem;
         margin-bottom: 27px !important;
@@ -92,7 +88,6 @@
     letter-spacing: 1.5px;
     font-size: 0.80rem;
     font-family: 'Lato';
-
     @media only screen and (max-width: 767px) {
         padding: 0.20rem 0.5rem;
         margin-bottom: 6px;
@@ -105,10 +100,9 @@
 
 .card-slug-curso {
     @media only screen and (max-width: 767px) {
-      font-size: 1rem;
-      width: 120%;
+        font-size: 1rem;
     }
-  }
+}
 
 .card-info-right-degree {
     margin-bottom: 20px;
@@ -119,7 +113,6 @@
     margin-top: 2rem;
     margin-bottom: 2.7rem !important;
     font-size: 13px;
-
     @media only screen and (max-width: 767px) {
         margin-top: -10px;
         margin-bottom: 25px !important;
@@ -139,7 +132,6 @@
         grid-row: 1 / 1;
         margin-bottom: 15px;
     }
-    
 }
 
 .card-curso {

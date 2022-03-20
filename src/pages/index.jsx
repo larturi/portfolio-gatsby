@@ -26,7 +26,7 @@ const Home = props => {
 
       {!isSSR && (
         <React.Suspense fallback={<div />}>
-          <Education backgroundWhite={true} items={5} />
+          <Education backgroundWhite={true} items={12} />
         </React.Suspense>
       )}
 

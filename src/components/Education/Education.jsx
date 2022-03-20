@@ -152,7 +152,7 @@ const Education = props => {
         title={titleCourses}
         theme={currentTheme === 'dark' ? 'dark' : 'light'}
       />
-      <div className="section-center-50">
+      <div className="section-center-50 cursos-container">
         {items > 0
           ? courses.map((course, index) => {
               if (index < items) {
@@ -163,16 +163,20 @@ const Education = props => {
           : courses.map((course, index) => {
               return <Course key={index} index={index} {...course} />;
             })}
-
-        {items > 0 && (
-          <div className="btnCenter">
-            <Link to="/education" className={`btn ${currentTheme}`}>
-              {titleBtnMore}
-            </Link>
-          </div>
-        )}
+       
       </div>
+
+      {items > 0 && (
+        <div className="btnCenter btnMoreCursos">
+          <Link to="/education" className={`btn ${currentTheme}`}>
+            {titleBtnMore}
+          </Link>
+        </div>
+      )}
+
     </section>
+
+    
   );
 };
 

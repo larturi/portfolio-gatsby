@@ -1,0 +1,79 @@
+@import '../../../sass/index.scss';
+.cursos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    text-align: center;
+    &__name {
+        font-size: .8rem;
+        h3 {
+            width: 90% !important;
+            margin: 0 auto !important;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 3rem;
+    }
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 3rem;
+    }
+    @media screen and (min-width: 1600px) {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 3rem;
+    }
+}
+
+.card-curso-container {
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 0.35rem;
+    position: relative;
+    @media screen and (min-width: 992px) {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    &.dark {
+        border: solid 2px $clr-primary-5-dark !important;
+    }
+    &.light {
+        border: solid 2px $clr-primary-5;
+    }
+    &__logo {
+        opacity: 0.6;
+        svg {
+            font-size: 5rem;
+        }
+    }
+    &__name {
+        font-size: 1rem;
+        @media screen and (max-width: 768px) {
+            width: 98%;
+        }
+    }
+    &__horas {
+        opacity: 0.6;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 2rem !important;
+        }
+    }
+    &__labels {
+        width: 96%;
+        margin: 0 auto;
+        text-align: center;
+        span {
+            font-size: 0.7rem !important;
+        }
+        @media screen and (max-width: 768px) {
+            width: 94%;
+        }
+        @media screen and (max-width: 992px) {
+            width: 91%;
+        }
+        @media screen and (max-width: 1200px) {
+            width: 80%;
+        }
+        @media screen and (max-width: 1600px) {
+            width: 92%;
+        }
+    }
+}
