@@ -29,15 +29,17 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
         {hours} horas - {institution} - {year}
       </p>
       
-      <div className={`card-label card-curso-container__labels ${currentTheme}`}>
-        {tecnologias.map(item => {
-          return (
-            <span key={item.name}>
-              <IconoFa name={item.logo} />
-              {item.name}
-            </span>
-          );
-        })}
+      <div className='card-curso-container__labels-parent'>
+        <div className={`card-label card-curso-container__labels ${currentTheme}`}>
+          {tecnologias.map(item => {
+            return (
+              <span key={item.name}>
+                <IconoFa name={item.logo} />
+                {item.name}
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
