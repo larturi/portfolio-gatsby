@@ -14,7 +14,7 @@
         background: $clr-primary-7-blue;
     }
     &.yellow {
-        background: $clr-primary-7-yellow;
+        background: $clr-primary-9-yellow;
     }
     h1,
     h2,
@@ -50,7 +50,7 @@
         color: $clr-grey-5-dark;
     }
     &.yellow {
-        color: $font-color-dark;
+        color: $font-color-light;
     }
 }
 
@@ -82,7 +82,7 @@
         color: $clr-white;
     }
     &.yellow {
-        color: $clr-black;
+        color: $clr-white;
     }
 }
 
@@ -112,7 +112,7 @@
         color: $clr-white;
     }
     &.yellow {
-        color: $clr-black;
+        color: $clr-white;
     }
     @media only screen and (max-width: 767px) {
         font-size: 34px;

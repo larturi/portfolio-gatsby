@@ -22,7 +22,7 @@
         background: $clr-primary-7-blue;
     }
     &.yellow {
-        background: $clr-primary-7-yellow;
+        background: $clr-primary-9-yellow;
     }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .sidebar-links.yellow li a {
-    color: $font-color-dark;
+    color: $clr-grey-1-dark;
 }
 
 .sidebar-links.dark li a:hover {
@@ -79,8 +79,8 @@
 }
 
 .sidebar-links.yellow li a:hover {
-    background: $font-color-dark;
-    color: $clr-primary-7-yellow;
+    background: $clr-primary-7-yellow;
+    color: $clr-grey-10;
 }
 
 .close-btn {
@@ -101,7 +101,7 @@
         color: $clr-primary-5-blue;
     }
     &.yellow {
-        color: $font-color-dark;
+        color: $clr-primary-2-yellow;
     }
 }
 

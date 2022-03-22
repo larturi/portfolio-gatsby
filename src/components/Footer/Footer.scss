@@ -74,23 +74,23 @@
         }
     }
     &.yellow {
-        background: darken($clr-primary-7-yellow, 0.9);
+        background: darken($clr-primary-9-yellow, 0.9);
         a,
         p {
-            color: $clr-black;
+            color: $clr-white;
             span {
-                color: $clr-black;
+                color: $clr-white;
             }
         }
         .social-link {
-            color: $clr-black
+            color: $clr-white
         }
         .social-link:hover {
-            color: $font-color-dark;
+            color: $font-color-light;
         }
         a,
         .copyright-autor-name {
-            color: $font-color-dark;
+            color: $font-color-light;
         }
         a:hover {
             color: $clr-primary-7-yellow;
