@@ -84,7 +84,7 @@ const Jobs = props => {
   return (
     <section
       className={
-        'section jobs color-less ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+        'section jobs ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
       }
     >
       <Title title={title} theme={currentTheme === 'dark' ? 'dark' : 'light'} />

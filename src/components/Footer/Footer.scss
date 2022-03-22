@@ -5,7 +5,7 @@
     display: grid;
     place-items: center;
     &.dark {
-        background: $clr-grey-7-dark;
+        background: darken($clr-primary-10-dark, 0.9);
         a,
         p {
             color: $clr-white;
@@ -28,7 +28,7 @@
         }
     }
     &.light {
-        background: $clr-grey-10;
+        background: $clr-white;
         a,
         p {
             color: $font-color-dark;

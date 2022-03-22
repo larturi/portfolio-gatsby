@@ -158,7 +158,7 @@ p {
         background: $clr-primary-10-dark;
         color: $clr-white;
         &.color-less {
-            background: rgba($clr-primary-8-dark, .9);
+            background: $clr-primary-8-dark;
         }
         h1,
         h2,
@@ -178,7 +178,7 @@ p {
             }
         }
         &.about-page {
-            background: $clr-primary-10-dark;
+            background: $clr-primary-8-dark;
             .about-stack span {
                 color: $clr-white;
                 border: solid 1px $clr-primary-5-dark;
@@ -222,10 +222,10 @@ p {
         }
     }
     &.light {
-        background: $clr-white;
+        background: $clr-primary-8;
         color: $clr-black;
         &.color-less {
-            background: rgba($clr-grey-10, .3);
+            background: $clr-primary-10;
         }
         h1,
         h2,

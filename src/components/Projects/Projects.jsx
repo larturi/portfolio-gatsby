@@ -67,7 +67,7 @@ const Projects = props => {
   return (
     <section
       className={
-        'section projects color-less ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
+        'section projects ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
       }
     >
       <Title
