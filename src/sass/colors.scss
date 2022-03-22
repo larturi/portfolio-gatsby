@@ -1,4 +1,9 @@
-/* Light Mode */
+$clr-white: #fff;
+$font-color-light: rgb(240, 240, 240);
+$font-color-dark: rgb(42, 42, 42);
+$clr-black: #1e1e1f;
+
+/* Light Theme */
 
 $clr-primary-1: hsl(184, 91%, 17%);
 $clr-primary-5: #2caeba;
@@ -7,15 +12,11 @@ $clr-primary-8: #fcfcfc;
 $clr-primary-10: #fff;
 $clr-grey-1: hsl(209, 61%, 16%);
 $clr-grey-3: hsl(209, 34%, 30%);
-$clr-grey-4: hsl(209, 28%, 39%);
 $clr-grey-5: hsl(210, 22%, 49%);
 $clr-grey-10: hsl(210, 36%, 96%);
-$clr-white: #fff;
-$font-color-dark: rgb(42, 42, 42);
 
-/* Dark Mode */
+/* Dark Theme */
 
-$clr-primary-1-dark: #330c8f;
 $clr-primary-5-dark: #6234c3;
 $clr-primary-7-dark: #8f62f7;
 $clr-primary-8-dark: #202020;
@@ -23,20 +24,21 @@ $clr-primary-9-dark: #BB86FC;
 $clr-primary-10-dark: #1d1d1d;
 $clr-grey-1-dark: #f0eeee;
 $clr-grey-5-dark: #e8e8e8;
-$clr-grey-7-dark: #151515;
-$clr-black: #1e1e1f;
-$font-color-light: rgb(240, 240, 240);
 
-/* Third Mode */
+/* Blue Theme */
 
-$clr-primary-1-blue: hsl(209, 91%, 17%);
+$clr-primary-3-blue: #5f92d4;
 $clr-primary-5-blue: #2761ad;
-$clr-primary-7-blue: #dfeaff;
-$clr-primary-8-blue: #fcfcfc;
-$clr-primary-9-blue: #fcfcfc;
-$clr-primary-10-blue: #fff;
-$clr-grey-1-blue: hsl(218, 61%, 16%);
-$clr-grey-3-blue: hsl(226, 35%, 30%);
-$clr-grey-4-blue: hsl(214, 28%, 39%);
-$clr-grey-5-blue: hsl(210, 22%, 49%);
-$clr-grey-10-blue: hsl(206, 33%, 96%);
+$clr-primary-7-blue: #05112e;
+$clr-primary-8-blue: #071536;
+$clr-primary-10-blue: #071530;
+
+/* Yellow Theme */
+
+$clr-primary-2-yellow: #ffca4f;
+$clr-primary-3-yellow: #feb916;
+$clr-primary-5-yellow: #f8af06;
+$clr-primary-6-yellow: #ffaa00;
+$clr-primary-7-yellow: #ffa704;
+$clr-primary-8-yellow: #071536;
+$clr-primary-10-yellow: #071530;

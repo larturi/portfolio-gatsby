@@ -20,12 +20,15 @@
     &.blue {
         background: $clr-primary-5-blue;
     }
+    &.yellow {
+        background: $clr-primary-5-yellow;
+    }
 }
 
 .modal-content {
-    padding: 1rem 1rem;
     display: flex;
     gap: 7px;
+    position: absolute;
 }
 
 .btn-color {
@@ -48,5 +51,8 @@
     }
     &.blue {
         background: $clr-primary-5-blue;
+    }
+    &.yellow {
+        background: $clr-primary-5-yellow;
     }
 }

@@ -26,8 +26,15 @@
         }
     }
     &.blue {
-        background: $clr-white;
-        color: $clr-grey-1;
+        background: $clr-primary-10-blue;
+        color: $clr-grey-1-dark;
+        &.isHome {
+            background: transparent;
+        }
+    }
+    &.yellow {
+        background: $clr-primary-7-yellow;
+        color: $clr-grey-1-dark;
         &.isHome {
             background: transparent;
         }
@@ -59,6 +66,9 @@
         color: $font-color-dark;
     }
     &.blue {
+        color: $font-color-light;
+    }
+    &.yellow {
         color: $font-color-dark;
     }
 }
@@ -72,6 +82,9 @@
         color: $font-color-dark;
     }
     &.blue {
+        color: $font-color-light;
+    }
+    &.yellow {
         color: $font-color-dark;
     }
 }
@@ -89,7 +102,10 @@
         color: $clr-primary-5;
     }
     &.blue {
-        color: $clr-primary-5-blue;
+        color: $clr-primary-3-blue;
+    }
+    &.yellow {
+        color: $font-color-dark;
     }
 }
 
@@ -102,6 +118,9 @@
     }
     &.blue {
         color: $clr-primary-5-blue;
+    }
+    &.yellow {
+        color: darken($font-color-dark, 50%);
     }
 }
 
@@ -136,6 +155,10 @@
         color: $clr-primary-5-blue;
         box-shadow: 0px 2px $clr-primary-5-blue;
     }
+    &.yellow {
+        color: $clr-primary-5-yellow;
+        box-shadow: 0px 2px $clr-primary-5-yellow;
+    }
 }
 
 .btn-hero {
@@ -150,6 +173,10 @@
     &.blue {
         background: $clr-primary-5-blue;
         color: $clr-primary-10;
+    }
+    &.yellow {
+        background: $clr-black;
+        color: $clr-white !important;
     }
 }
 
@@ -177,6 +204,9 @@
             color: $clr-grey-1 !important;
         }
         &.blue a {
+            color: $clr-grey-1-dark !important;
+        }
+        &.yellow a {
             color: $clr-grey-1 !important;
         }
     }
@@ -202,6 +232,10 @@
             color: $clr-primary-5-blue;
             box-shadow: 0px 2px $clr-primary-5-blue;
         }
+        &.yellow {
+            color: $clr-primary-5-yellow;
+            box-shadow: 0px 2px $clr-primary-5-yellow;
+        }
     }
     .active {
         &.dark {
@@ -215,6 +249,10 @@
         &.blue {
             color: $clr-primary-5-blue;
             box-shadow: 0px 2px $clr-primary-5-blue;
+        }
+        &.yellow {
+            color: $clr-primary-10-dark;
+            box-shadow: 0px 2px $clr-white;
         }
     }
     .nav-center {

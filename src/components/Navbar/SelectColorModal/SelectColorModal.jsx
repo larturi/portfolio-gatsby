@@ -57,6 +57,17 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
           >
             <VscColorMode />
           </button>
+          <button
+            type="button"
+            className="btn-color yellow"
+            onClick={() => {
+              setColorTheme('yellow');
+              localStorage.setItem('theme', 'yellow');
+              handleOpenModal();
+            }}
+          >
+            <VscColorMode />
+          </button>
         </div>
       )}
     </>

@@ -15,9 +15,17 @@ export const skillsColorsDark = {
 };
 
 export const skillsColorsBlue = {
-    bar: '#2761ad',
+    bar: '#5994e2',
     title: {
         text: '#fff',
-        background: '#2761a0',
+        background: '#5994e2',
+    },
+};
+
+export const skillsColorsYellow = {
+    bar: 'rgb(42, 42, 42)',
+    title: {
+        text: '#fff',
+        background: 'rgb(42, 42, 42)',
     },
 };

@@ -27,7 +27,10 @@ body {
         background-color: $clr-white;
     }
     &.blue {
-        background-color: $clr-white;
+        background-color: $clr-primary-10-dark;
+    }
+    &.yellow {
+        background-color: $clr-primary-5-yellow;
     }
 }
 
@@ -124,6 +127,10 @@ p {
     }
     &.blue {
         background: $clr-primary-5-blue;
+        color: $clr-white !important;
+    }
+    &.yellow {
+        background: $clr-black;
         color: $clr-white !important;
     }
     @media only screen and (max-width: 576px) {
@@ -290,10 +297,10 @@ p {
         }
     }
     &.blue {
-        background: $clr-primary-8;
+        background: $clr-primary-10-blue;
         color: $clr-white;
         &.color-less {
-            background: $clr-primary-10-blue;
+            background: $clr-primary-8-blue;
         }
         h1,
         h2,
@@ -301,24 +308,27 @@ p {
         h4,
         a,
         p {
-            color: $clr-black;
+            color: $clr-white;
         }
         .tech-icon {
-            color: $clr-grey-5;
+            color: $clr-white;
         }
         a {
-            color: $font-color-dark;
+            color: $clr-white;
              :hover {
-                color: $clr-primary-1;
+                color: rgb($clr-white, .9);
             }
         }
         &.about-page {
-            background: $clr-white;
+            background: $clr-primary-8-blue;
             .about-stack span {
                 color: $clr-white;
                 border: solid 1px $clr-primary-5-blue;
                 background: $clr-primary-5-blue;
                 font-size: 10px;
+            }
+            p {
+                color: rgba($clr-white, .8)
             }
         }
         .card-label,
@@ -330,24 +340,94 @@ p {
             }
         }
         .card-info {
-            border-color: $clr-primary-5-blue;
             .education-periodo,
             .job-date {
-                color: rgba($font-color-dark, .75);
+                color: rgba($clr-white, .75);
             }
             .job-desc {
-                color: rgba($font-color-dark, .90);
+                color: rgba($clr-white, .90);
                 display: flex;
             }
             .card-desc {
-                color: rgba($font-color-dark, .80);
+                color: rgba($clr-white, .80);
             }
+            border-color: $clr-primary-3-blue;
         }
         .react-github-container svg {
             border: solid 1px $clr-primary-5-blue;
-            background: white;
+            background: $clr-primary-10-blue;
             border-radius: 5px;
             padding: 1rem;
+        }
+        .react-github-container svg>* {
+            fill: white !important;
+        }
+    }
+    &.yellow {
+        background: $clr-primary-6-yellow;
+        color: $clr-black;
+        &.color-less {
+            background: $clr-primary-7-yellow;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        a,
+        p {
+            color: $clr-black;
+        }
+        .tech-icon {
+            color: $clr-black;
+        }
+        a {
+            color: $clr-black;
+             :hover {
+                color: rgb($clr-black, .9);
+            }
+        }
+        &.about-page {
+            background: $clr-primary-6-yellow;
+            .about-stack span {
+                color: $clr-white;
+                border: solid 1px $clr-black;
+                background: $font-color-dark;
+                font-size: 10px;
+            }
+            p {
+                color: rgba($clr-black, .8)
+            }
+        }
+        .card-label,
+        .education-label {
+            span {
+                color: $clr-white;
+                border: solid 1px $font-color-dark;
+                background: $font-color-dark;
+            }
+        }
+        .card-info {
+            .education-periodo,
+            .job-date {
+                color: rgba($clr-black, .75);
+            }
+            .job-desc {
+                color: rgba($clr-black, .90);
+                display: flex;
+            }
+            .card-desc {
+                color: rgba($clr-black, .80);
+            }
+            border-color: $font-color-dark;
+        }
+        .react-github-container svg {
+            border: solid 1px $font-color-dark;
+            background: $clr-primary-3-yellow;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+        .react-github-container svg>* {
+            fill: white !important;
         }
     }
     @media only screen and (max-width: 767px) {
@@ -402,6 +482,9 @@ p {
     &.blue {
         background: $clr-primary-5-blue;
     }
+    &.yellow {
+        background: $clr-black;
+    }
 }
 
 .section-title {
@@ -425,6 +508,9 @@ p {
     }
     &.blue {
         background: $clr-primary-5-blue;
+    }
+    &.yellow {
+        background: $clr-black;
     }
 }
 

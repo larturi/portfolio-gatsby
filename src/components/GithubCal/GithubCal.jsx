@@ -17,7 +17,10 @@ const GithubCal = () => {
         return '#2caeba';
 
       case 'blue':
-        return '#2761ad';
+        return '#5994e2';
+
+      case 'yellow':
+        return '#1f1f1f';
 
       default:
         return '#BB86FC';

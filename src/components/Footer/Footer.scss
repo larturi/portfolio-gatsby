@@ -51,26 +51,49 @@
         }
     }
     &.blue {
-        background: $clr-white;
+        background: darken($clr-primary-10-blue, 0.9);
         a,
         p {
-            color: $font-color-dark;
-            a,
+            color: $clr-white;
             span {
-                color: $font-color-dark;
+                color: $clr-white;
             }
         }
         .social-link {
-            color: $font-color-dark;
+            color: $clr-white
         }
         .social-link:hover {
-            color: $clr-primary-5-blue;
+            color: darken($clr-primary-3-blue, 0.5);
         }
+        a,
+        .copyright-autor-name {
+            color: $clr-white;
+        }
+        a:hover {
+            color: $clr-primary-8-blue;
+        }
+    }
+    &.yellow {
+        background: darken($clr-primary-7-yellow, 0.9);
+        a,
+        p {
+            color: $clr-black;
+            span {
+                color: $clr-black;
+            }
+        }
+        .social-link {
+            color: $clr-black
+        }
+        .social-link:hover {
+            color: $font-color-dark;
+        }
+        a,
         .copyright-autor-name {
             color: $font-color-dark;
         }
         a:hover {
-            color: $clr-primary-5-blue;
+            color: $clr-primary-7-yellow;
         }
     }
 }

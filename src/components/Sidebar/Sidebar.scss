@@ -19,7 +19,10 @@
         background: $clr-primary-10;
     }
     &.blue {
-        background: $clr-primary-10;
+        background: $clr-primary-7-blue;
+    }
+    &.yellow {
+        background: $clr-primary-7-yellow;
     }
 }
 
@@ -52,6 +55,14 @@
     color: $font-color-dark;
 }
 
+.sidebar-links.blue li a {
+    color: $clr-grey-1-dark;
+}
+
+.sidebar-links.yellow li a {
+    color: $font-color-dark;
+}
+
 .sidebar-links.dark li a:hover {
     background: $clr-primary-5-dark;
     color: $clr-grey-10;
@@ -60,6 +71,16 @@
 .sidebar-links.light li a:hover {
     background: $clr-primary-5;
     color: $clr-grey-10;
+}
+
+.sidebar-links.blue li a:hover {
+    background: $clr-primary-5-blue;
+    color: $clr-grey-10;
+}
+
+.sidebar-links.yellow li a:hover {
+    background: $font-color-dark;
+    color: $clr-primary-7-yellow;
 }
 
 .close-btn {
@@ -78,6 +99,9 @@
     }
     &.blue {
         color: $clr-primary-5-blue;
+    }
+    &.yellow {
+        color: $font-color-dark;
     }
 }
 

@@ -26,7 +26,6 @@ const query = graphql`
 const Navbar = props => {
   const isSSR = typeof window === 'undefined';
 
-  // const [isDarkMode, setIsDarkMode] = useState(null);
   const [colorTheme, setColorTheme] = useState('dark');
   const [transparentNavbar, setTransparentNavbar] = useState('');
 
@@ -46,11 +45,6 @@ const Navbar = props => {
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('theme')) {
       currentTheme = localStorage.getItem('theme');
-      // if (isDarkMode === null) {
-      //   setIsDarkMode(currentTheme === 'dark');
-      // }
-      // } else {
-      // setIsDarkMode(currentTheme === 'dark');
     }
   }
 
@@ -96,17 +90,6 @@ const Navbar = props => {
     <nav className={`navbar ${currentTheme} ${transparentNavbar}`}>
       <div className="nav-center">
         <div className="nav-header">
-          {/* {!isSSR && (
-            <React.Suspense fallback={<div />}>
-              <DarkModeToggle
-                onChange={setIsDarkMode}
-                checked={isDarkMode}
-                className="dark-mode-toggle"
-                size={60}
-              />
-            </React.Suspense>
-          )} */}
-
           {!isSSR && (
             <React.Suspense fallback={<div />}>
               <SelectColorModal

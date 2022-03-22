@@ -13,6 +13,9 @@
     &.blue {
         background: $clr-primary-7-blue;
     }
+    &.yellow {
+        background: $clr-primary-7-yellow;
+    }
     h1,
     h2,
     h3,
@@ -44,7 +47,10 @@
         color: $clr-grey-5;
     }
     &.blue {
-        color: $clr-grey-5;
+        color: $clr-grey-5-dark;
+    }
+    &.yellow {
+        color: $font-color-dark;
     }
 }
 
@@ -73,7 +79,10 @@
         color: $clr-grey-1;
     }
     &.blue {
-        color: $clr-grey-1;
+        color: $clr-white;
+    }
+    &.yellow {
+        color: $clr-black;
     }
 }
 
@@ -85,7 +94,10 @@
         color: $clr-primary-5;
     }
     &.blue {
-        color: $clr-primary-5-blue;
+        color: $font-color-light;
+    }
+    &.yellow {
+        color: $clr-grey-10;
     }
 }
 
@@ -97,6 +109,9 @@
         color: $clr-black;
     }
     &.blue {
+        color: $clr-white;
+    }
+    &.yellow {
         color: $clr-black;
     }
     @media only screen and (max-width: 767px) {
@@ -132,7 +147,10 @@
         background: rgba($clr-white, .9);
     }
     .hero.blue::before {
-        background: rgba($clr-white, .9);
+        background: rgba($clr-primary-3-blue, .9);
+    }
+    .hero.yellow::before {
+        background: rgba($clr-primary-3-yellow, .9);
     }
     .hero-center {
         grid-template-columns: repeat(12, 1fr);
