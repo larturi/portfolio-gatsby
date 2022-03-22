@@ -8,10 +8,26 @@ import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 const GithubCal = () => {
   let { currentTheme } = useCurrentTheme();
 
+  const getColor = () => {
+    switch (currentTheme) {
+      case 'dark':
+        return '#BB86FC';
+
+      case 'light':
+        return '#2caeba';
+
+      case 'blue':
+        return '#2761ad';
+
+      default:
+        return '#BB86FC';
+    }
+  };
+
   return (
     <GitHubCalendar
       username="larturi"
-      color={currentTheme === 'dark' ? '#BB86FC' : 'hsl(185, 81%, 29%)'}
+      color={getColor()}
       blockSize={12}
       blockMargin={5}
       hideColorLegend={true}

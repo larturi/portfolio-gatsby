@@ -1,5 +1,4 @@
 @import '../../sass/index.scss';
-
 .sidebar {
     background: $clr-grey-10;
     position: fixed;
@@ -13,11 +12,13 @@
     opacity: 0;
     transition: 0;
     transform: translateX(-100%);
-
-    &.dark { 
+    &.dark {
         background: $clr-black;
-      }
-    &.light { 
+    }
+    &.light {
+        background: $clr-primary-10;
+    }
+    &.blue {
         background: $clr-primary-10;
     }
 }
@@ -69,12 +70,14 @@
     background: transparent;
     border-color: transparent;
     cursor: pointer;
-
-    &.dark { 
+    &.dark {
         color: $clr-primary-5-dark;
-      }
-    &.light { 
+    }
+    &.light {
         color: $clr-primary-5;
+    }
+    &.blue {
+        color: $clr-primary-5-blue;
     }
 }
 

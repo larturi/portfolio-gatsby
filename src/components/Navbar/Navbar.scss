@@ -1,5 +1,4 @@
 @import '../../sass/index.scss';
-
 .navbar {
     position: absolute;
     top: 0;
@@ -12,173 +11,219 @@
 }
 
 .navbar {
-  &.dark { 
-    background: $clr-primary-10-dark;
-    color: $clr-grey-1-dark;
-    &.isHome {
-      background: transparent;
+    &.dark {
+        background: $clr-primary-10-dark;
+        color: $clr-grey-1-dark;
+        &.isHome {
+            background: transparent;
+        }
     }
-    
-  }
-  &.light { 
-    background: $clr-white;
-    color: $clr-grey-1; 
-    &.isHome {
-      background: transparent;
+    &.light {
+        background: $clr-white;
+        color: $clr-grey-1;
+        &.isHome {
+            background: transparent;
+        }
     }
-  }
+    &.blue {
+        background: $clr-white;
+        color: $clr-grey-1;
+        &.isHome {
+            background: transparent;
+        }
+    }
 }
 
 .nav-center {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 0 auto;
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
 }
 
 .nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-header img {
-  margin-bottom: 0.375rem;
+    margin-bottom: 0.375rem;
 }
 
 .nav-language-icon {
-  margin: -2px 0 -1px 0px;
-  &.dark { color: $font-color-light; }
-  &.light { color: $font-color-dark; }
+    margin: -2px 0 -1px 0px;
+    &.dark {
+        color: $font-color-light;
+    }
+    &.light {
+        color: $font-color-dark;
+    }
+    &.blue {
+        color: $font-color-dark;
+    }
 }
 
 .nav-language-text {
-  margin-left: 5px;
-  &.dark { color: $font-color-light; }
-  &.light { color: $font-color-dark; }
+    margin-left: 5px;
+    &.dark {
+        color: $font-color-light;
+    }
+    &.light {
+        color: $font-color-dark;
+    }
+    &.blue {
+        color: $font-color-dark;
+    }
 }
 
 .toggle-btn {
-  font-size: 2rem;
-  background: transparent;
-  border-color: transparent;
-  
-  cursor: pointer;
-  transition: $transition;
-
-  &.dark { color: $clr-primary-5-dark; }
-  &.light { color: $clr-primary-5; }
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    transition: $transition;
+    &.dark {
+        color: $clr-primary-5-dark;
+    }
+    &.light {
+        color: $clr-primary-5;
+    }
+    &.blue {
+        color: $clr-primary-5-blue;
+    }
 }
 
 .toggle-btn:hover {
-  &.dark { color: $clr-primary-5-dark; }
-  &.light { color: $clr-primary-5; }
+    &.dark {
+        color: $clr-primary-5-dark;
+    }
+    &.light {
+        color: $clr-primary-5;
+    }
+    &.blue {
+        color: $clr-primary-5-blue;
+    }
 }
 
 .nav-links {
-  display: none;
+    display: none;
 }
 
 .link-button {
-  background: none!important;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: $clr-grey-1;
-  letter-spacing: $spacing;
-  transition: $transition;
-  padding-bottom: 7px;
-  margin-top: 4px;
-  font-size: 11px;
+    background: none!important;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $clr-grey-1;
+    letter-spacing: $spacing;
+    transition: $transition;
+    padding-bottom: 7px;
+    margin-top: 4px;
+    font-size: 11px;
 }
 
 .link-button:hover {
-  &.dark { 
-    color: $clr-primary-5-dark; 
-    box-shadow: 0px 2px $clr-primary-5-dark;
-  }
-  &.light { 
-    color: $clr-primary-5;
-    box-shadow: 0px 2px $clr-primary-5;
-  }
+    &.dark {
+        color: $clr-primary-5-dark;
+        box-shadow: 0px 2px $clr-primary-5-dark;
+    }
+    &.light {
+        color: $clr-primary-5;
+        box-shadow: 0px 2px $clr-primary-5;
+    }
+    &.blue {
+        color: $clr-primary-5-blue;
+        box-shadow: 0px 2px $clr-primary-5-blue;
+    }
 }
 
 .btn-hero {
-  &.dark { 
-    background: $clr-primary-5-dark;
-    color: $font-color-light;
-  }
-  &.light { 
-    background: $clr-primary-5;
-    color: $clr-primary-10;
-  }
+    &.dark {
+        background: $clr-primary-5-dark;
+        color: $font-color-light;
+    }
+    &.light {
+        background: $clr-primary-5;
+        color: $clr-primary-10;
+    }
+    &.blue {
+        background: $clr-primary-5-blue;
+        color: $clr-primary-10;
+    }
 }
 
 .dark-mode-toggle {
-  margin-right: 10px;
+    margin-right: 10px;
 }
-  
+
 @media screen and (min-width: 992px) {
-  .navbar {
-    background: transparent;
-  }
+    .navbar {
+        background: transparent;
+    }
 }
 
 @media screen and (min-width: 768px) {
-
-  .toggle-btn {
-    display: none;
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: flex-end;
-
-    &.dark a { color: $clr-grey-1-dark !important; }
-    &.light a { color: $clr-grey-1 !important; }
-  }
-
-  .nav-links li {
-    margin-right: 2rem;
-  }
-
-  .nav-links a {
-    text-transform: capitalize;
-    letter-spacing: $spacing;
-    transition: $transition;
-    padding: 0.5rem 0;
-
-  }
-
-  .nav-links a:hover {
-    &.dark { 
-      color: $clr-primary-5-dark; 
-      box-shadow: 0px 2px $clr-primary-5-dark;
+    .toggle-btn {
+        display: none;
     }
-    &.light { 
-      color: $clr-primary-5;
-      box-shadow: 0px 2px $clr-primary-5;
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        &.dark a {
+            color: $clr-grey-1-dark !important;
+        }
+        &.light a {
+            color: $clr-grey-1 !important;
+        }
+        &.blue a {
+            color: $clr-grey-1 !important;
+        }
     }
-  }
-
-  .active {
-    &.dark { 
-      color: $clr-primary-5-dark; 
-      box-shadow: 0px 2px $clr-primary-5-dark;
+    .nav-links li {
+        margin-right: 2rem;
     }
-    &.light { 
-      color: $clr-primary-5;
-      box-shadow: 0px 2px $clr-primary-5;
+    .nav-links a {
+        text-transform: capitalize;
+        letter-spacing: $spacing;
+        transition: $transition;
+        padding: 0.5rem 0;
     }
-  }
-
-  .nav-center {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-  }
+    .nav-links a:hover {
+        &.dark {
+            color: $clr-primary-5-dark;
+            box-shadow: 0px 2px $clr-primary-5-dark;
+        }
+        &.light {
+            color: $clr-primary-5;
+            box-shadow: 0px 2px $clr-primary-5;
+        }
+        &.blue {
+            color: $clr-primary-5-blue;
+            box-shadow: 0px 2px $clr-primary-5-blue;
+        }
+    }
+    .active {
+        &.dark {
+            color: $clr-primary-5-dark;
+            box-shadow: 0px 2px $clr-primary-5-dark;
+        }
+        &.light {
+            color: $clr-primary-5;
+            box-shadow: 0px 2px $clr-primary-5;
+        }
+        &.blue {
+            color: $clr-primary-5-blue;
+            box-shadow: 0px 2px $clr-primary-5-blue;
+        }
+    }
+    .nav-center {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
 }
 
 .material-icons {
-  display: none;
+    display: none;
 }

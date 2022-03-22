@@ -3,6 +3,7 @@ import './Navbar.scss';
 import React, { useState, useContext, useEffect } from 'react';
 import { FaAlignRight } from 'react-icons/fa';
 import { graphql, useStaticQuery, Link } from 'gatsby';
+import SelectColorModal from './SelectColorModal';
 
 import {
   GlobalDispatchContext,
@@ -23,10 +24,10 @@ const query = graphql`
 `;
 
 const Navbar = props => {
+  const isSSR = typeof window === 'undefined';
 
-  const isSSR = typeof window === "undefined";
-
-  const [isDarkMode, setIsDarkMode] = useState(null);
+  // const [isDarkMode, setIsDarkMode] = useState(null);
+  const [colorTheme, setColorTheme] = useState('dark');
   const [transparentNavbar, setTransparentNavbar] = useState('');
 
   const { toggleSidebar, path } = props;
@@ -45,11 +46,11 @@ const Navbar = props => {
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('theme')) {
       currentTheme = localStorage.getItem('theme');
-      if (isDarkMode === null) {
-        setIsDarkMode(currentTheme === 'dark');
-      }
-    } else {
-      setIsDarkMode(currentTheme === 'dark');
+      // if (isDarkMode === null) {
+      //   setIsDarkMode(currentTheme === 'dark');
+      // }
+      // } else {
+      // setIsDarkMode(currentTheme === 'dark');
     }
   }
 
@@ -76,7 +77,9 @@ const Navbar = props => {
   });
 
   useEffect(() => {
-    const selectedTheme = isDarkMode ? 'dark' : 'light';
+    const selectedTheme = localStorage.getItem('theme') || 'dark';
+    setColorTheme(selectedTheme);
+
     localStorage.setItem('theme', selectedTheme);
     dispatch({ type: 'SET_THEME', payload: selectedTheme });
 
@@ -87,24 +90,28 @@ const Navbar = props => {
       document.body.classList.add('light');
       document.body.classList.remove('dark');
     }
-  }, [isDarkMode, dispatch]);
-
-  const DarkModeToggle = React.lazy(() =>
-    import("react-dark-mode-toggle")
-  );
+  }, [colorTheme, dispatch]);
 
   return (
     <nav className={`navbar ${currentTheme} ${transparentNavbar}`}>
       <div className="nav-center">
         <div className="nav-header">
-
-          {!isSSR && (
+          {/* {!isSSR && (
             <React.Suspense fallback={<div />}>
               <DarkModeToggle
                 onChange={setIsDarkMode}
                 checked={isDarkMode}
                 className="dark-mode-toggle"
                 size={60}
+              />
+            </React.Suspense>
+          )} */}
+
+          {!isSSR && (
+            <React.Suspense fallback={<div />}>
+              <SelectColorModal
+                setColorTheme={setColorTheme}
+                colorTheme={colorTheme}
               />
             </React.Suspense>
           )}

@@ -130,16 +130,8 @@ const Education = props => {
       : moreEN.translates[0].text;
 
   return (
-    <section
-      className={
-        'section educations color-less ' +
-        (currentTheme === 'dark' ? 'dark ' : 'light ')
-      }
-    >
-      <Title
-        title={titleEducation}
-        theme={currentTheme === 'dark' ? 'dark' : 'light'}
-      />
+    <section className={'section educations color-less ' + currentTheme}>
+      <Title title={titleEducation} theme={currentTheme} />
       <div className="section-center-50">
         {degrees.map((degree, index) => {
           return <Degree key={degree.order} index={index} {...degree} />;
@@ -148,10 +140,7 @@ const Education = props => {
 
       <div className="education-separador" />
 
-      <Title
-        title={titleCourses}
-        theme={currentTheme === 'dark' ? 'dark' : 'light'}
-      />
+      <Title title={titleCourses} theme={currentTheme} />
       <div className="section-center-50 cursos-container">
         {items > 0
           ? courses.map((course, index) => {
@@ -163,7 +152,6 @@ const Education = props => {
           : courses.map((course, index) => {
               return <Course key={index} index={index} {...course} />;
             })}
-       
       </div>
 
       {items > 0 && (
@@ -173,10 +161,7 @@ const Education = props => {
           </Link>
         </div>
       )}
-
     </section>
-
-    
   );
 };
 

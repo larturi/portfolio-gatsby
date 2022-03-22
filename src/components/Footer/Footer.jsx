@@ -4,7 +4,7 @@ import React from 'react';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import socialLinks from '../../constants/social_links';
 
-const Footer = (props) => {
+const Footer = props => {
   let { currentTheme } = useCurrentTheme();
 
   const { footerHiden } = props;
@@ -14,9 +14,7 @@ const Footer = (props) => {
   }
 
   return (
-    <footer
-      className={'footer ' + (currentTheme === 'dark' ? 'dark ' : 'light ')}
-    >
+    <footer className={'footer ' + currentTheme}>
       <div>
         <div className="footer-links social-links">
           {socialLinks.map(link => {
@@ -34,17 +32,40 @@ const Footer = (props) => {
             );
           })}
         </div>
-       
+
         <p>
-          Made with <span className="footer-author-name">❤️</span>{' '} with 
-          <span className={`copyright-autor-name ${currentTheme}`}> 
-            <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer"> Gatsby</a>
-          </span>,
+          Made with <span className="footer-author-name">❤️</span> with
           <span className={`copyright-autor-name ${currentTheme}`}>
-            <a href="https://strapi.io/" target="_blank" rel="noopener noreferrer"> Strapi</a>
-          </span> & 
+            <a
+              href="https://www.gatsbyjs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {' '}
+              Gatsby
+            </a>
+          </span>
+          ,
           <span className={`copyright-autor-name ${currentTheme}`}>
-            <a href="https://graphql.org/" target="_blank" rel="noopener noreferrer"> GraphQL</a>
+            <a
+              href="https://strapi.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {' '}
+              Strapi
+            </a>
+          </span>{' '}
+          &
+          <span className={`copyright-autor-name ${currentTheme}`}>
+            <a
+              href="https://graphql.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {' '}
+              GraphQL
+            </a>
           </span>
         </p>
         <br />

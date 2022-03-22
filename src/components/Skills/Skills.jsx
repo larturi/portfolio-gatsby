@@ -6,13 +6,20 @@ import Title from '../Title';
 import SubTitle from '../Title/SubTitle';
 import GithubCal from '../GithubCal';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
-import { skillsColors, skillsColorsDark } from '../../constants/skills_colors';
+import {
+  skillsColorsLight,
+  skillsColorsDark,
+  skillsColorsBlue,
+} from '../../constants/skills_colors';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const query = graphql`
   {
     skillsFront: strapi {
-      tecnologias(where: { category: "Frontend", destacado: 1 }, sort: "sort:asc") {
+      tecnologias(
+        where: { category: "Frontend", destacado: 1 }
+        sort: "sort:asc"
+      ) {
         name
         porcentaje
         logo
@@ -20,7 +27,10 @@ const query = graphql`
       }
     }
     skillsBack: strapi {
-      tecnologias(where: { category: "Backend", destacado: 1 }, sort: "sort:asc") {
+      tecnologias(
+        where: { category: "Backend", destacado: 1 }
+        sort: "sort:asc"
+      ) {
         name
         porcentaje
         logo
@@ -28,7 +38,10 @@ const query = graphql`
       }
     }
     skillsMobile: strapi {
-      tecnologias(where: { category: "Mobile", destacado: 1 }, sort: "sort:asc") {
+      tecnologias(
+        where: { category: "Mobile", destacado: 1 }
+        sort: "sort:asc"
+      ) {
         name
         porcentaje
         logo
@@ -36,7 +49,10 @@ const query = graphql`
       }
     }
     skillsDb: strapi {
-      tecnologias(where: { category: "Database", destacado: 1 }, sort: "sort:asc") {
+      tecnologias(
+        where: { category: "Database", destacado: 1 }
+        sort: "sort:asc"
+      ) {
         name
         porcentaje
         logo
@@ -44,7 +60,10 @@ const query = graphql`
       }
     }
     skillsDevOps: strapi {
-      tecnologias(where: { category: "DevOps", destacado: 1 }, sort: "sort:asc") {
+      tecnologias(
+        where: { category: "DevOps", destacado: 1 }
+        sort: "sort:asc"
+      ) {
         name
         porcentaje
         logo
@@ -52,7 +71,10 @@ const query = graphql`
       }
     }
     skillsOther: strapi {
-      tecnologias(where: { category: "Other", destacado: 1 }, sort: "sort:asc") {
+      tecnologias(
+        where: { category: "Other", destacado: 1 }
+        sort: "sort:asc"
+      ) {
         name
         porcentaje
         logo
@@ -112,99 +134,81 @@ const Skills = props => {
     otherSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
+  const getColor = () => {
+    switch (currentTheme) {
+      case 'light':
+        return skillsColorsLight;
+      case 'dark':
+        return skillsColorsDark;
+      case 'blue':
+        return skillsColorsBlue;
+      default:
+        return skillsColorsDark;
+    }
+  };
+
   return (
     <>
-      <section
-        className={
-          'section skills ' +
-          (currentTheme === 'dark' ? 'dark ' : 'light ')
-        }
-      >
-        <Title
-          title="Skills"
-          theme={currentTheme === 'dark' ? 'dark' : 'light'}
-        />
+      <section className={'section skills ' + currentTheme}>
+        <Title title="Skills" theme={currentTheme} />
 
         <div className="skills-list section-center">
-          <SubTitle
-            title="Frontend"
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title="Frontend" theme={currentTheme} />
           <SkillBar
             skills={frontSkills}
-            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={getColor()}
             height={24}
             animationDelay={100}
           />
 
           <div className="separador-section-skills" />
-          <SubTitle
-            title="Backend"
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title="Backend" theme={currentTheme} />
           <SkillBar
             skills={backSkills}
-            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={getColor()}
             height={24}
             animationDelay={100}
           />
 
           <div className="separador-section-skills" />
-          <SubTitle
-            title="DevOps"
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title="DevOps" theme={currentTheme} />
           <SkillBar
             skills={devOpsSkills}
-            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={getColor()}
             height={24}
             animationDelay={100}
           />
 
           <div className="separador-section-skills" />
-          <SubTitle
-            title="Database"
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title="Database" theme={currentTheme} />
           <SkillBar
             skills={dbSkills}
-            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={getColor()}
             height={24}
             animationDelay={100}
           />
 
           <div className="separador-section-skills" />
-          <SubTitle
-            title="Mobile"
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title="Mobile" theme={currentTheme} />
           <SkillBar
             skills={mobileSkills}
-            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={getColor()}
             height={24}
             animationDelay={100}
           />
 
           <div className="separador-section-skills" />
-          <SubTitle
-            title="Other"
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title="Other" theme={currentTheme} />
           <SkillBar
             skills={otherSkills}
-            colors={currentTheme === 'dark' ? skillsColorsDark : skillsColors}
+            colors={getColor()}
             height={24}
             animationDelay={100}
           />
         </div>
       </section>
 
-      <section
-        className={
-          'section skills ' +
-          (currentTheme === 'dark' ? 'dark ' : 'light ')
-        }
-      >
+      <section className={'section skills ' + currentTheme}>
         <div className="about-github-cal">
           <a
             href="https://github.com/larturi"
@@ -212,10 +216,7 @@ const Skills = props => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Title
-              title="@larturi on GitHub"
-              theme={currentTheme === 'dark' ? 'dark' : 'light'}
-            />
+            <Title title="@larturi on GitHub" theme={currentTheme} />
           </a>
           <div className="react-github-container">
             <GithubCal />

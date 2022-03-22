@@ -38,6 +38,9 @@
     &.light {
         border: solid 2px $clr-primary-5;
     }
+    &.blue {
+        border: solid 2px $clr-primary-5-blue;
+    }
     &__logo {
         opacity: 0.6;
         svg {

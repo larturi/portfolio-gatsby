@@ -50,6 +50,29 @@
             color: $clr-primary-5;
         }
     }
+    &.blue {
+        background: $clr-white;
+        a,
+        p {
+            color: $font-color-dark;
+            a,
+            span {
+                color: $font-color-dark;
+            }
+        }
+        .social-link {
+            color: $font-color-dark;
+        }
+        .social-link:hover {
+            color: $clr-primary-5-blue;
+        }
+        .copyright-autor-name {
+            color: $font-color-dark;
+        }
+        a:hover {
+            color: $clr-primary-5-blue;
+        }
+    }
 }
 
 .footer p {

@@ -26,6 +26,9 @@ body {
     &.light {
         background-color: $clr-white;
     }
+    &.blue {
+        background-color: $clr-white;
+    }
 }
 
 ul {
@@ -117,6 +120,10 @@ p {
     }
     &.light {
         background: $clr-primary-5;
+        color: $clr-white !important;
+    }
+    &.blue {
+        background: $clr-primary-5-blue;
         color: $clr-white !important;
     }
     @media only screen and (max-width: 576px) {
@@ -282,6 +289,67 @@ p {
             padding: 1rem;
         }
     }
+    &.blue {
+        background: $clr-primary-8;
+        color: $clr-white;
+        &.color-less {
+            background: $clr-primary-10-blue;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        a,
+        p {
+            color: $clr-black;
+        }
+        .tech-icon {
+            color: $clr-grey-5;
+        }
+        a {
+            color: $font-color-dark;
+             :hover {
+                color: $clr-primary-1;
+            }
+        }
+        &.about-page {
+            background: $clr-white;
+            .about-stack span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-5-blue;
+                background: $clr-primary-5-blue;
+                font-size: 10px;
+            }
+        }
+        .card-label,
+        .education-label {
+            span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-5-blue;
+                background: $clr-primary-5-blue;
+            }
+        }
+        .card-info {
+            border-color: $clr-primary-5-blue;
+            .education-periodo,
+            .job-date {
+                color: rgba($font-color-dark, .75);
+            }
+            .job-desc {
+                color: rgba($font-color-dark, .90);
+                display: flex;
+            }
+            .card-desc {
+                color: rgba($font-color-dark, .80);
+            }
+        }
+        .react-github-container svg {
+            border: solid 1px $clr-primary-5-blue;
+            background: white;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+    }
     @media only screen and (max-width: 767px) {
         padding: 2rem 0;
     }
@@ -331,6 +399,9 @@ p {
     &.light {
         background: $clr-primary-5;
     }
+    &.blue {
+        background: $clr-primary-5-blue;
+    }
 }
 
 .section-title {
@@ -351,6 +422,9 @@ p {
     }
     &.light {
         background: $clr-primary-5;
+    }
+    &.blue {
+        background: $clr-primary-5-blue;
     }
 }
 

@@ -1,19 +1,16 @@
 @import '../../sass/index.scss';
-
 .about-page {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
     height: calc(100vh - 4rem);
-
     @media only screen and (max-width: 767px) {
         padding: 2rem 0;
         height: auto;
     }
 }
 
-.about-stack svg{
+.about-stack svg {
     height: 13px;
     width: 13px;
     margin: 1px 6px -2px 0;
@@ -27,16 +24,16 @@
     margin-left: 50px;
     max-width: 160px;
     margin: 0 auto;
-
     @media only screen and (max-width: 767px) {
         max-width: 130px;
-
     }
-
-    &.dark { 
+    &.dark {
         box-shadow: rgba(245, 229, 250, 0.9) 0px 0px 10px;
-      }
-    &.light { 
+    }
+    &.light {
+        box-shadow: rgba(35, 41, 40, 0.9) 0px 0px 10px;
+    }
+    &.blue {
         box-shadow: rgba(35, 41, 40, 0.9) 0px 0px 10px;
     }
 }
@@ -66,7 +63,7 @@
     line-height: 2;
     font-size: 15px;
     margin-top: -4px;
-    text-align: justify; 
+    text-align: justify;
 }
 
 .stack-container {
@@ -85,7 +82,6 @@
 
 .about-img picture img {
     border-radius: 100%;
-
     @media only screen and (max-width: 767px) {
         margin: 20px auto;
         max-width: 130px;
@@ -122,5 +118,4 @@
     margin-left: 3px !important;
     margin-bottom: 3px !important;
     font-size: 10px !important;
-
 }

@@ -8,11 +8,7 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
   let { currentTheme } = useCurrentTheme();
 
   return (
-    <div
-      className={`card-curso-container ${
-        currentTheme === 'dark' ? 'dark' : 'light'
-      }`}
-    >
+    <div className={`card-curso-container ${currentTheme}`}>
       <div className="card-curso-container__logo">
         <IconoFa name={logo} />
       </div>
@@ -28,9 +24,11 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
       <p className="card-curso-container__horas">
         {hours} horas - {institution} - {year}
       </p>
-      
-      <div className='card-curso-container__labels-parent'>
-        <div className={`card-label card-curso-container__labels ${currentTheme}`}>
+
+      <div className="card-curso-container__labels-parent">
+        <div
+          className={`card-label card-curso-container__labels ${currentTheme}`}
+        >
           {tecnologias.map(item => {
             return (
               <span key={item.name}>

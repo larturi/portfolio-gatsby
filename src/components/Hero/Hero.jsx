@@ -27,7 +27,7 @@ const query = graphql`
         locale
       }
     }
-    img: file(relativePath: { eq: "hero.webp" }) {
+    imgLight: file(relativePath: { eq: "hero.webp" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
@@ -37,12 +37,17 @@ const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
+    imgBlue: file(relativePath: { eq: "hero-blue.webp" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
   }
 `;
 
 const Hero = () => {
   const dispatch = useContext(GlobalDispatchContext);
-  const { dataES, dataEN, img, imgDark } = useStaticQuery(query);
+  const { dataES, dataEN, imgLight, imgDark, imgBlue } = useStaticQuery(query);
 
   let { currentLanguaje } = useCurrentLanguaje();
   let { currentTheme } = useCurrentTheme() || 'dark';
@@ -106,7 +111,11 @@ const Hero = () => {
           image={
             currentTheme === 'dark'
               ? imgDark.childImageSharp.gatsbyImageData
-              : img.childImageSharp.gatsbyImageData
+              : currentTheme === 'light'
+              ? imgLight.childImageSharp.gatsbyImageData
+              : currentTheme === 'blue'
+              ? imgBlue.childImageSharp.gatsbyImageData
+              : null
           }
           alt="Leandro Arturi"
           className="hero-img"

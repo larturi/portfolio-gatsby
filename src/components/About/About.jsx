@@ -29,7 +29,7 @@ const query = graphql`
         title_stack
       }
     }
-    img: file(relativePath: { eq: "ninja-light.webp" }) {
+    imgLight: file(relativePath: { eq: "ninja-light.webp" }) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
@@ -39,11 +39,17 @@ const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
+    imgBlue: file(relativePath: { eq: "ninja-blue.webp" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
   }
 `;
 
 const About = () => {
-  const { aboutES, aboutEN, img, imgDark } = useStaticQuery(query);
+  const { aboutES, aboutEN, imgLight, imgDark, imgBlue } =
+    useStaticQuery(query);
 
   let { currentTheme } = useCurrentTheme();
   let { currentLanguaje } = useCurrentLanguaje();
@@ -51,64 +57,99 @@ const About = () => {
   const about = currentLanguaje === 'es-AR' ? aboutES.about : aboutEN.about;
 
   return (
-    <section
-      className={
-        'section about-page ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
-      }
-    >
+    <section className={'section about-page ' + currentTheme}>
       <div className="section-center-50 about-center">
-        <article
-          className={`about-text  ${
-            currentTheme === 'dark' ? 'dark ' : 'light '
-          }`}
-        >
-
-          <div className='about-img'>
-                <GatsbyImage
-                  image={
-                    currentTheme === 'dark'
-                      ? imgDark.childImageSharp.gatsbyImageData
-                      : img.childImageSharp.gatsbyImageData
-                  }
-                  alt="Leandro Arturi"
-                  className="hero-img"
-                />
+        <article className={`about-text  ${currentTheme}`}>
+          <div className="about-img">
+            <GatsbyImage
+              image={
+                currentTheme === 'dark'
+                  ? imgDark.childImageSharp.gatsbyImageData
+                  : currentTheme === 'light'
+                  ? imgLight.childImageSharp.gatsbyImageData
+                  : currentTheme === 'blue'
+                  ? imgBlue.childImageSharp.gatsbyImageData
+                  : imgDark.childImageSharp.gatsbyImageData
+              }
+              alt="Leandro Arturi"
+              className="hero-img"
+            />
           </div>
 
-          <Title
-            title={about.title}
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <Title title={about.title} theme={currentTheme} />
           <p>{about.info}</p>
 
           <br />
 
-          <SubTitle
-            title={about.title_stack}
-            theme={currentTheme === 'dark' ? 'dark' : 'light'}
-          />
+          <SubTitle title={about.title_stack} theme={currentTheme} />
           <div className={`about-stack ${currentTheme}`}>
+            <span>
+              <IconoFa name="FaReact" />
+              React
+            </span>
+            <span>
+              <IconoFa name="SiJavascript" />
+              JavaScript
+            </span>
+            <span>
+              <IconoFa name="SiGraphql" />
+              GraphQL
+            </span>
+            <span>
+              <IconoFa name="SiSass" />
+              Sass
+            </span>
+            <span>
+              <IconoFa name="SiBootstrap" />
+              Bootstrap
+            </span>
+            <span>
+              <IconoFa name="SiTailwindcss" />
+              Tailwind
+            </span>
 
-            <span><IconoFa name='FaReact'/>React</span>
-            <span><IconoFa name='SiJavascript'/>JavaScript</span>
-            <span><IconoFa name='SiGraphql'/>GraphQL</span>
-            <span><IconoFa name='SiSass'/>Sass</span>
-            <span><IconoFa name='SiBootstrap'/>Bootstrap</span>
-            <span><IconoFa name='SiTailwindcss'/>Tailwind</span>
+            <span>
+              <IconoFa name="SiDjango" />
+              Django
+            </span>
+            <span>
+              <IconoFa name="FaPython" />
+              Python
+            </span>
+            <span>
+              <IconoFa name="FaLaravel" />
+              Laravel
+            </span>
+            <span>
+              <IconoFa name="SiPhp" />
+              Php
+            </span>
+            <span>
+              <IconoFa name="FaNodeJs" />
+              Node
+            </span>
 
-            <span><IconoFa name='SiDjango'/>Django</span>
-            <span><IconoFa name='FaPython'/>Python</span>
-            <span><IconoFa name='FaLaravel'/>Laravel</span>
-            <span><IconoFa name='SiPhp'/>Php</span>
-            <span><IconoFa name='FaNodeJs'/>Node</span>
-           
-            <span><IconoFa name='SiPostgresql'/>PostgreSQL</span>
-            <span><IconoFa name='SiMysql'/>MySQL</span>
-            <span><IconoFa name='SiMongodb'/>MongoDB</span>
-            <span><IconoFa name='SiDocker'/>Docker</span>
-            <span><IconoFa name='FaGithub'/>GitHub</span>
+            <span>
+              <IconoFa name="SiPostgresql" />
+              PostgreSQL
+            </span>
+            <span>
+              <IconoFa name="SiMysql" />
+              MySQL
+            </span>
+            <span>
+              <IconoFa name="SiMongodb" />
+              MongoDB
+            </span>
+            <span>
+              <IconoFa name="SiDocker" />
+              Docker
+            </span>
+            <span>
+              <IconoFa name="FaGithub" />
+              GitHub
+            </span>
           </div>
-
         </article>
       </div>
     </section>

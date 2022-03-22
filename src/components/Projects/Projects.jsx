@@ -65,15 +65,8 @@ const Projects = props => {
       : moreEN.translates[0].text;
 
   return (
-    <section
-      className={
-        'section projects ' + (currentTheme === 'dark' ? 'dark ' : 'light ')
-      }
-    >
-      <Title
-        title="Portfolio"
-        theme={currentTheme === 'dark' ? 'dark' : 'light'}
-      />
+    <section className={'section projects ' + currentTheme}>
+      <Title title="Portfolio" theme={currentTheme} />
       <div className="section-center-50">
         {items > 0
           ? projects.map((project, index) => {

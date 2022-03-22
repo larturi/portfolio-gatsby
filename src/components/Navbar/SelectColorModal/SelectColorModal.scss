@@ -1,0 +1,52 @@
+@import '../../../sass/colors.scss';
+.color-icon-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+    &.dark {
+        background: $clr-primary-10-dark;
+    }
+    &.light {
+        background: $clr-primary-5;
+    }
+    &.blue {
+        background: $clr-primary-5-blue;
+    }
+}
+
+.modal-content {
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 7px;
+}
+
+.btn-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+    }
+    &.dark {
+        background: $clr-primary-10-dark;
+    }
+    &.light {
+        background: $clr-primary-5;
+    }
+    &.blue {
+        background: $clr-primary-5-blue;
+    }
+}
