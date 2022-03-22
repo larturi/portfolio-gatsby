@@ -12,16 +12,25 @@
         fill: white;
     }
     &.dark {
-        background: $clr-primary-10-dark;
+        background: $clr-primary-7-dark;
+        svg {
+            fill: rgb(44, 44, 44);
+        }
     }
     &.light {
         background: $clr-primary-5;
     }
     &.blue {
-        background: $clr-primary-5-blue;
+        background: $clr-primary-3-blue;
+        svg {
+            fill: $clr-primary-7-blue;
+        }
     }
     &.yellow {
         background: $clr-primary-5-yellow;
+        svg {
+            fill: $clr-primary-8-yellow;
+        }
     }
 }
 
@@ -44,15 +53,24 @@
         fill: white;
     }
     &.dark {
-        background: $clr-primary-10-dark;
+        background: $clr-primary-7-dark;
+        svg {
+            fill: rgb(44, 44, 44);
+        }
     }
     &.light {
         background: $clr-primary-5;
     }
     &.blue {
-        background: $clr-primary-5-blue;
+        background: $clr-primary-3-blue;
+        svg {
+            fill: $clr-primary-7-blue;
+        }
     }
     &.yellow {
         background: $clr-primary-5-yellow;
+        svg {
+            fill: $clr-primary-8-yellow;
+        }
     }
 }
