@@ -49,11 +49,16 @@ const query = graphql`
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
+    imgPink: file(relativePath: { eq: "ninja-pink.webp" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
   }
 `;
 
 const About = () => {
-  const { aboutES, aboutEN, imgLight, imgDark, imgBlue, imgYellow } =
+  const { aboutES, aboutEN, imgLight, imgDark, imgBlue, imgYellow, imgPink } =
     useStaticQuery(query);
 
   let { currentTheme } = useCurrentTheme();
@@ -76,6 +81,8 @@ const About = () => {
                   ? imgBlue.childImageSharp.gatsbyImageData
                   : currentTheme === 'yellow'
                   ? imgYellow.childImageSharp.gatsbyImageData
+                  : currentTheme === 'pink'
+                  ? imgPink.childImageSharp.gatsbyImageData
                   : imgDark.childImageSharp.gatsbyImageData
               }
               alt="Leandro Arturi"

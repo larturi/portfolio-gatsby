@@ -24,6 +24,9 @@
     &.yellow {
         background: $clr-primary-9-yellow;
     }
+    &.pink {
+        background: $clr-primary-7-pink;
+    }
 }
 
 .show-sidebar {
@@ -63,6 +66,10 @@
     color: $clr-grey-1-dark;
 }
 
+.sidebar-links.pink li a {
+    color: $clr-grey-1-dark;
+}
+
 .sidebar-links.dark li a:hover {
     background: $clr-primary-5-dark;
     color: $clr-grey-10;
@@ -80,6 +87,11 @@
 
 .sidebar-links.yellow li a:hover {
     background: $clr-primary-7-yellow;
+    color: $clr-grey-10;
+}
+
+.sidebar-links.pink li a:hover {
+    background: $clr-primary-3-pink;
     color: $clr-grey-10;
 }
 
@@ -102,6 +114,9 @@
     }
     &.yellow {
         color: $clr-primary-2-yellow;
+    }
+    &.pink {
+        color: $clr-primary-5-pink;
     }
 }
 

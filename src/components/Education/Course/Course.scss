@@ -44,6 +44,9 @@
     &.yellow {
         border: solid 2px $clr-primary-7-yellow;
     }
+    &.pink {
+        border: solid 2px $clr-primary-5-pink;
+    }
     &__logo {
         opacity: 0.6;
         svg {

@@ -39,6 +39,13 @@
             background: transparent;
         }
     }
+    &.pink {
+        background: $clr-primary-6-pink;
+        color: $clr-grey-1-dark;
+        &.isHome {
+            background: transparent;
+        }
+    }
 }
 
 .nav-center {
@@ -71,6 +78,9 @@
     &.yellow {
         color: $font-color-light;
     }
+    &.pink {
+        color: $font-color-light;
+    }
 }
 
 .nav-language-text {
@@ -85,6 +95,9 @@
         color: $font-color-light;
     }
     &.yellow {
+        color: $font-color-light;
+    }
+    &.pink {
         color: $font-color-light;
     }
 }
@@ -107,6 +120,9 @@
     &.yellow {
         color: $clr-primary-1-yellow;
     }
+    &.pink {
+        color: $clr-primary-3-pink;
+    }
 }
 
 .toggle-btn:hover {
@@ -121,6 +137,9 @@
     }
     &.yellow {
         color: darken($clr-primary-1-yellow, 20%);
+    }
+    &.pink {
+        color: $clr-primary-5-pink;
     }
 }
 
@@ -159,6 +178,10 @@
         color: $clr-primary-7-yellow;
         box-shadow: 0px 2px $clr-primary-7-yellow;
     }
+    &.pink {
+        color: $clr-primary-5-pink;
+        box-shadow: 0px 2px $clr-primary-5-pink;
+    }
 }
 
 .btn-hero {
@@ -175,7 +198,11 @@
         color: $clr-primary-10;
     }
     &.yellow {
-        background: $clr-primary-7-yellow;
+        background: darken($clr-primary-7-yellow, 4%);
+        color: $clr-white !important;
+    }
+    &.pink {
+        background: $clr-primary-2-pink;
         color: $clr-white !important;
     }
 }
@@ -209,6 +236,9 @@
         &.yellow a {
             color: $clr-white !important;
         }
+        &.pink a {
+            color: $clr-grey-1-dark !important;
+        }
     }
     .nav-links li {
         margin-right: 2rem;
@@ -236,6 +266,10 @@
             color: $clr-primary-5-yellow;
             box-shadow: 0px 2px $clr-primary-5-yellow;
         }
+        &.pink {
+            color: $clr-primary-5-pink;
+            box-shadow: 0px 2px $clr-primary-5-pink;
+        }
     }
     .active {
         &.dark {
@@ -253,6 +287,10 @@
         &.yellow {
             color: $clr-primary-10-dark;
             box-shadow: 0px 2px $clr-white;
+        }
+        &.pink {
+            color: $clr-primary-5-pink;
+            box-shadow: 0px 2px $clr-primary-5-pink;
         }
     }
     .nav-center {

@@ -11,6 +11,7 @@ import {
   skillsColorsDark,
   skillsColorsBlue,
   skillsColorsYellow,
+  skillsColorsPink,
 } from '../../constants/skills_colors';
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -145,6 +146,8 @@ const Skills = props => {
         return skillsColorsBlue;
       case 'yellow':
         return skillsColorsYellow;
+      case 'pink':
+        return skillsColorsPink;
       default:
         return skillsColorsDark;
     }

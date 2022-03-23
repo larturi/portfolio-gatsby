@@ -96,6 +96,29 @@
             color: $clr-primary-7-yellow;
         }
     }
+    &.pink {
+        background: darken($clr-primary-6-pink, 2%) !important;
+        a,
+        p {
+            color: $clr-white;
+            span {
+                color: $clr-white;
+            }
+        }
+        .social-link {
+            color: $clr-white
+        }
+        .social-link:hover {
+            color: darken($clr-primary-3-pink, 0.5);
+        }
+        a,
+        .copyright-autor-name {
+            color: $clr-white;
+        }
+        a:hover {
+            color: $clr-primary-5-pink;
+        }
+    }
 }
 
 .footer p {

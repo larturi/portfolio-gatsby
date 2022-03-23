@@ -32,6 +32,12 @@
             fill: $clr-primary-8-yellow;
         }
     }
+    &.pink {
+        background: $clr-primary-5-pink;
+        svg {
+            fill: $clr-primary-6-pink;
+        }
+    }
 }
 
 .modal-content {
@@ -71,6 +77,12 @@
         background: $clr-primary-5-yellow;
         svg {
             fill: $clr-primary-8-yellow;
+        }
+    }
+    &.pink {
+        background: $clr-primary-5-pink;
+        svg {
+            fill: $clr-primary-6-pink;
         }
     }
 }

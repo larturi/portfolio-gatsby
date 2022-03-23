@@ -32,6 +32,9 @@ body {
     &.yellow {
         background-color: $clr-primary-5-yellow;
     }
+    &.pink {
+        background-color: $clr-primary-5-pink;
+    }
 }
 
 ul {
@@ -132,6 +135,10 @@ p {
     &.yellow {
         background: $clr-primary-7-yellow;
         color: $clr-white !important;
+    }
+    &.pink {
+        background: $clr-primary-5-pink;
+        color: $font-color-dark !important;
     }
     @media only screen and (max-width: 576px) {
         margin-bottom: 12px;
@@ -367,7 +374,7 @@ p {
         background: $clr-primary-6-yellow !important;
         color: $clr-white;
         &.color-less {
-            background: $clr-primary-7-yellow;
+            background: darken($clr-primary-6-yellow, 1%) !important;
         }
         h1,
         h2,
@@ -387,7 +394,7 @@ p {
             }
         }
         &.about-page {
-            background: $clr-primary-7-yellow;
+            background: darken($clr-primary-9-yellow, 1%) !important;
             .about-stack span {
                 color: $clr-white;
                 border: solid 1px $clr-primary-7-yellow;
@@ -434,6 +441,73 @@ p {
         }
         .react-github-container {
             color: white;
+        }
+    }
+    &.pink {
+        background: $clr-primary-6-pink;
+        color: $clr-white;
+        &.color-less {
+            background: darken($clr-primary-6-pink, 2%) !important;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        a,
+        p {
+            color: $clr-white;
+        }
+        .tech-icon {
+            color: $clr-primary-1-pink !important;
+        }
+        a {
+            color: $clr-white;
+             :hover {
+                color: rgb($clr-white, .9);
+            }
+        }
+        &.about-page {
+            background: darken($clr-primary-6-pink, 1%) !important;
+            .about-stack span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-5-pink;
+                background: $clr-primary-6-pink;
+                font-size: 10px;
+            }
+            p {
+                color: rgba($clr-white, .8)
+            }
+        }
+        .card-label,
+        .education-label {
+            span {
+                color: $clr-white;
+                border: solid 1px $clr-primary-3-pink;
+                background: $clr-primary-6-pink;
+            }
+        }
+        .card-info {
+            .education-periodo,
+            .job-date {
+                color: rgba($clr-white, .75);
+            }
+            .job-desc {
+                color: rgba($clr-white, .90);
+                display: flex;
+            }
+            .card-desc {
+                color: rgba($clr-white, .80);
+            }
+            border-color: $clr-primary-3-pink;
+        }
+        .react-github-container svg {
+            border: solid 1px $clr-primary-5-pink;
+            background: $clr-primary-6-pink;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+        .react-github-container svg>* {
+            fill: white !important;
         }
     }
     @media only screen and (max-width: 767px) {
@@ -491,6 +565,9 @@ p {
     &.yellow {
         background: $clr-primary-7-yellow;
     }
+    &.pink {
+        background: $clr-primary-5-pink;
+    }
 }
 
 .section-title {
@@ -517,6 +594,9 @@ p {
     }
     &.yellow {
         background: $clr-primary-7-yellow;
+    }
+    &.pink {
+        background: $clr-primary-5-pink;
     }
 }
 

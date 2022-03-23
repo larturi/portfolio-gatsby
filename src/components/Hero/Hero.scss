@@ -16,6 +16,9 @@
     &.yellow {
         background: $clr-primary-9-yellow;
     }
+    &.pink {
+        background: $clr-primary-6-pink;
+    }
     h1,
     h2,
     h3,
@@ -52,6 +55,9 @@
     &.yellow {
         color: $font-color-light;
     }
+    &.pink {
+        color: $clr-grey-5-dark;
+    }
 }
 
 .hero-icons {
@@ -84,6 +90,9 @@
     &.yellow {
         color: $clr-white;
     }
+    &.pink {
+        color: $clr-white;
+    }
 }
 
 .social-link:hover {
@@ -99,6 +108,9 @@
     &.yellow {
         color: $clr-grey-10;
     }
+    &.pink {
+        color: $font-color-light;
+    }
 }
 
 .home-name-hello {
@@ -112,6 +124,9 @@
         color: $clr-white;
     }
     &.yellow {
+        color: $clr-white;
+    }
+    &.pink {
         color: $clr-white;
     }
     @media only screen and (max-width: 767px) {
@@ -151,6 +166,9 @@
     }
     .hero.yellow::before {
         background: rgba($clr-primary-3-yellow, .9);
+    }
+    .hero.pink::before {
+        background: rgba($clr-primary-3-pink, .9);
     }
     .hero-center {
         grid-template-columns: repeat(12, 1fr);
