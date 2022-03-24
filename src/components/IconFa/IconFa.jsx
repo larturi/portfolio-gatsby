@@ -1,109 +1,71 @@
 import React from 'react';
 
 import {
-  FaAws,
-  FaReact,
-  FaGraduationCap,
-  FaVuejs,
-  FaNodeJs,
-  FaPython,
-  FaLaravel,
   FaAngular,
+  FaAws,
   FaBitcoin,
   FaGithub,
-  FaUbuntu,
-  FaWordpress,
+  FaGraduationCap,
+  FaLaravel,
   FaMountain,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+  FaUbuntu,
+  FaVuejs,
+  FaWordpress,
 } from 'react-icons/fa';
 
 import {
+  SiAndroid,
   SiApollographql,
-  SiJavascript,
-  SiTypescript,
+  SiBootstrap,
+  SiConfluence,
+  SiCss3,
   SiDart,
+  SiDjango,
+  SiDocker,
+  SiFirebase,
   SiFlutter,
   SiGatsby,
-  SiIonic,
-  SiMysql,
-  SiPhp,
-  SiBootstrap,
-  SiDocker,
   SiGitlab,
-  SiAndroid,
-  SiCss3,
-  SiXampp,
-  SiStrapi,
-  SiNextdotjs,
-  SiNuxtdotjs,
   SiGraphql,
-  SiMongodb,
-  SiSocketdotio,
-  SiFirebase,
-  SiJest,
-  SiSass,
-  SiTailwindcss,
-  SiWebpack,
   SiHtml5,
-  SiOracle,
-  SiDjango,
-  SiConfluence,
+  SiIonic,
+  SiJavascript,
+  SiJest,
   SiJira,
   SiJquery,
-  SiVisualstudio,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNuxtdotjs,
+  SiOracle,
+  SiPhp,
   SiPostgresql,
+  SiPrisma,
+  SiSass,
+  SiSocketdotio,
+  SiStrapi,
+  SiTailwindcss,
+  SiTypescript,
+  SiVisualstudio,
+  SiWebpack,
+  SiXampp,
 } from 'react-icons/si';
 
 import { DiScrum } from 'react-icons/di';
 
 const IconFa = props => {
   switch (props.name) {
-    case 'FaAws':
-      return <FaAws className="tech-icon"></FaAws>;
-
-    case 'SiApollographql':
-      return <SiApollographql className="tech-icon"></SiApollographql>;
-
-    case 'FaReact':
-      return <FaReact className="tech-icon"></FaReact>;
-
-    case 'FaVuejs':
-      return <FaVuejs className="tech-icon"></FaVuejs>;
-
-    case 'FaNodeJs':
-      return <FaNodeJs className="tech-icon"></FaNodeJs>;
-
-    case 'FaWordpress':
-      return <FaWordpress className="tech-icon"></FaWordpress>;
-
-    case 'FaPython':
-      return <FaPython className="tech-icon"></FaPython>;
-
-    case 'FaLaravel':
-      return <FaLaravel className="tech-icon"></FaLaravel>;
-
     case 'FaAngular':
       return <FaAngular className="tech-icon"></FaAngular>;
 
-    case 'SiJavascript':
-      return <SiJavascript className="tech-icon"></SiJavascript>;
-
-    case 'SiTypescript':
-      return <SiTypescript className="tech-icon"></SiTypescript>;
-
-    case 'SiDart':
-      return <SiDart className="tech-icon"></SiDart>;
-
-    case 'SiFlutter':
-      return <SiFlutter className="tech-icon"></SiFlutter>;
+    case 'FaAws':
+      return <FaAws className="tech-icon"></FaAws>;
 
     case 'FaBitcoin':
       return <FaBitcoin className="tech-icon"></FaBitcoin>;
-
-    case 'SiOracle':
-      return <SiOracle className="tech-icon"></SiOracle>;
-
-    case 'SiGatsby':
-      return <SiGatsby className="tech-icon"></SiGatsby>;
 
     case 'FaGithub':
       return <FaGithub className="tech-icon"></FaGithub>;
@@ -111,38 +73,95 @@ const IconFa = props => {
     case 'SiGitlab':
       return <SiGitlab className="tech-icon"></SiGitlab>;
 
-    case 'SiPostgresql':
-      return <SiPostgresql className="tech-icon"></SiPostgresql>;
+    case 'FaLaravel':
+      return <FaLaravel className="tech-icon"></FaLaravel>;
 
-    case 'SiBootstrap':
-      return <SiBootstrap className="tech-icon"></SiBootstrap>;
+    case 'FaMountain':
+      return <FaMountain className="tech-icon"></FaMountain>;
 
-    case 'SiIonic':
-      return <SiIonic className="tech-icon"></SiIonic>;
+    case 'FaNodeJs':
+      return <FaNodeJs className="tech-icon"></FaNodeJs>;
 
-    case 'SiDocker':
-      return <SiDocker className="tech-icon"></SiDocker>;
+    case 'FaPython':
+      return <FaPython className="tech-icon"></FaPython>;
 
-    case 'SiDjango':
-      return <SiDjango className="tech-icon"></SiDjango>;
+    case 'FaReact':
+      return <FaReact className="tech-icon"></FaReact>;
 
-    case 'SiAndroid':
-      return <SiAndroid className="tech-icon"></SiAndroid>;
+    case 'FaUbuntu':
+      return <FaUbuntu className="tech-icon"></FaUbuntu>;
 
-    case 'SiXampp':
-      return <SiXampp className="tech-icon"></SiXampp>;
+    case 'FaVuejs':
+      return <FaVuejs className="tech-icon"></FaVuejs>;
+
+    case 'FaWordpress':
+      return <FaWordpress className="tech-icon"></FaWordpress>;
 
     case 'DiScrum':
       return <DiScrum className="tech-icon"></DiScrum>;
 
+    case 'SiAndroid':
+      return <SiAndroid className="tech-icon"></SiAndroid>;
+
+    case 'SiPrisma':
+      return <SiPrisma className="tech-icon"></SiPrisma>;
+
+    case 'SiApollographql':
+      return <SiApollographql className="tech-icon"></SiApollographql>;
+
+    case 'SiBootstrap':
+      return <SiBootstrap className="tech-icon"></SiBootstrap>;
+
+    case 'SiConfluence':
+      return <SiConfluence className="tech-icon"></SiConfluence>;
+
+    case 'SiCss3':
+      return <SiCss3 className="tech-icon"></SiCss3>;
+
+    case 'SiDart':
+      return <SiDart className="tech-icon"></SiDart>;
+
+    case 'SiDjango':
+      return <SiDjango className="tech-icon"></SiDjango>;
+
+    case 'SiDocker':
+      return <SiDocker className="tech-icon"></SiDocker>;
+
+    case 'SiFirebase':
+      return <SiFirebase className="tech-icon"></SiFirebase>;
+
+    case 'SiFlutter':
+      return <SiFlutter className="tech-icon"></SiFlutter>;
+
+    case 'SiGatsby':
+      return <SiGatsby className="tech-icon"></SiGatsby>;
+
+    case 'SiGraphql':
+      return <SiGraphql className="tech-icon"></SiGraphql>;
+
+    case 'SiHtml5':
+      return <SiHtml5 className="tech-icon"></SiHtml5>;
+
+    case 'SiIonic':
+      return <SiIonic className="tech-icon"></SiIonic>;
+
+    case 'SiJavascript':
+      return <SiJavascript className="tech-icon"></SiJavascript>;
+
+    case 'SiJest':
+      return <SiJest className="tech-icon"></SiJest>;
+
+    case 'SiJira':
+      return <SiJira className="tech-icon"></SiJira>;
+
+    case 'SiJquery':
+      return <SiJquery className="tech-icon"></SiJquery>;
+
+    case 'SiMongodb':
+      return <SiMongodb className="tech-icon"></SiMongodb>;
+
     case 'SiMysql':
       return <SiMysql className="tech-icon"></SiMysql>;
-
-    case 'SiPhp':
-      return <SiPhp className="tech-icon"></SiPhp>;
-
-    case 'SiStrapi':
-      return <SiStrapi className="tech-icon"></SiStrapi>;
 
     case 'SiNextDotJs':
       return <SiNextdotjs className="tech-icon"></SiNextdotjs>;
@@ -150,20 +169,20 @@ const IconFa = props => {
     case 'SiNuxtDotJs':
       return <SiNuxtdotjs className="tech-icon"></SiNuxtdotjs>;
 
-    case 'SiGraphql':
-      return <SiGraphql className="tech-icon"></SiGraphql>;
+    case 'SiOracle':
+      return <SiOracle className="tech-icon"></SiOracle>;
 
-    case 'SiMongodb':
-      return <SiMongodb className="tech-icon"></SiMongodb>;
+    case 'SiPhp':
+      return <SiPhp className="tech-icon"></SiPhp>;
+
+    case 'SiPostgresql':
+      return <SiPostgresql className="tech-icon"></SiPostgresql>;
 
     case 'SiSocketDotIo':
       return <SiSocketdotio className="tech-icon"></SiSocketdotio>;
 
-    case 'SiFirebase':
-      return <SiFirebase className="tech-icon"></SiFirebase>;
-
-    case 'SiJest':
-      return <SiJest className="tech-icon"></SiJest>;
+    case 'SiStrapi':
+      return <SiStrapi className="tech-icon"></SiStrapi>;
 
     case 'SiSass':
       return <SiSass className="tech-icon"></SiSass>;
@@ -171,32 +190,17 @@ const IconFa = props => {
     case 'SiTailwindcss':
       return <SiTailwindcss className="tech-icon"></SiTailwindcss>;
 
-    case 'SiWebpack':
-      return <SiWebpack className="tech-icon"></SiWebpack>;
-
-    case 'SiJira':
-      return <SiJira className="tech-icon"></SiJira>;
-
-    case 'SiConfluence':
-      return <SiConfluence className="tech-icon"></SiConfluence>;
-
-    case 'SiHtml5':
-      return <SiHtml5 className="tech-icon"></SiHtml5>;
-
-    case 'SiCss3':
-      return <SiCss3 className="tech-icon"></SiCss3>;
-
-    case 'SiJquery':
-      return <SiJquery className="tech-icon"></SiJquery>;
+    case 'SiTypescript':
+      return <SiTypescript className="tech-icon"></SiTypescript>;
 
     case 'SiVisualstudio':
       return <SiVisualstudio className="tech-icon"></SiVisualstudio>;
 
-    case 'FaUbuntu':
-      return <FaUbuntu className="tech-icon"></FaUbuntu>;
+    case 'SiWebpack':
+      return <SiWebpack className="tech-icon"></SiWebpack>;
 
-    case 'FaMountain':
-      return <FaMountain className="tech-icon"></FaMountain>;
+    case 'SiXampp':
+      return <SiXampp className="tech-icon"></SiXampp>;
 
     default:
       return <FaGraduationCap className="tech-icon"></FaGraduationCap>;
