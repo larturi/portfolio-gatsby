@@ -56,7 +56,7 @@
         color: $font-color-light;
     }
     &.pink {
-        color: $clr-grey-5-dark;
+        color: $clr-grey-5;
     }
 }
 
@@ -127,7 +127,7 @@
         color: $clr-white;
     }
     &.pink {
-        color: $clr-white;
+        color: $clr-primary-5-pink;
     }
     @media only screen and (max-width: 767px) {
         font-size: 34px;

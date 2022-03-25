@@ -137,8 +137,8 @@ p {
         color: $clr-white !important;
     }
     &.pink {
-        background: $clr-primary-5-pink;
-        color: $font-color-dark !important;
+        background: $clr-primary-8-pink;
+        color: $clr-white !important;
     }
     @media only screen and (max-width: 576px) {
         margin-bottom: 12px;
@@ -445,7 +445,7 @@ p {
     }
     &.pink {
         background: $clr-primary-6-pink;
-        color: $clr-white;
+        color: $clr-black;
         &.color-less {
             background: darken($clr-primary-6-pink, 2%) !important;
         }
@@ -455,50 +455,50 @@ p {
         h4,
         a,
         p {
-            color: $clr-white;
+            color: $clr-primary-8-pink;
         }
         .tech-icon {
-            color: $clr-primary-1-pink !important;
+            color: $clr-primary-8-pink;
         }
         a {
-            color: $clr-white;
+            color: $clr-primary-8-pink;
              :hover {
-                color: rgb($clr-white, .9);
+                color: rgb($clr-primary-8-pink, .9);
             }
         }
         &.about-page {
             background: darken($clr-primary-6-pink, 1%) !important;
             .about-stack span {
-                color: $clr-white;
-                border: solid 1px $clr-primary-5-pink;
-                background: $clr-primary-6-pink;
+                color: $clr-primary-6-pink;
+                border: solid 1px $clr-primary-6-pink;
+                background: $clr-primary-8-pink;
                 font-size: 10px;
             }
             p {
-                color: rgba($clr-white, .8)
+                color: rgba($clr-black, .6)
             }
         }
         .card-label,
         .education-label {
             span {
                 color: $clr-white;
-                border: solid 1px $clr-primary-3-pink;
-                background: $clr-primary-6-pink;
+                border: solid 1px $clr-white;
+                background: $clr-primary-8-pink;
             }
         }
         .card-info {
             .education-periodo,
             .job-date {
-                color: rgba($clr-white, .75);
+                color: rgba($clr-black, .45);
             }
             .job-desc {
                 color: rgba($clr-white, .90);
                 display: flex;
             }
             .card-desc {
-                color: rgba($clr-white, .80);
+                color: rgba($clr-black, .60);
             }
-            border-color: $clr-primary-3-pink;
+            border-color: $clr-primary-5-pink;
         }
         .react-github-container svg {
             border: solid 1px $clr-primary-5-pink;

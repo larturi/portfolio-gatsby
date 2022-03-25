@@ -23,7 +23,7 @@ const GithubCal = () => {
         return '#FFAE10';
 
       case 'pink':
-        return '#F9D1DF';
+        return '#ec769f';
 
       default:
         return '#BB86FC';

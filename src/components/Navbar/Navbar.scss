@@ -79,7 +79,7 @@
         color: $font-color-light;
     }
     &.pink {
-        color: $font-color-light;
+        color: $font-color-dark;
     }
 }
 
@@ -98,7 +98,7 @@
         color: $font-color-light;
     }
     &.pink {
-        color: $font-color-light;
+        color: $font-color-dark;
     }
 }
 
@@ -202,7 +202,7 @@
         color: $clr-white !important;
     }
     &.pink {
-        background: $clr-primary-2-pink;
+        background: $clr-primary-5-pink;
         color: $clr-white !important;
     }
 }
@@ -237,7 +237,7 @@
             color: $clr-white !important;
         }
         &.pink a {
-            color: $clr-grey-1-dark !important;
+            color: $clr-grey-1 !important;
         }
     }
     .nav-links li {

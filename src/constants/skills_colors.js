@@ -31,9 +31,9 @@ export const skillsColorsYellow = {
 };
 
 export const skillsColorsPink = {
-    bar: '#D787A1',
+    bar: '#ee95b4',
     title: {
         text: '#fff',
-        background: '#D787A1',
+        background: '#ee95b4',
     },
 };
