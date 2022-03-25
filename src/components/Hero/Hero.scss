@@ -17,7 +17,7 @@
         background: $clr-primary-9-yellow;
     }
     &.pink {
-        background: $clr-primary-6-pink;
+        background: $clr-primary-3-pink;
     }
     h1,
     h2,
@@ -168,7 +168,7 @@
         background: rgba($clr-primary-3-yellow, .9);
     }
     .hero.pink::before {
-        background: rgba($clr-primary-3-pink, .9);
+        background: rgba($clr-primary-6-pink, .9);
     }
     .hero-center {
         grid-template-columns: repeat(12, 1fr);
