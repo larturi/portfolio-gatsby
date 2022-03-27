@@ -14,7 +14,7 @@
     &.dark {
         background: $clr-primary-7-dark;
         svg {
-            fill: rgb(44, 44, 44);
+            fill: $clr-primary-10-dark;
         }
     }
     &.light {
@@ -61,7 +61,7 @@
     &.dark {
         background: $clr-primary-7-dark;
         svg {
-            fill: rgb(44, 44, 44);
+            fill: $clr-primary-10-dark;
         }
     }
     &.light {

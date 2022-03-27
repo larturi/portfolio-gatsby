@@ -134,7 +134,7 @@ p {
     }
     &.yellow {
         background: $clr-primary-7-yellow;
-        color: $clr-white !important;
+        color: $clr-grey-1 !important;
     }
     &.pink {
         background: $clr-primary-8-pink;
@@ -190,7 +190,7 @@ p {
             color: $clr-white;
         }
         .tech-icon {
-            color: $clr-primary-6-dark;
+            color: transparentize($clr-primary-6-dark, 0.2);
         }
         a {
             color: $clr-white;
@@ -257,7 +257,7 @@ p {
             color: $clr-primary-9;
         }
         .tech-icon {
-            color: $clr-primary-5;
+            color: transparentize($clr-primary-5, .3);
         }
         a {
             color: $font-color-dark;
@@ -318,7 +318,7 @@ p {
             color: $clr-white;
         }
         .tech-icon {
-            color: $clr-primary-1-blue;
+            color: transparentize($clr-primary-1-blue, .5);
         }
         a {
             color: $clr-white;
@@ -385,7 +385,7 @@ p {
             color: $clr-white;
         }
         .tech-icon {
-            color: $clr-primary-2-yellow;
+            color: transparentize($clr-primary-1-yellow, .5);
         }
         a {
             color: $clr-white;
@@ -458,7 +458,7 @@ p {
             color: $clr-primary-10-pink;
         }
         .tech-icon {
-            color: $clr-primary-8-pink;
+            color: transparentize($clr-primary-8-pink, .3);
         }
         a {
             color: $clr-primary-10-pink;
