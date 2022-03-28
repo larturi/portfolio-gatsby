@@ -28,7 +28,7 @@
         }
     }
     &.light {
-        background: $clr-white;
+        background: transparentize($clr-primary-5, 0.94) !important;
         a,
         p {
             color: $font-color-dark;
@@ -97,26 +97,26 @@
         }
     }
     &.pink {
-        background: darken($clr-primary-5-pink, 2%) !important;
+        background: transparentize($clr-primary-3-pink, 0.7) !important;
         a,
         p {
-            color: $clr-white;
+            color: $clr-primary-9;
             span {
-                color: $clr-white;
+                color: $clr-primary-9;
             }
         }
         .social-link {
-            color: $clr-white
+            color: $clr-primary-8-pink
         }
         .social-link:hover {
-            color: darken($clr-primary-3-pink, 0.5);
+            color: darken($clr-primary-5-pink, 0.5);
         }
         a,
         .copyright-autor-name {
-            color: $clr-white;
+            color: $clr-primary-9;
         }
         a:hover {
-            color: $clr-primary-3-pink;
+            color: $clr-primary-9;
         }
     }
 }
