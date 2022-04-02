@@ -39,17 +39,6 @@ const query = graphql`
         category
       }
     }
-    skillsMobile: strapi {
-      tecnologias(
-        where: { category: "Mobile", destacado: 1 }
-        sort: "sort:asc"
-      ) {
-        name
-        porcentaje
-        logo
-        category
-      }
-    }
     skillsDb: strapi {
       tecnologias(
         where: { category: "Database", destacado: 1 }
@@ -72,17 +61,6 @@ const query = graphql`
         category
       }
     }
-    skillsOther: strapi {
-      tecnologias(
-        where: { category: "Other", destacado: 1 }
-        sort: "sort:asc"
-      ) {
-        name
-        porcentaje
-        logo
-        category
-      }
-    }
   }
 `;
 
@@ -94,10 +72,8 @@ const Skills = props => {
   const {
     skillsFront,
     skillsBack,
-    skillsMobile,
     skillsDb,
     skillsDevOps,
-    skillsOther,
   } = useStaticQuery(query);
 
   const { tecnologias: tecnologiasFront } = skillsFront;
@@ -118,22 +94,10 @@ const Skills = props => {
     dbSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
-  const { tecnologias: tecnologiasMobile } = skillsMobile;
-  const mobileSkills = [];
-  tecnologiasMobile.map(skill =>
-    mobileSkills.push({ type: skill.name, level: skill.porcentaje })
-  );
-
   const { tecnologias: tecnologiasDevOps } = skillsDevOps;
   const devOpsSkills = [];
   tecnologiasDevOps.map(skill =>
     devOpsSkills.push({ type: skill.name, level: skill.porcentaje })
-  );
-
-  const { tecnologias: tecnologiasOther } = skillsOther;
-  const otherSkills = [];
-  tecnologiasOther.map(skill =>
-    otherSkills.push({ type: skill.name, level: skill.porcentaje })
   );
 
   const getColor = () => {
@@ -194,23 +158,6 @@ const Skills = props => {
             animationDelay={100}
           />
 
-          <div className="separador-section-skills" />
-          <SubTitle title="Mobile" theme={currentTheme} />
-          <SkillBar
-            skills={mobileSkills}
-            colors={getColor()}
-            height={24}
-            animationDelay={100}
-          />
-
-          <div className="separador-section-skills" />
-          <SubTitle title="Other" theme={currentTheme} />
-          <SkillBar
-            skills={otherSkills}
-            colors={getColor()}
-            height={24}
-            animationDelay={100}
-          />
         </div>
       </section>
 
