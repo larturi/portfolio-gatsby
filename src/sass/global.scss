@@ -690,6 +690,10 @@ p {
         max-height: 30px;
         overflow-y: hidden;
     }
+    @media screen and (min-width: 1600px) {
+        max-height: 60px;
+        overflow-y: hidden;
+    }
 }
 
 .card-label span {
