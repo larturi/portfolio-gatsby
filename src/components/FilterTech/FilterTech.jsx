@@ -12,8 +12,13 @@ const FilterTech = ({ items, setFilterTech }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleClick = tech => {
-    setFilterTech(countedTechs[tech][0].split('_')[0]);
-    setSelectedOption(countedTechs[tech][0].split('_')[0]);
+    if (selectedOption === getNameTech(tech)) {
+      setSelectedOption(null);
+      setFilterTech(null);
+    } else {
+      setFilterTech(getNameTech(tech));
+      setSelectedOption(getNameTech(tech));
+    }
   };
 
   useEffect(() => {
@@ -35,31 +40,55 @@ const FilterTech = ({ items, setFilterTech }) => {
     });
 
     setCountedTechs(sortable);
-  }, [items]);
+  }, [items, selectedOption]);
+
+  const excludedTechs = [
+    'Android SDK',
+    'Apollo',
+    'CSS',
+    'Firebase',
+    'GitHub',
+    'Jest',
+    'Leadership',
+    'MongoDB',
+    'MySQL',
+    'Postgres',
+    'SASS',
+    'Scrum',
+    'Socket.io',
+    'Webpack',
+  ];
+
+  const getNameTech = tech => {
+    return countedTechs[tech][0].split('_')[0];
+  };
+
+  const getNameIconName = tech => {
+    return countedTechs[tech][0].split('_')[1];
+  };
 
   return (
     <div className={`filter-tech__container ${currentTheme}`}>
       {Object.keys(countedTechs).map(tech => {
-        return (
-          <div
-            key={tech}
-            aria-hidden="true"
-            className={`filter-tech__container__item ${currentTheme} ${
-              (countedTechs[tech][0].split('_')[0] === selectedOption &&
-                'selected') ||
-              ''
-            }`}
-            onClick={() => handleClick(tech)}
-          >
-            <span>
-              <IconoFa name={countedTechs[tech][0].split('_')[1]} />
-              {countedTechs[tech][0].split('_')[0] +
-                ' (' +
-                countedTechs[tech][1] +
-                ')'}
-            </span>
-          </div>
-        );
+        if (excludedTechs.includes(getNameTech(tech))) {
+          return null;
+        } else {
+          return (
+            <div
+              key={tech}
+              aria-hidden="true"
+              className={`filter-tech__container__item ${currentTheme} ${
+                (getNameTech(tech) === selectedOption && 'selected') || ''
+              }`}
+              onClick={() => handleClick(tech)}
+            >
+              <span>
+                <IconoFa name={getNameIconName(tech)} />
+                {getNameTech(tech) + ' (' + countedTechs[tech][1] + ')'}
+              </span>
+            </div>
+          );
+        }
       })}
     </div>
   );
