@@ -1,11 +1,14 @@
-import './Projects.scss';
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from '../Title';
 import Project from './Project';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
+import FilterTech from '../FilterTech/FilterTech';
+
+import './Projects.scss';
 
 const query = graphql`
   {
@@ -64,12 +67,34 @@ const Projects = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
+  const [filterTech, setFilterTech] = useState(null);
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
+  useEffect(() => {
+    // Filter the projects with specific technology
+    if (filterTech) {
+      const filtered = projects.filter(project => {
+        return project.tecnologias.some(tech => {
+          return tech.name === filterTech;
+        });
+      });
+      setFilteredProjects(filtered);
+    } else {
+      setFilteredProjects(projects);
+    }
+  }, [filterTech, projects]);
+
   return (
     <section className={'section projects ' + currentTheme}>
       <Title title="Portfolio" theme={currentTheme} />
+
       <div className="section-center-50">
+        <div>
+          <FilterTech projects={projects} setFilterTech={setFilterTech} />
+        </div>
+
         {items > 0
-          ? projects.map((project, index) => {
+          ? filteredProjects.map((project, index) => {
               if (index < items) {
                 return (
                   <Project key={project.order} index={index} {...project} />
@@ -77,7 +102,7 @@ const Projects = props => {
               }
               return null;
             })
-          : projects.map((project, index) => {
+          : filteredProjects?.map((project, index) => {
               return <Project key={project.order} index={index} {...project} />;
             })}
 

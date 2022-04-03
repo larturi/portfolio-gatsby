@@ -1,0 +1,89 @@
+@import '../../sass/index.scss';
+.filter-tech {
+    &__container {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        padding: 0 3rem 1rem 3rem;
+        @media(max-width: 768px) {
+            padding: 0 1rem 1rem 1rem;
+        }
+        &__item {
+            padding-right: 15px;
+            font-size: 11px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            &.dark {
+                background: $clr-primary-5-dark;
+                border: 1px solid $clr-primary-7-dark;
+                color: $clr-primary-6-dark;
+                &.selected {
+                    background: darken($clr-primary-5-dark, 20%);
+                    border: 1px solid $clr-primary-7-dark;
+                }
+                &:hover {
+                    background: darken($clr-primary-5-dark, 20%);
+                    color: $clr-primary-6-dark;
+                }
+            }
+            &.light {
+                background: $clr-primary-5;
+                border: 1px solid $clr-primary-7;
+                color: $clr-primary-8;
+                &.selected {
+                    background: darken($clr-primary-5, 10%);
+                    border: 1px solid $clr-primary-7;
+                }
+                &:hover {
+                    background: darken($clr-primary-5, 10%);
+                    border: 1px solid $clr-primary-7;
+                }
+            }
+            &.blue {
+                background: $clr-primary-5-blue;
+                border: 1px solid $clr-primary-3-blue;
+                color: $clr-grey-1-dark;
+                &.selected {
+                    background: darken($clr-primary-5-blue, 10%);
+                    border: 1px solid $clr-grey-1-dark;
+                }
+                &:hover {
+                    background: darken($clr-primary-5-blue, 10%);
+                    border: 1px solid $clr-grey-1-dark;
+                }
+            }
+            &.yellow {
+                background: $clr-primary-6-yellow;
+                border: 1px solid $clr-primary-5-yellow;
+                color: $clr-grey-1-dark;
+                &.selected {
+                    background: darken($clr-primary-2-yellow, 10%);
+                    border: 1px solid $clr-primary-7-yellow;
+                    color: #000;
+                }
+                &:hover {
+                    background: darken($clr-primary-2-yellow, 10%);
+                    border: 1px solid $clr-primary-7-yellow;
+                    color: #000;
+                }
+            }
+            &.pink {
+                background: $clr-primary-8-pink;
+                border: 1px solid $clr-primary-3-pink;
+                color: $clr-grey-1-dark;
+                &.selected {
+                    background: darken($clr-primary-5-pink, 20%);
+                    border: 1px solid $clr-grey-1-dark;
+                }
+                &:hover {
+                    background: darken($clr-primary-5-pink, 20%);
+                    border: 1px solid $clr-grey-1-dark;
+                }
+            }
+        }
+    }
+}
