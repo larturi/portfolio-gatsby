@@ -90,7 +90,7 @@ const Projects = props => {
 
       <div className="section-center-50">
         <div>
-          <FilterTech projects={projects} setFilterTech={setFilterTech} />
+          <FilterTech items={projects} setFilterTech={setFilterTech} />
         </div>
 
         {items > 0

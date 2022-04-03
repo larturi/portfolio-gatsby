@@ -1,5 +1,4 @@
 @import '../../sass/index.scss';
-
 .project {
     display: grid;
     margin-bottom: 4rem;
@@ -22,7 +21,6 @@
     font-size: 0.85rem;
     margin-top: 0.5rem;
     font-family: 'Lato';
-
     @media screen and (max-width: 576px) {
         display: inline-block;
         margin-right: 0.45rem;
@@ -31,10 +29,8 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 0.7rem;
-        
     }
 }
-
 
 @media screen and (min-width: 576px) {
     .project-img {
@@ -69,5 +65,8 @@
         grid-row: 1 / 1;
         text-align: left;
     }
-    
+}
+
+.section.projects {
+    min-height: 600px;
 }

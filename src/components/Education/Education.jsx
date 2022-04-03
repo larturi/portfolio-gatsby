@@ -1,12 +1,15 @@
-import './Education.scss';
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Title from '../../components/Title';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Degree from './Degree';
 import Course from './Course';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 import { useCurrentLanguaje } from '../../hooks/useCurrentLanguaje';
+import FilterTech from '../FilterTech/FilterTech';
+
+import './Education.scss';
 
 const query = graphql`
   {
@@ -129,6 +132,23 @@ const Education = props => {
       ? moreES.translates[0].text
       : moreEN.translates[0].text;
 
+  const [filterTech, setFilterTech] = useState(null);
+  const [filteredCourses, setFilteredCourses] = useState([]);
+
+  useEffect(() => {
+    // Filter the courses with specific technology
+    if (filterTech) {
+      const filtered = courses.filter(course => {
+        return course.tecnologias.some(tech => {
+          return tech.name === filterTech;
+        });
+      });
+      setFilteredCourses(filtered);
+    } else {
+      setFilteredCourses(courses);
+    }
+  }, [filterTech, courses]);
+
   return (
     <section className={'section educations color-less ' + currentTheme}>
       <Title title={titleEducation} theme={currentTheme} />
@@ -141,15 +161,20 @@ const Education = props => {
       <div className="education-separador" />
 
       <Title title={titleCourses} theme={currentTheme} />
+
+      <div className="section-center-50 content-filter-techs-courses">
+        <FilterTech items={courses} setFilterTech={setFilterTech} />
+      </div>
+
       <div className="section-center-50 cursos-container">
         {items > 0
-          ? courses.map((course, index) => {
+          ? filteredCourses.map((course, index) => {
               if (index < items) {
                 return <Course key={index} index={index} {...course} />;
               }
               return null;
             })
-          : courses.map((course, index) => {
+          : filteredCourses.map((course, index) => {
               return <Course key={index} index={index} {...course} />;
             })}
       </div>

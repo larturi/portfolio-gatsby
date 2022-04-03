@@ -6,7 +6,7 @@ import { useCurrentTheme } from '../../hooks/useCurrentTheme';
 
 import './FilterTech.scss';
 
-const FilterTech = ({ projects, setFilterTech }) => {
+const FilterTech = ({ items, setFilterTech }) => {
   let { currentTheme } = useCurrentTheme();
 
   const [countedTechs, setCountedTechs] = useState([]);
@@ -14,8 +14,8 @@ const FilterTech = ({ projects, setFilterTech }) => {
 
   useEffect(() => {
     const allTechs = [];
-    projects.forEach(project => {
-      project.tecnologias.forEach(tech => {
+    items.forEach(item => {
+      item.tecnologias.forEach(tech => {
         allTechs.push(tech.name);
       });
     });
