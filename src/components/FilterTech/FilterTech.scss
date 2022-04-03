@@ -2,6 +2,7 @@
 .filter-tech {
     &__container {
         margin-bottom: 1.5rem;
+        margin-top: 0;
         text-align: center;
         padding: 0 5rem 1rem 5rem;
         svg {
@@ -10,7 +11,7 @@
             margin: 1px 6px -2px 0px;
         }
         @media(max-width: 768px) {
-            padding: 0 1rem 1rem 1rem;
+            padding: 0
         }
         &__item {
             font-size: 10px;
@@ -76,12 +77,18 @@
                 &.selected {
                     background: darken($clr-primary-2-yellow, 10%);
                     border: 1px solid $clr-primary-7-yellow;
-                    color: #000;
+                    color: #000 !important;
+                    svg {
+                        color: #000 !important;
+                    }
                 }
                 &:hover {
                     background: darken($clr-primary-2-yellow, 10%);
                     border: 1px solid $clr-primary-7-yellow;
-                    color: #000;
+                    color: #000 !important;
+                    svg {
+                        color: #000 !important;
+                    }
                 }
                 svg {
                     color: $clr-grey-1-dark !important;

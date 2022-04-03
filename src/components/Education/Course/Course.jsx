@@ -39,6 +39,8 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
           })}
         </div>
       </div>
+
+      <div className="card-curso-container__footer"></div>
     </div>
   );
 };
