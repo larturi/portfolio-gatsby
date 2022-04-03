@@ -40,13 +40,14 @@ const FilterTech = ({ items, setFilterTech }) => {
   return (
     <div className={`filter-tech__container ${currentTheme}`}>
       {Object.keys(countedTechs).map(tech => {
-        console.log([tech]);
         return (
           <div
             key={tech}
             aria-hidden="true"
             className={`filter-tech__container__item ${currentTheme} ${
-              (countedTechs[tech][0] === selectedOption && 'selected') || ''
+              (countedTechs[tech][0].split('_')[0] === selectedOption &&
+                'selected') ||
+              ''
             }`}
             onClick={() => handleClick(tech)}
           >
