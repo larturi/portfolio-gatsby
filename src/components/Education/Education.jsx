@@ -1,5 +1,3 @@
-// eslint-disable-next-line react-hooks/exhaustive-deps
-
 import React, { useEffect, useState } from 'react';
 import Title from '../../components/Title';
 import { graphql, useStaticQuery, Link } from 'gatsby';

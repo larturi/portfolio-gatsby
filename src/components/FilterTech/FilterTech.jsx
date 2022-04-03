@@ -1,8 +1,7 @@
-// eslint-disable-next-line react-hooks/exhaustive-deps
-
 import React, { useEffect, useState } from 'react';
 import lodash from 'lodash';
 import { useCurrentTheme } from '../../hooks/useCurrentTheme';
+import IconoFa from '../IconFa';
 
 import './FilterTech.scss';
 
@@ -12,11 +11,16 @@ const FilterTech = ({ items, setFilterTech }) => {
   const [countedTechs, setCountedTechs] = useState([]);
   const [selectedOption, setSelectedOption] = useState(null);
 
+  const handleClick = tech => {
+    setFilterTech(countedTechs[tech][0].split('_')[0]);
+    setSelectedOption(countedTechs[tech][0].split('_')[0]);
+  };
+
   useEffect(() => {
     const allTechs = [];
     items.forEach(item => {
       item.tecnologias.forEach(tech => {
-        allTechs.push(tech.name);
+        allTechs.push(tech.name + '_' + tech.logo);
       });
     });
 
@@ -31,23 +35,28 @@ const FilterTech = ({ items, setFilterTech }) => {
     });
 
     setCountedTechs(sortable);
-  }, []);
+  }, [items]);
 
   return (
     <div className={`filter-tech__container ${currentTheme}`}>
       {Object.keys(countedTechs).map(tech => {
+        console.log([tech]);
         return (
           <div
             key={tech}
+            aria-hidden="true"
             className={`filter-tech__container__item ${currentTheme} ${
               (countedTechs[tech][0] === selectedOption && 'selected') || ''
             }`}
-            onClick={() => (
-              setFilterTech(countedTechs[tech][0]),
-              setSelectedOption(countedTechs[tech][0])
-            )}
+            onClick={() => handleClick(tech)}
           >
-            {countedTechs[tech][0] + ' (' + countedTechs[tech][1] + ')'}
+            <span>
+              <IconoFa name={countedTechs[tech][0].split('_')[1]} />
+              {countedTechs[tech][0].split('_')[0] +
+                ' (' +
+                countedTechs[tech][1] +
+                ')'}
+            </span>
           </div>
         );
       })}

@@ -4,13 +4,17 @@
         margin-bottom: 1.5rem;
         text-align: center;
         padding: 0 3rem 1rem 3rem;
+        svg {
+            height: 13px;
+            width: 13px;
+            margin: 1px 6px -2px 0px;
+        }
         @media(max-width: 768px) {
             padding: 0 1rem 1rem 1rem;
         }
         &__item {
-            padding-right: 15px;
-            font-size: 11px;
-            padding: 3.7px 7px;
+            font-size: 10px;
+            padding: 4px 7px;
             border-radius: 5px;
             display: inline-block;
             margin-right: 8px;
@@ -20,7 +24,7 @@
             &.dark {
                 background: $clr-primary-5-dark;
                 border: 1px solid $clr-primary-7-dark;
-                color: $clr-primary-6-dark;
+                color: $clr-grey-1-dark;
                 &.selected {
                     background: darken($clr-primary-5-dark, 20%);
                     border: 1px solid $clr-primary-7-dark;
@@ -28,6 +32,9 @@
                 &:hover {
                     background: darken($clr-primary-5-dark, 20%);
                     color: $clr-primary-6-dark;
+                }
+                svg {
+                    color: $clr-grey-1-dark !important;
                 }
             }
             &.light {
@@ -42,6 +49,9 @@
                     background: darken($clr-primary-5, 10%);
                     border: 1px solid $clr-primary-7;
                 }
+                svg {
+                    color: $clr-grey-1-dark !important;
+                }
             }
             &.blue {
                 background: $clr-primary-5-blue;
@@ -54,6 +64,9 @@
                 &:hover {
                     background: darken($clr-primary-5-blue, 10%);
                     border: 1px solid $clr-grey-1-dark;
+                }
+                svg {
+                    color: $clr-grey-1-dark !important;
                 }
             }
             &.yellow {
@@ -70,6 +83,9 @@
                     border: 1px solid $clr-primary-7-yellow;
                     color: #000;
                 }
+                svg {
+                    color: $clr-grey-1-dark !important;
+                }
             }
             &.pink {
                 background: $clr-primary-8-pink;
@@ -82,6 +98,9 @@
                 &:hover {
                     background: darken($clr-primary-5-pink, 20%);
                     border: 1px solid $clr-grey-1-dark;
+                }
+                svg {
+                    color: $clr-grey-1-dark !important;
                 }
             }
         }
