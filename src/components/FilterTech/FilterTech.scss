@@ -23,48 +23,53 @@
             cursor: pointer;
             text-transform: uppercase;
             &.dark {
-                background: $clr-primary-5-dark;
+                background: $clr-primary-8-dark;
                 border: 1px solid $clr-primary-7-dark;
                 color: $clr-grey-1-dark;
                 &.selected {
-                    background: darken($clr-primary-5-dark, 20%);
-                    border: 1px solid $clr-primary-7-dark;
+                    background: $clr-primary-5-dark;
+                    border: 1px solid $clr-primary-5-dark;
+                    color: $clr-primary-6-dark !important;
+                    svg {
+                        color: $clr-primary-6-dark !important;
+                    }
                 }
                 &:hover {
-                    background: darken($clr-primary-5-dark, 20%);
-                    color: $clr-primary-6-dark;
+                    border: 1px solid $clr-primary-5-dark;
                 }
                 svg {
                     color: $clr-grey-1-dark !important;
                 }
             }
             &.light {
-                background: $clr-primary-5;
-                border: 1px solid $clr-primary-7;
-                color: $clr-primary-8;
+                background: $clr-primary-8;
+                border: 1px solid darken($clr-primary-5, 5%);
+                color: darken($clr-primary-5, 10%);
                 &.selected {
                     background: darken($clr-primary-5, 10%);
-                    border: 1px solid $clr-primary-7;
+                    border: 1px solid $clr-primary-5;
+                    color: $clr-primary-8 !important;
+                    svg {
+                        color: $clr-primary-8;
+                    }
                 }
                 &:hover {
-                    background: darken($clr-primary-5, 10%);
-                    border: 1px solid $clr-primary-7;
+                    border: 1px solid $clr-primary-4;
                 }
                 svg {
-                    color: $clr-grey-1-dark !important;
+                    color: darken($clr-primary-5, 10%);
                 }
             }
             &.blue {
-                background: $clr-primary-5-blue;
+                background: $clr-primary-8-blue;
                 border: 1px solid $clr-primary-3-blue;
                 color: $clr-grey-1-dark;
                 &.selected {
                     background: darken($clr-primary-5-blue, 10%);
-                    border: 1px solid $clr-grey-1-dark;
+                    border: 1px solid $clr-primary-5-blue;
                 }
                 &:hover {
-                    background: darken($clr-primary-5-blue, 10%);
-                    border: 1px solid $clr-grey-1-dark;
+                    border: 1px solid $clr-primary-5-blue;
                 }
                 svg {
                     color: $clr-grey-1-dark !important;
@@ -83,31 +88,29 @@
                     }
                 }
                 &:hover {
-                    background: darken($clr-primary-2-yellow, 10%);
-                    border: 1px solid $clr-primary-7-yellow;
-                    color: #000 !important;
-                    svg {
-                        color: #000 !important;
-                    }
+                    border: 1px solid $clr-primary-4-yellow;
                 }
                 svg {
                     color: $clr-grey-1-dark !important;
                 }
             }
             &.pink {
-                background: $clr-primary-8-pink;
-                border: 1px solid $clr-primary-3-pink;
-                color: $clr-grey-1-dark;
+                background: $clr-primary-6-pink;
+                border: 1px solid darken($clr-primary-8-pink, 5%);
+                color: darken($clr-primary-8-pink, 10%);
                 &.selected {
-                    background: darken($clr-primary-5-pink, 20%);
-                    border: 1px solid $clr-grey-1-dark;
+                    background: darken($clr-primary-5-pink, 10%);
+                    border: 1px solid $clr-primary-5-pink;
+                    color: $clr-primary-8 !important;
+                    svg {
+                        color: $clr-primary-8;
+                    }
                 }
                 &:hover {
-                    background: darken($clr-primary-5-pink, 20%);
-                    border: 1px solid $clr-grey-1-dark;
+                    border: 1px solid $clr-primary-1-pink;
                 }
                 svg {
-                    color: $clr-grey-1-dark !important;
+                    color: darken($clr-primary-5-pink, 10%);
                 }
             }
         }
