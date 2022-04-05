@@ -5,7 +5,7 @@ import Seo from '../components/Seo';
 
 const EducationPage = props => {
   return (
-    <Layout path={props.uri}>
+    <Layout path={props.uri} navbarTransparent={true}>
       <Seo title="Leandro Arturi - Educación" />
       <Education />
     </Layout>

@@ -13,6 +13,9 @@
 .navbar {
     &.dark {
         background: $clr-primary-10-dark;
+        &.transparent {
+            background: $clr-primary-8-dark;
+        }
         color: $clr-grey-1-dark;
         &.isHome {
             background: transparent;
@@ -27,6 +30,9 @@
     }
     &.blue {
         background: $clr-primary-10-blue;
+        &.transparent {
+            background: $clr-primary-8-blue;
+        }
         color: $clr-grey-1-dark;
         &.isHome {
             background: transparent;
@@ -34,6 +40,9 @@
     }
     &.yellow {
         background: $clr-primary-9-yellow;
+        &.transparent {
+            background: $clr-primary-6-yellow;
+        }
         color: $clr-grey-1-dark;
         &.isHome {
             background: transparent;
@@ -41,6 +50,9 @@
     }
     &.pink {
         background: $clr-primary-6-pink;
+        &.transparent {
+            background: darken($clr-primary-6-pink, 1%);
+        }
         color: $clr-grey-1-dark;
         &.isHome {
             background: transparent;

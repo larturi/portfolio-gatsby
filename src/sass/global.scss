@@ -371,10 +371,10 @@ p {
         }
     }
     &.yellow {
-        background: $clr-primary-6-yellow !important;
+        background: $clr-primary-9-yellow !important;
         color: $clr-white;
         &.color-less {
-            background: darken($clr-primary-6-yellow, 1%) !important;
+            background: $clr-primary-6-yellow !important;
         }
         h1,
         h2,
@@ -394,7 +394,7 @@ p {
             }
         }
         &.about-page {
-            background: darken($clr-primary-9-yellow, 1%) !important;
+            background: $clr-primary-6-yellow !important;
             .about-stack span {
                 color: $clr-white;
                 border: solid 1px $clr-primary-7-yellow;
