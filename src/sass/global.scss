@@ -687,8 +687,8 @@ p {
 .card-label {
     margin-bottom: 1rem;
     @media screen and (max-width: 576px) {
-        max-height: 30px;
-        overflow-y: hidden;
+        // max-height: 30px;
+        // overflow-y: hidden;
     }
     @media screen and (min-width: 1600px) {
         max-height: 60px;
