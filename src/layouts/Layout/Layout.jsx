@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 
 import GlobalContextProvider from '../../context/GlobalContextProvider';
 
-const Layout = ({ children, path, footerHiden }) => {
+const Layout = ({ children, path, footerHiden, navbarTransparent=false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -15,7 +15,7 @@ const Layout = ({ children, path, footerHiden }) => {
   return (
     <>
       <GlobalContextProvider>
-        <Navbar toggleSidebar={toggleSidebar} path={path} />
+        <Navbar toggleSidebar={toggleSidebar} path={path} navbarTransparent={navbarTransparent} />
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         {children}
         <Footer footerHiden={footerHiden} />

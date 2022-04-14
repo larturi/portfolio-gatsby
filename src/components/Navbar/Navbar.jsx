@@ -29,7 +29,7 @@ const Navbar = props => {
   const [colorTheme, setColorTheme] = useState('dark');
   const [transparentNavbar, setTransparentNavbar] = useState('');
 
-  const { toggleSidebar, path } = props;
+  const { toggleSidebar, path, navbarTransparent } = props;
 
   const dispatch = useContext(GlobalDispatchContext);
   const state = useContext(GlobalStateContext);
@@ -87,7 +87,7 @@ const Navbar = props => {
   }, [colorTheme, dispatch]);
 
   return (
-    <nav className={`navbar ${currentTheme} ${transparentNavbar}`}>
+    <nav className={`navbar ${currentTheme} ${transparentNavbar} ${navbarTransparent && 'transparent'}`}>
       <div className="nav-center">
         <div className="nav-header">
           {!isSSR && (

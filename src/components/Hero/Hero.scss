@@ -14,7 +14,7 @@
         background: $clr-primary-7-blue;
     }
     &.yellow {
-        background: $clr-primary-9-yellow;
+        background: darken($clr-primary-9-yellow, .4) !important;
     }
     &.pink {
         background: $clr-primary-3-pink;
