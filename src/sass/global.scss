@@ -412,7 +412,7 @@ p {
         .education-label {
             span {
                 color: $clr-white;
-                border: solid 1px transparentize($clr-primary-7-yellow, .6);
+                border: solid 1px transparentize($clr-primary-7-yellow, 1);
                 background: transparentize($clr-primary-7-yellow, .6);
             }
         }
