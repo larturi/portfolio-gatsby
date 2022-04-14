@@ -412,8 +412,8 @@ p {
         .education-label {
             span {
                 color: $clr-white;
-                border: solid 1px $clr-primary-7-yellow;
-                background: $font-color-dark;
+                border: solid 1px transparentize($clr-primary-7-yellow, .6);
+                background: transparentize($clr-primary-7-yellow, .6);
             }
         }
         .card-info {
@@ -482,7 +482,7 @@ p {
         .education-label {
             span {
                 color: $clr-white;
-                border: solid 1px $clr-white;
+                border: solid 1px $clr-primary-8-pink;
                 background: $clr-primary-8-pink;
             }
         }
