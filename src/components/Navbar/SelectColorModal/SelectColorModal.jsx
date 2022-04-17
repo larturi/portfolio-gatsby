@@ -24,19 +24,6 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
 
       {openModal && (
         <div className="modal-content">
-          {/* Dark */}
-          <button
-            type="button"
-            className="btn-color dark"
-            onClick={() => {
-              setColorTheme('dark');
-              localStorage.setItem('theme', 'dark');
-              handleOpenModal();
-            }}
-          >
-            <VscColorMode />
-          </button>
-          
           {/* Blue */}
           <button
             type="button"
@@ -49,7 +36,20 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
           >
             <VscColorMode />
           </button>
-        
+
+          {/* Dark */}
+          <button
+            type="button"
+            className="btn-color dark"
+            onClick={() => {
+              setColorTheme('dark');
+              localStorage.setItem('theme', 'dark');
+              handleOpenModal();
+            }}
+          >
+            <VscColorMode />
+          </button>
+
           {/* Yellow */}
           <button
             type="button"
@@ -62,7 +62,7 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
           >
             <VscColorMode />
           </button>
-          
+
           {/* Light */}
           <button
             type="button"
@@ -75,7 +75,7 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
           >
             <VscColorMode />
           </button>
-          
+
           {/* Pink */}
           <button
             type="button"

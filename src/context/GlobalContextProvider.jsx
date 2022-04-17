@@ -1,11 +1,11 @@
 import React, { useReducer } from 'react';
-
+import { THEME_DEFAULT, LANG_DEFAULT } from '../constants/global';
 export const GlobalStateContext = React.createContext();
 export const GlobalDispatchContext = React.createContext();
 
 const initialState = {
-  selectedLang: 'en',
-  selectedTheme: 'dark',
+  selectedLang: LANG_DEFAULT,
+  selectedTheme: THEME_DEFAULT,
 };
 
 function reducer(state, action) {

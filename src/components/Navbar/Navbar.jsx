@@ -5,6 +5,8 @@ import { FaAlignRight } from 'react-icons/fa';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import SelectColorModal from './SelectColorModal';
 
+import { LANG_DEFAULT, THEME_DEFAULT } from '../../constants/global';
+
 import {
   GlobalDispatchContext,
   GlobalStateContext,
@@ -26,7 +28,7 @@ const query = graphql`
 const Navbar = props => {
   const isSSR = typeof window === 'undefined';
 
-  const [colorTheme, setColorTheme] = useState('dark');
+  const [colorTheme, setColorTheme] = useState(THEME_DEFAULT);
   const [transparentNavbar, setTransparentNavbar] = useState('');
 
   const { toggleSidebar, path, navbarTransparent } = props;
@@ -35,13 +37,13 @@ const Navbar = props => {
   const state = useContext(GlobalStateContext);
   const dataAll = useStaticQuery(query);
 
-  let currentLanguaje = state.selectedLang || 'en';
+  let currentLanguaje = state.selectedLang || LANG_DEFAULT;
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('locale'))
       currentLanguaje = localStorage.getItem('locale');
   }
 
-  let currentTheme = state.selectedTheme || 'dark';
+  let currentTheme = state.selectedTheme || THEME_DEFAULT;
   if (typeof window !== 'undefined') {
     if (localStorage.getItem('theme')) {
       currentTheme = localStorage.getItem('theme');
@@ -50,10 +52,10 @@ const Navbar = props => {
 
   if (typeof window !== 'undefined') {
     if (!localStorage.getItem('locale')) {
-      localStorage.setItem('locale', 'en');
+      localStorage.setItem('locale', LANG_DEFAULT);
     }
     if (!localStorage.getItem('theme')) {
-      localStorage.setItem('theme', 'dark');
+      localStorage.setItem('theme', THEME_DEFAULT);
     }
   }
 
@@ -71,7 +73,7 @@ const Navbar = props => {
   });
 
   useEffect(() => {
-    const selectedTheme = localStorage.getItem('theme') || 'dark';
+    const selectedTheme = localStorage.getItem('theme') || THEME_DEFAULT;
     setColorTheme(selectedTheme);
 
     localStorage.setItem('theme', selectedTheme);
@@ -87,7 +89,11 @@ const Navbar = props => {
   }, [colorTheme, dispatch]);
 
   return (
-    <nav className={`navbar ${currentTheme} ${transparentNavbar} ${navbarTransparent && 'transparent'}`}>
+    <nav
+      className={`navbar ${currentTheme} ${transparentNavbar} ${
+        navbarTransparent && 'transparent'
+      }`}
+    >
       <div className="nav-center">
         <div className="nav-header">
           {!isSSR && (
