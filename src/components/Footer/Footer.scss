@@ -28,7 +28,7 @@
         }
     }
     &.light {
-        background: transparentize($clr-primary-5, 0.94) !important;
+        background: $clr-primary-7 !important;
         a,
         p {
             color: $font-color-dark;

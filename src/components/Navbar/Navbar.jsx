@@ -79,13 +79,9 @@ const Navbar = props => {
     localStorage.setItem('theme', selectedTheme);
     dispatch({ type: 'SET_THEME', payload: selectedTheme });
 
-    if (selectedTheme === 'dark') {
-      document.body.classList.add('dark');
-      document.body.classList.remove('light');
-    } else {
-      document.body.classList.add('light');
-      document.body.classList.remove('dark');
-    }
+    // Add theme color to body
+    document.body.className = currentTheme = '';
+    document.body.className = currentTheme = selectedTheme;
   }, [colorTheme, dispatch]);
 
   return (
