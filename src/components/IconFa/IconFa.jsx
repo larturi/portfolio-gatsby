@@ -50,6 +50,7 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiVisualstudio,
+  SiVite,
   SiWebpack,
   SiXampp,
 } from 'react-icons/si';
@@ -195,6 +196,9 @@ const IconFa = props => {
 
     case 'SiVisualstudio':
       return <SiVisualstudio className="tech-icon"></SiVisualstudio>;
+
+    case 'SiVite':
+      return <SiVite className="tech-icon"></SiVite>;
 
     case 'SiWebpack':
       return <SiWebpack className="tech-icon"></SiWebpack>;
