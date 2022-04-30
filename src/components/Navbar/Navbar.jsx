@@ -80,6 +80,7 @@ const Navbar = props => {
     dispatch({ type: 'SET_THEME', payload: selectedTheme });
 
     // Add theme color to body
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     document.body.className = currentTheme = '';
     document.body.className = currentTheme = selectedTheme;
   }, [colorTheme, dispatch]);
