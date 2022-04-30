@@ -97,24 +97,71 @@ const About = () => {
 
           <SubTitle title={about.title_stack} theme={currentTheme} />
           <div className={`about-stack ${currentTheme}`}>
-            <span><IconoFa name="FaReact" />React</span>
-            <span><IconoFa name="SiJavascript" />JavaScript</span>
-            <span><IconoFa name="SiGraphql" />GraphQL</span>
-            <span><IconoFa name="SiSass" />Sass</span>
-            <span><IconoFa name="SiBootstrap" />Bootstrap</span>
-            <span><IconoFa name="SiTailwindcss" />Tailwind</span>
+            <span>
+              <IconoFa name="FaReact" />
+              React
+            </span>
+            <span>
+              <IconoFa name="SiJavascript" />
+              JavaScript
+            </span>
+            <span>
+              <IconoFa name="SiGraphql" />
+              GraphQL
+            </span>
+            <span>
+              <IconoFa name="SiSass" />
+              Sass
+            </span>
+            <span>
+              <IconoFa name="SiBootstrap" />
+              Bootstrap
+            </span>
+            <span>
+              <IconoFa name="SiTailwindcss" />
+              Tailwind
+            </span>
 
-            <span><IconoFa name="FaLaravel" />Laravel</span>
-            <span><IconoFa name="SiPhp" />Php</span>
-            <span><IconoFa name="FaNodeJs" />Node</span>
-            <span><IconoFa name="SiDjango" />Django</span>
-            <span><IconoFa name="FaPython" />Python</span>
-        
-            <span><IconoFa name="SiPostgresql" />PostgreSQL</span>
-            <span><IconoFa name="SiMysql" /> MySQL</span>
-            <span><IconoFa name="SiMongodb" />MongoDB</span>
-            <span><IconoFa name="SiDocker" />Docker</span>
-            <span><IconoFa name="FaGithub" />GitHub</span>
+            <span>
+              <IconoFa name="FaLaravel" />
+              Laravel
+            </span>
+            <span>
+              <IconoFa name="SiPhp" />
+              Php
+            </span>
+            <span>
+              <IconoFa name="FaNodeJs" />
+              Node
+            </span>
+            <span>
+              <IconoFa name="SiDjango" />
+              Django
+            </span>
+            <span>
+              <IconoFa name="FaPython" />
+              Python
+            </span>
+
+            <span>
+              <IconoFa name="SiPostgresql" />
+              PostgreSQL
+            </span>
+            <span>
+              <IconoFa name="SiMysql" /> MySQL
+            </span>
+            <span>
+              <IconoFa name="SiMongodb" />
+              MongoDB
+            </span>
+            <span>
+              <IconoFa name="SiDocker" />
+              Docker
+            </span>
+            <span>
+              <IconoFa name="FaGithub" />
+              GitHub
+            </span>
           </div>
         </article>
       </div>

@@ -99,11 +99,12 @@
         display: grid;
         align-items: center;
         column-gap: 4rem;
-        padding: 0 10rem;
+        padding: 0 7rem;
     }
     .about-img {
         grid-column: 1 / span 5;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
+        margin-top: -5rem !important;
         border-radius: 100%;
     }
     .about-text {
