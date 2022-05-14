@@ -67,6 +67,9 @@
         @media screen and (max-width: 768px) {
             margin-bottom: 2rem !important;
         }
+        @media screen and (min-width: 1600px) {
+            margin: -7px 0 8px !important;
+        }
     }
     &__labels-parent {
         position: relative;
@@ -81,6 +84,9 @@
         overflow: hidden;
         span {
             font-size: 0.7rem !important;
+        }
+        @media screen and (min-width: 1600px) {
+            margin: 8px auto !important;
         }
     }
     &__footer {
