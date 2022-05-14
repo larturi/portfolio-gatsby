@@ -687,7 +687,7 @@ p {
 .card-label {
     margin-bottom: 1rem;
     @media screen and (min-width: 1600px) {
-        max-height: 75px;
+        max-height: 67px;
         overflow-y: hidden;
     }
 }
@@ -695,13 +695,13 @@ p {
 .card-label span {
     display: inline-block;
     margin-right: 0.55rem;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
     border-radius: 0.25rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 0.80rem;
     font-family: 'Lato';
-    padding: 0.27rem 0.54em;
+    padding: 0.33rem 0.54em;
     svg {
         height: 13px;
         width: 13px;
@@ -715,6 +715,10 @@ p {
         text-transform: uppercase;
         letter-spacing: 1px;
         font-size: 0.7rem;
+    }
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 9px;
+        padding: 0.27rem 0.54em;
     }
 }
 

@@ -9,10 +9,15 @@
             height: 13px;
             width: 13px;
             margin: 1px 6px -2px 0px;
+
+            @media(min-width: 1600px) {
+                margin: 2px 6px -2px 1px !important;
+            }
         }
         @media(max-width: 768px) {
             padding: 0 0 2.5rem 0;
         }
+        
         &__item {
             font-size: 10px;
             padding: 5px 7px;
