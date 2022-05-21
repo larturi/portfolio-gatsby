@@ -31,9 +31,8 @@ const Course = ({ url, name, institution, year, tecnologias, logo, hours }) => {
         >
           {tecnologias.map(item => {
             return (
-              <span key={item.name}>
+              <span key={item.name} className={`icon-tech-curso-square ${currentTheme}`}>
                 <IconoFa name={item.logo} />
-                {item.name}
               </span>
             );
           })}

@@ -58,6 +58,9 @@
     &__name {
         font-size: 1rem;
         line-height: 19px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
         @media screen and (max-width: 768px) {
             width: 98%;
         }
@@ -83,9 +86,9 @@
         font-size: 1px !important;
         overflow: hidden;
         span {
-            font-size: 0.7rem !important;
-
+            font-size: 1rem !important;
             svg {
+                margin: 0px 0px 0px 0;
                 @media screen and (min-width: 1600px) {
                     margin: 2px 6px -2px 1px !important;
                 }
@@ -97,5 +100,30 @@
     }
     &__footer {
         min-height: 1rem;
+    }
+}
+
+.icon-tech-curso-square {
+    background: none !important;
+    border: none !important;
+    opacity: 0.7 !important;
+    svg {
+        height: 23px !important;
+        width: 23px !important;
+    }
+    &.dark svg {
+        color: transparentize($clr-primary-6-dark, 0.2) !important;
+    }
+    &.light svg {
+        color: transparentize($clr-primary-5, .3) !important;
+    }
+    &.blue svg {
+        color: transparentize($clr-primary-1-blue, .5) !important;
+    }
+    &.yellow svg {
+        color: transparentize($clr-primary-1-yellow, .5) !important;
+    }
+    &.pink svg {
+        color: transparentize($clr-primary-8-pink, .3) !important;
     }
 }
