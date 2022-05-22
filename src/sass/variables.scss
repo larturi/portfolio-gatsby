@@ -1,7 +1,10 @@
   /* Fonts */
+  
   $ff-primary: "Roboto",
   sans-serif;
   $ff-secondary: "Open Sans",
+  sans-serif;
+  $ff-title: "Julius Sans One",
   sans-serif;
   $transition: all 0.1s linear;
   $spacing: 0.2rem;
@@ -10,8 +13,9 @@
   $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   $max-width: 1170px;
   $fixed-width: 700px;
-
+  $border-size-card: 1.5px;
   /* Breackpoints */
+  
   $breackpoint-up-sm: '576px';
   $breackpoint-up-md: '768px';
   $breackpoint-up-lg: '992px';

@@ -1,5 +1,5 @@
 @import './index.scss';
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Lato:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700|Lato:400,700|Julius+Sans+One&display=swap");
 *,
 ::after,
 ::before {
@@ -172,7 +172,7 @@ p {
     padding: 5rem 0;
     .card-info {
         border-radius: 5px;
-        border-width: 2px;
+        border-width: $border-size-card;
         border-style: solid;
     }
     &.dark {
@@ -627,12 +627,14 @@ p {
     order: 1;
     @media only screen and (max-width: 767px) {
         opacity: 0.4;
+        position: absolute;
+        right: 50px;
         order: 1;
         min-width: 50px;
         width: 50px;
-        height: auto;
-        display: flex;
-        align-items: center;
+        margin-top: 24px;
+        margin-right: -5px;
+        height: 150px;
     }
 }
 
@@ -648,7 +650,7 @@ p {
     text-transform: uppercase;
     transition: $transition;
     @media only screen and (max-width: 767px) {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
         width: 100%;
     }
 }

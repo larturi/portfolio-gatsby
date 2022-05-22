@@ -43,11 +43,13 @@
 }
 
 .home-profesion {
+    font-family: $ff-title;
+    font-size: 1rem;
     &.dark {
         color: $clr-grey-5-dark;
     }
     &.light {
-        color: $clr-grey-5;
+        color: $font-color-dark;
     }
     &.blue {
         color: $clr-grey-5-dark;
@@ -114,6 +116,8 @@
 }
 
 .home-name-hello {
+    font-family: $ff-title;
+    font-size: 3.7rem;
     &.dark {
         color: $clr-white;
     }
@@ -130,10 +134,11 @@
         color: $clr-primary-10-pink;
     }
     @media only screen and (max-width: 767px) {
-        font-size: 34px;
+        font-size: 37px;
     }
-    @media only screen and (max-width: 350px) {
-        font-size: 30px;
+    @media only screen and (max-width: 380px) {
+        font-size: 27px;
+        margin-top: 1rem;
     }
 }
 
@@ -142,7 +147,11 @@
         margin-top: 10px;
     }
     .home-profesion {
-        font-size: 0.95rem;
+        font-family: $ff-title;
+        font-size: 1rem;
+        @media only screen and (max-width: 380px) {
+            font-size: 10px;
+        }
     }
 }
 

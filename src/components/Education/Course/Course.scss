@@ -35,19 +35,19 @@
         padding: 2rem 1rem 2rem 1rem;
     }
     &.dark {
-        border: solid 2px $clr-primary-5-dark !important;
+        border: solid $border-size-card $clr-primary-5-dark !important;
     }
     &.light {
-        border: solid 2px $clr-primary-5;
+        border: solid $border-size-card $clr-primary-5;
     }
     &.blue {
-        border: solid 2px $clr-primary-5-blue;
+        border: solid $border-size-card $clr-primary-5-blue;
     }
     &.yellow {
-        border: solid 2px $clr-primary-7-yellow;
+        border: solid $border-size-card $clr-primary-7-yellow;
     }
     &.pink {
-        border: solid 2px $clr-primary-5-pink;
+        border: solid $border-size-card $clr-primary-5-pink;
     }
     &__logo {
         opacity: 0.6;
@@ -58,11 +58,11 @@
     &__name {
         font-size: 1rem;
         line-height: 19px;
-        width: 95%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
         @media screen and (max-width: 768px) {
-            width: 98%;
+            width: 90%;
         }
     }
     &__horas {

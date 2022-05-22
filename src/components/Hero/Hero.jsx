@@ -87,7 +87,7 @@ const Hero = () => {
           <div>
             <div className={`underline ${currentTheme}`}></div>
             <h1 className={`home-name-hello ${currentTheme}`}>
-              Leandro Arturi
+              LEANDRO ARTURI
             </h1>
             <h2 className={`home-profesion ${currentTheme}`}>
               {data.home.text}

@@ -96,7 +96,6 @@
 
 .card-label-course {
     margin-top: -10px;
-
     span svg {
         @media only screen and (min-width: 1600px) {
             margin: -3px 6px -3px 1px !important;
@@ -106,7 +105,7 @@
 
 .card-slug-curso {
     @media only screen and (max-width: 767px) {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 }
 
