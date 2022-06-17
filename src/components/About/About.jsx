@@ -98,6 +98,10 @@ const About = () => {
           <SubTitle title={about.title_stack} theme={currentTheme} />
           <div className={`about-stack ${currentTheme}`}>
             <span>
+              <IconoFa name="SiNextDotJs" />
+              Next.js
+            </span>
+            <span>
               <IconoFa name="FaReact" />
               React
             </span>
@@ -105,23 +109,7 @@ const About = () => {
               <IconoFa name="SiJavascript" />
               JavaScript
             </span>
-            <span>
-              <IconoFa name="SiGraphql" />
-              GraphQL
-            </span>
-            <span>
-              <IconoFa name="SiSass" />
-              Sass
-            </span>
-            <span>
-              <IconoFa name="SiBootstrap" />
-              Bootstrap
-            </span>
-            <span>
-              <IconoFa name="SiTailwindcss" />
-              Tailwind
-            </span>
-
+            
             <span>
               <IconoFa name="FaLaravel" />
               Laravel
@@ -135,33 +123,40 @@ const About = () => {
               Node
             </span>
             <span>
-              <IconoFa name="SiDjango" />
-              Django
-            </span>
-            <span>
-              <IconoFa name="FaPython" />
-              Python
+              <IconoFa name="SiStrapi" />
+              Strapi
             </span>
 
+            <span>
+              <IconoFa name="SiMysql" /> MySQL
+            </span>
             <span>
               <IconoFa name="SiPostgresql" />
               PostgreSQL
             </span>
             <span>
-              <IconoFa name="SiMysql" /> MySQL
-            </span>
-            <span>
               <IconoFa name="SiMongodb" />
               MongoDB
             </span>
+
             <span>
               <IconoFa name="SiDocker" />
               Docker
             </span>
+
             <span>
-              <IconoFa name="FaGithub" />
-              GitHub
+              <IconoFa name="SiSass" />
+              Sass
             </span>
+            <span>
+              <IconoFa name="SiBootstrap" />
+              Bootstrap
+            </span>
+            <span>
+              <IconoFa name="SiTailwindcss" />
+              Tailwind
+            </span>
+
           </div>
         </article>
       </div>
