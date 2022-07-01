@@ -28,7 +28,7 @@
         }
     }
     &.light {
-        background: $clr-primary-7 !important;
+        background: darken($clr-primary-8, .5) !important;
         a,
         p {
             color: $font-color-dark;
@@ -51,7 +51,7 @@
         }
     }
     &.blue {
-        background: darken($clr-primary-10-blue, 0.9);
+        background: darken($clr-primary-10-blue, .9);
         a,
         p {
             color: $clr-white;

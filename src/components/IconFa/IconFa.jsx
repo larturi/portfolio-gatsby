@@ -36,6 +36,7 @@ import {
   SiJest,
   SiJira,
   SiJquery,
+  SiMaterialui,
   SiMongodb,
   SiMysql,
   SiNextdotjs,
@@ -157,6 +158,9 @@ const IconFa = props => {
 
     case 'SiJquery':
       return <SiJquery className="tech-icon"></SiJquery>;
+
+    case 'SiMaterialui':
+      return <SiMaterialui className="tech-icon"></SiMaterialui>;
 
     case 'SiMongodb':
       return <SiMongodb className="tech-icon"></SiMongodb>;

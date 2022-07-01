@@ -77,7 +77,7 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
           </button>
 
           {/* Pink */}
-          <button
+          {/* <button
             type="button"
             className="btn-color pink"
             onClick={() => {
@@ -87,7 +87,7 @@ const SelectColorModal = ({ setColorTheme, colorTheme }) => {
             }}
           >
             <VscColorMode />
-          </button>
+          </button> */}
         </div>
       )}
     </>
