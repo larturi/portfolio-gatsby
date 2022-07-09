@@ -32,7 +32,9 @@ const FilterTech = ({ items, setFilterTech }) => {
     const allTechsCount = lodash.countBy(allTechs);
     var sortable = [];
     for (var tech in allTechsCount) {
-      sortable.push([tech, allTechsCount[tech]]);
+      if(allTechsCount[tech] > 0) {
+        sortable.push([tech, allTechsCount[tech]]);
+      }
     }
 
     sortable.sort(function (a, b) {
@@ -46,17 +48,21 @@ const FilterTech = ({ items, setFilterTech }) => {
     'Android SDK',
     'Apollo',
     'CSS',
+    'Dart',
     'Firebase',
+    'Flutter',
     'GitHub',
     'Jest',
     'Leadership',
-    'MongoDB',
-    'MySQL',
-    'Postgres',
-    'SASS',
     'Scrum',
     'Socket.io',
+    'Vite.js',
     'Webpack',
+    'WordPress',
+    'Ionic',
+    'Nuxt JS',
+    'TypeScript',
+    'Material UI',
   ];
 
   const getNameTech = tech => {
