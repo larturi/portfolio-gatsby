@@ -29,6 +29,7 @@ import {
   SiFlutter,
   SiGatsby,
   SiGitlab,
+  SiGoland,
   SiGraphql,
   SiHtml5,
   SiIonic,
@@ -137,6 +138,9 @@ const IconFa = props => {
 
     case 'SiGatsby':
       return <SiGatsby className="tech-icon"></SiGatsby>;
+
+    case 'SiGoland':
+      return <SiGoland className="tech-icon"></SiGoland>;
 
     case 'SiGraphql':
       return <SiGraphql className="tech-icon"></SiGraphql>;
