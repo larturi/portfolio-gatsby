@@ -5,6 +5,7 @@ import {
   FaAws,
   FaBitcoin,
   FaGithub,
+  FaGitSquare,
   FaGraduationCap,
   FaLaravel,
   FaMountain,
@@ -72,6 +73,9 @@ const IconFa = props => {
 
     case 'FaGithub':
       return <FaGithub className="tech-icon"></FaGithub>;
+
+    case 'FaGitSquare':
+      return <FaGitSquare className="tech-icon"></FaGitSquare>;
 
     case 'SiGitlab':
       return <SiGitlab className="tech-icon"></SiGitlab>;

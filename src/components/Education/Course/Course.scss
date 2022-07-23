@@ -18,8 +18,8 @@
         padding: 0 3rem;
     }
     @media screen and (min-width: 1400px) {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 3rem;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 2rem;
     }
     @media screen and (min-width: 1600px) {
         grid-template-columns: repeat(4, 1fr);
@@ -33,6 +33,9 @@
     position: relative;
     @media screen and (min-width: 992px) {
         padding: 2rem 1rem 2rem 1rem;
+    }
+    @media screen and (min-width: 1400px) {
+        padding: 10px 4px 10px 4px;
     }
     @media screen and (min-width: 1600px) {
         padding: 15px 6px 15px 6px;
@@ -56,6 +59,12 @@
         opacity: 0.6;
         svg {
             font-size: 5rem;
+            @media screen and (min-width: 1400px) {
+                font-size: 4rem;
+            }
+            @media screen and (min-width: 1600px) {
+                font-size: 5rem;
+            }
         }
     }
     &__name {
@@ -67,6 +76,10 @@
         @media screen and (max-width: 768px) {
             width: 90%;
         }
+        @media screen and (min-width: 1400px) {
+            width: 90%;
+            font-size: 11px;
+        }
         @media screen and (min-width: 1600px) {
             width: 100%;
             font-size: 13px;
@@ -76,6 +89,9 @@
         opacity: 0.6;
         @media screen and (max-width: 768px) {
             margin-bottom: 2rem !important;
+        }
+        @media screen and (min-width: 1400px) {
+            margin: -7px 0 8px !important;
         }
         @media screen and (min-width: 1600px) {
             margin: -7px 0 8px !important;
@@ -96,10 +112,16 @@
             font-size: 1rem !important;
             svg {
                 margin: 0px 0px 0px 0;
+                @media screen and (min-width: 1400px) {
+                    margin: 5px 1px 5px 1px !important
+                }
                 @media screen and (min-width: 1600px) {
                     margin: 12px -5px -2px 4px !important
                 }
             }
+        }
+        @media screen and (min-width: 1400px) {
+            margin: 4px auto !important;
         }
         @media screen and (min-width: 1600px) {
             margin: 8px auto !important;
@@ -117,6 +139,10 @@
     svg {
         height: 23px !important;
         width: 23px !important;
+        @media screen and (min-width: 1400px) {
+            height: 18px !important;
+            width: 18px !important;
+        }
         @media screen and (min-width: 1600px) {
             height: 20px !important;
             width: 20px !important;
